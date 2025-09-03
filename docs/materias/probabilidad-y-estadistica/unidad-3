@@ -1,0 +1,12 @@
+## Distribución Binomial: X ~ Binomial(n,p)
+
+La variable aleatoria X tiene distribución Binomial con parámetros n y p, y su 
+función de probabilidad es:
+
+$f(x;p,n) = \begin{pmatrix} n \\ p \end{pmatrix} p^x (1-p)^{1-p}, x = 0,\dots,n$
+
+donde $0 \lep p \lep 1 y n > 0$
+
+- $E(X) = \mu = np$
+- $Var(X) = \sigma^2 = np(1-p)$
+- Funcion de distribución $\Rightarrow F_x(X) = P(X \leq x) = \sum_{k=0}^x \begin{pmatrix} n \\ p \end{pmatrix} p^k (1-p)^{n-k}$
