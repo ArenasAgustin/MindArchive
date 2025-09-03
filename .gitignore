@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+
+# Production
+.docusaurus/
+.cache/
+.temp/
+.vscode/
+
+# Debug logs
+npm-debug.log*
+
+# Misc
+.next/
+out/
+.vercel
