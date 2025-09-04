@@ -1,25 +1,35 @@
+---
+title: "Unidad 3: Distribuciones de Probabilidad"
+description: "Distribuciones Binomial y Poisson"
+sidebar_position: 3
+tags: [probabilidad, distribuciones, binomial, poisson]
+last_update:
+  date: 2025-09-04
+  author: Agustin Arenas
+---
+
 ## Distribución Binomial: X ~ Binomial(n,p)
 
-La variable aleatoria X tiene distribución Binomial con parámetros n y p, y su 
+La variable aleatoria X tiene distribución Binomial con parámetros n y p, y su
 función de probabilidad es:
 
-$f(x;p,n) = \begin{pmatrix} n \\ p \end{pmatrix} p^x (1-p)^{1-p}, x = 0,\dots,n$
+$$f(x;p,n) = \binom{n}{x} p^x (1-p)^{n-x}, \quad x = 0,\ldots,n$$
 
-donde $0 \lep p \lep 1 y n > 0$
+donde $0 \leq p \leq 1$ y $n > 0$
 
 - $E(X) = \mu = np$
-- $Var(X) = \sigma^2 = np(1-p)$
-- Funcion de distribución $\Rightarrow F_X(x) = P(X \leq x) = \sum_{k=0}^x \begin{pmatrix} n \\ p \end{pmatrix} p^k (1-p)^{n-k}$
+- $\text{Var}(X) = \sigma^2 = np(1-p)$
+- Función de distribución $\Rightarrow F_X(x) = P(X \leq x) = \sum_{k=0}^x \binom{n}{k} p^k (1-p)^{n-k}$
 
 ## Distribución Poisson: X ~ Poisson($\lambda$)
 
-La variable aleatoria X tiene distribución Poisson con parámetro $\lambda$, y su 
+La variable aleatoria X tiene distribución Poisson con parámetro $\lambda$, y su
 función de probabilidad es:
 
-$f(x;\lambda) = \frac{e^{-\lambda}\lambda^x}{x!}, x = \{0, 1, 2, \dots\}$
+$$f(x;\lambda) = \frac{e^{-\lambda}\lambda^x}{x!}, \quad x \in \{0, 1, 2, \ldots\}$$
 
-donde $\lambda \in (0,\infty)$  y representa la Tasa Promedio de ocurrencias del evento por unidad de tiempo, espacio, volumen, etc (es constante!)
+donde $\lambda \in (0,\infty)$ y representa la Tasa Promedio de ocurrencias del evento por unidad de tiempo, espacio, volumen, etc (es constante!)
 
 - $E(X) = \lambda$
-- $Var(X) = \lambda$
-- Funcion de distribución $\Rightarrow F_X(x) = P(X \leq x) = \sum_{k=0}^x \frac{e^{-\lambda}\lambda^x}{x!}$
+- $\text{Var}(X) = \lambda$
+- Función de distribución $\Rightarrow F_X(x) = P(X \leq x) = \sum_{k=0}^x \frac{e^{-\lambda}\lambda^k}{k!}$

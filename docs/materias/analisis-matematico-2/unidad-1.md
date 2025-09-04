@@ -14,40 +14,48 @@ last_update:
 
 ### Bolas Abiertas y Cerradas
 
-- **Definición:** Dado $\overline{x}_{0} \in \mathbb{R}^{n}$ and $r \in \mathbb{R} > 0$:
+- **Definición:** Dado $\overline{x}_{0} \in \mathbb{R}^{n}$ y $r \in \mathbb{R} > 0$:
 
-  - **a)** La **bola abierta** con centro en $\overline{x}_{0}$ and radio $r$ es: $B_{r}(\overline{x}_{0}) = \overline{x} \in \mathbb{R}^{n} / ||\overline{x} - \overline{x}_{0}|| < r$.
-  - **b)** La **bola cerrada** con centro en $\overline{x}_{0}$ and radio $r$ es: $\overline{B}_{r}(\overline{x}_{0}) = \overline{x} \in \mathbb{R}^{n} / ||\overline{x} - \overline{x}_{0}|| \le r$.
-  - **c)** La **bola reducida** con centro en $\overline{x}_{0}$ and radio $r$ es: $B_{r}^\prime(\overline{x}_{0}) = \overline{x} \in \mathbb{R}^{n} / 0 < ||\overline{x} - \overline{x}_{0}|| < r$.
+  - **a)** La **bola abierta** con centro en $\overline{x}_{0}$ y radio $r$ es:
+
+    $$B_{r}(\overline{x}_{0}) = \{\overline{x} \in \mathbb{R}^{n} \mid ||\overline{x} - \overline{x}_{0}|| < r\}$$
+
+  - **b)** La **bola cerrada** con centro en $\overline{x}_{0}$ y radio $r$ es:
+
+    $$\overline{B}_{r}(\overline{x}_{0}) = \{\overline{x} \in \mathbb{R}^{n} \mid ||\overline{x} - \overline{x}_{0}|| \le r\}$$
+
+  - **c)** La **bola reducida** con centro en $\overline{x}_{0}$ y radio $r$ es:
+
+    $$B_{r}^\prime(\overline{x}_{0}) = \{\overline{x} \in \mathbb{R}^{n} \mid 0 < ||\overline{x} - \overline{x}_{0}|| < r\}$$
 
 ### Puntos Asociados a un Conjunto
 
-- **Definición:** Dado $A \subseteq \mathbb{R}^{n}$ and $\overline{x}_{0} \in \mathbb{R}^{n}$:
+- **Definición:** Dado $A \subseteq \mathbb{R}^{n}$ y $\overline{x}_{0} \in \mathbb{R}^{n}$:
 
   - **a)** $\overline{x}_{0}$ es un **punto interior** de $A$ si y solo si existe $r \in \mathbb{R} > 0$ tal que $B_{r}(\overline{x}_{0}) \subseteq A$.
   - **b)** $\overline{x}_{0}$ es un **punto exterior** de $A$ si y solo si existe $r \in \mathbb{R} > 0$ tal que $B_{r}(\overline{x}_{0}) \subseteq A^{c}$.
-  - **c)** $\overline{x}_{0}$ es un **punto frontera** de $A$ si y solo si para todo $r \in \mathbb{R} > 0$: $B_{r}(\overline{x}_{0}) \cap A \ne \emptyset$ and $B_{r}(\overline{x}_{0}) \cap A^{c} \ne \emptyset$.
+  - **c)** $\overline{x}_{0}$ es un **punto frontera** de $A$ si y solo si para todo $r \in \mathbb{R} > 0$: $B_{r}(\overline{x}_{0}) \cap A \ne \emptyset$ y $B_{r}(\overline{x}_{0}) \cap A^{c} \ne \emptyset$.
   - **d)** $\overline{x}_{0}$ es un **punto límite (o de acumulación)** de $A$ si y solo si para todo $r \in \mathbb{R} > 0$: $B_{r}^\prime(\overline{x}_{0}) \cap A \ne \emptyset$.
-  - **e)** $\overline{x}_{0}$ es un **punto aislado** de $A$ si y solo si existe $r \in \mathbb{R} > 0$ tal que $B_{r}(\overline{x}_{0}) \cap A = \overline{x}_{0}$.
+  - **e)** $\overline{x}_{0}$ es un **punto aislado** de $A$ si y solo si existe $r \in \mathbb{R} > 0$ tal que $B_{r}(\overline{x}_{0}) \cap A = \{\overline{x}_{0}\}$.
 
 - **Observaciones:**
 
-  - **a)** Si $\overline{x}_{0}$ es interior de $A$, se escribe $\overline{x}_{0} \in Int(A)$.
-  - **b)** Análogamente para $Ext(A)$, $Fr(A)$, $Aisl(A)$ y $Acum(A)$.
+  - **a)** Si $\overline{x}_{0}$ es interior de $A$, se escribe $\overline{x}_{0} \in \text{Int}(A)$.
+  - **b)** Análogamente para $\text{Ext}(A)$, $\text{Fr}(A)$, $\text{Aisl}(A)$ y $\text{Acum}(A)$.
 
 ### Conjuntos Abiertos y Cerrados
 
 - **Definición:** Dado $A \subseteq \mathbb{R}^{n}$:
 
-  - **a)** $A$ es **abierto** si y solo si $A = Int(A)$.
+  - **a)** $A$ es **abierto** si y solo si $A = \text{Int}(A)$.
   - **b)** $A$ es **cerrado** si y solo si su complemento, $A^{c}$, es abierto.
 
 - **Observaciones:**
 
-  - **a)** $A$ es abierto si $A \cap Fr(A) = \emptyset$.
-  - **b)** $A$ es cerrado si $Fr(A) \subseteq A$.
+  - **a)** $A$ es abierto si $A \cap \text{Fr}(A) = \emptyset$.
+  - **b)** $A$ es cerrado si $\text{Fr}(A) \subseteq A$.
   - **c)** Un conjunto puede no ser ni abierto ni cerrado.
-  - **d)** Los únicos conjuntos que son abiertos y cerrados a la vez son $\mathbb{R}^{n}$ and $\emptyset$.
+  - **d)** Los únicos conjuntos que son abiertos y cerrados a la vez son $\mathbb{R}^{n}$ y $\emptyset$.
   - **e)** Una **vecindad** de $\overline{x}_{0}$ es un conjunto abierto que lo contiene.
 
 ---
@@ -79,7 +87,7 @@ last_update:
   - $\gamma: [-6\pi, 6\pi) \rightarrow \mathbb{R}^{3}$ definido por $\gamma(t) = (3 \cos t, 3 \sin t, t)$.
   - $\gamma: \mathbb{R} \rightarrow \mathbb{R}^{2}$ definido por $\gamma(t) = (e^{t}, e^{2t})$.
 
-    - Los puntos $\gamma(t)$ satisfacen $y=x^{2}$ con $x>0$. El gráfico es $Gr_{\gamma} = \{(e^{t}, e^{2t}, t) \mid t \in \mathbb{R}\}$.
+    - Los puntos $\gamma(t)$ satisfacen $y=x^{2}$ con $x>0$. El gráfico es $\text{Gr}_{\gamma} = \{(e^{t}, e^{2t}, t) \mid t \in \mathbb{R}\}$.
 
 ### Superficies ($n=2$)
 
@@ -119,18 +127,18 @@ last_update:
 
 ### Imagen
 
-- **Definición:** La **imagen** de $\overline{f}$ es $Im_{\overline{f}} = {\overline{f}(\overline{x}) / \overline{x} \in D_{\overline{f}}} \subseteq \mathbb{R}^{p}$.
-- Ejemplo: Para $\gamma:[0,\pi) \rightarrow \mathbb{R}^{2}$ con $\gamma(t) = (2 \cos t, 2 \sin t)$, la imagen es $Im_{\gamma} = {(2 \cos t, 2 \sin t) / t \in [0, \pi)}$.
+- **Definición:** La **imagen** de $\overline{f}$ es $\text{Im}_{\overline{f}} = \{\overline{f}(\overline{x}) \mid \overline{x} \in D_{\overline{f}}\} \subseteq \mathbb{R}^{p}$.
+- Ejemplo: Para $\gamma:[0,\pi) \rightarrow \mathbb{R}^{2}$ con $\gamma(t) = (2 \cos t, 2 \sin t)$, la imagen es $\text{Im}_{\gamma} = \{(2 \cos t, 2 \sin t) \mid t \in [0, \pi)\}$.
 
 ### Conjuntos de Nivel
 
-- **Definición:** Dada $\overline{f}: D_{\overline{f}} \rightarrow \mathbb{R}^{p}$ y $\overline{z}_{0} \in \mathbb{R}^{p}$, el **conjunto de nivel** en $\overline{z}_{0}$ es $CN_{\overline{f}}(\overline{z}_{0}) = {\overline{x} \in D_{\overline{f}} / \overline{f}(\overline{x}) = \overline{z}_{0}}$.
-- Ejemplo: $g(x,y) = x^{2}+y^{2}$ con $z_{0}=4$ y $D_{g} = {(x,y)/y \ge 0}$, entonces $CN_{g}(4) = {(x,y) \in D_{g} | x^{2}+y^{2} = 4}$.
+- **Definición:** Dada $\overline{f}: D_{\overline{f}} \rightarrow \mathbb{R}^{p}$ y $\overline{z}_{0} \in \mathbb{R}^{p}$, el **conjunto de nivel** en $\overline{z}_{0}$ es $\text{CN}_{\overline{f}}(\overline{z}_{0}) = \{\overline{x} \in D_{\overline{f}} \mid \overline{f}(\overline{x}) = \overline{z}_{0}\}$.
+- Ejemplo: $g(x,y) = x^{2}+y^{2}$ con $z_{0}=4$ y $D_{g} = \{(x,y) \mid y \ge 0\}$, entonces $\text{CN}_{g}(4) = \{(x,y) \in D_{g} \mid x^{2}+y^{2} = 4\}$.
 
 ### Gráfico
 
-- **Definición:** El **gráfico** de $\overline{f}$ es $Gr_{\overline{f}} = {(\overline{x}, \overline{f}(\overline{x})) / \overline{x} \in D_{\overline{f}}} \subseteq \mathbb{R}^{n+p}$.
-- Ejemplo: Para $f(x) = \sqrt{4-x^{2}}$, con $x \in [-2,2]$, el gráfico es $Gr_{f} = {(x,y) / y = \sqrt{4-x^{2}}, x \in [-2,2]}$.
+- **Definición:** El **gráfico** de $\overline{f}$ es $\text{Gr}_{\overline{f}} = \{(\overline{x}, \overline{f}(\overline{x})) \mid \overline{x} \in D_{\overline{f}}\} \subseteq \mathbb{R}^{n+p}$.
+- Ejemplo: Para $f(x) = \sqrt{4-x^{2}}$, con $x \in [-2,2]$, el gráfico es $\text{Gr}_{f} = \{(x,y) \mid y = \sqrt{4-x^{2}}, x \in [-2,2]\}$.
 
 ---
 
@@ -138,9 +146,9 @@ last_update:
 
 - **Definición:** Dado $A \subseteq \mathbb{R}^{n+p}$:
 
-  - **a)** $A$ tiene **forma explícita** si $A = Gr_{\overline{f}}$.
-  - **b)** $A$ tiene **forma implícita** si $A = CN_{\overline{g}}(\overline{z}_{0})$ para algún $\overline{z}_{0}$.
-  - **c)** $A$ tiene **forma paramétrica** si $A = Im_{\overline{h}}$.
+  - **a)** $A$ tiene **forma explícita** si $A = \text{Gr}_{\overline{f}}$.
+  - **b)** $A$ tiene **forma implícita** si $A = \text{CN}_{\overline{g}}(\overline{z}_{0})$ para algún $\overline{z}_{0}$.
+  - **c)** $A$ tiene **forma paramétrica** si $A = \text{Im}_{\overline{h}}$.
 
 - **Observaciones:**
 

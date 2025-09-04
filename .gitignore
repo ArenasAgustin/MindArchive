@@ -19,3 +19,5 @@ npm-debug.log*
 .next/
 out/
 .vercel
+
+build/

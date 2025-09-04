@@ -1,6 +1,8 @@
 // @ts-check
 
 import { themes as prismThemes } from "prism-react-renderer";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 
 const organizationName = "ArenasAgustin";
 const projectName = "resumenes-universitarios";
@@ -34,10 +36,14 @@ const config = {
         docs: {
           sidebarPath: "./sidebars.js",
           editUrl: `https://github.com/${organizationName}/${projectName}/tree/main/`,
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
         },
         blog: {
           showReadingTime: true,
           editUrl: `https://github.com/${organizationName}/${projectName}/tree/main/`,
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -78,7 +84,7 @@ const config = {
             items: [
               {
                 label: "Materias",
-                to: "/docs/intro",
+                to: "/docs/",
               },
             ],
           },
@@ -100,6 +106,16 @@ const config = {
         additionalLanguages: ["cpp", "java", "python", "matlab"],
       },
     }),
+
+  stylesheets: [
+    {
+      href: "https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css",
+      type: "text/css",
+      integrity:
+        "sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM",
+      crossorigin: "anonymous",
+    },
+  ],
 };
 
 export default config;
