@@ -8,9 +8,7 @@ last_update:
   author: Agustin Arenas
 ---
 
-### UNIDAD 2: LÍMITE Y CONTINUIDAD
-
----
+## UNIDAD 2: LÍMITE Y CONTINUIDAD
 
 ### Idea
 

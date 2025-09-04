@@ -13,7 +13,6 @@
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 export default {
-  // By default, Docusaurus generates a sidebar from the docs folder structure
   materiasSidebar: [
     {
       type: "doc",
@@ -31,6 +30,14 @@ export default {
             "materias/analisis-matematico-2/index",
             "materias/analisis-matematico-2/unidad-1",
             "materias/analisis-matematico-2/unidad-2",
+          ],
+        },
+        {
+          type: "category",
+          label: "Probabilidad y Estadística",
+          items: [
+            "materias/probabilidad-y-estadistica/index",
+            "materias/probabilidad-y-estadistica/unidad-3",
           ],
         },
       ],

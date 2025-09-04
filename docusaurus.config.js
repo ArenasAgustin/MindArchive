@@ -1,57 +1,46 @@
 // @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from "prism-react-renderer";
+
+const organizationName = "ArenasAgustin";
+const projectName = "resumenes-universitarios";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Documentación Académica Universitaria',
-  tagline: 'Repositorio centralizado de apuntes, trabajos y recursos académicos',
-  favicon: 'img/favicon.ico',
+  title: "Documentación Académica Universitaria",
+  tagline:
+    "Repositorio centralizado de apuntes, trabajos y recursos académicos",
+  favicon: "img/favicon.ico",
 
-  // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  url: `https://${organizationName}.github.io`,
+  baseUrl: `/${projectName}/`,
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'usuario', // Usually your GitHub org/user name.
-  projectName: 'documentacion-academica', // Usually your repo name.
+  organizationName,
+  projectName,
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
 
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'es',
-    locales: ['es'],
+    defaultLocale: "es",
+    locales: ["es"],
   },
 
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/usuario/documentacion-academica/tree/main/',
+          sidebarPath: "./sidebars.js",
+          editUrl: `https://github.com/${organizationName}/${projectName}/tree/main/`,
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/usuario/documentacion-academica/tree/main/',
+          editUrl: `https://github.com/${organizationName}/${projectName}/tree/main/`,
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: "./src/css/custom.css",
         },
       }),
     ],
@@ -60,74 +49,55 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: 'Documentación Académica',
+        title: "Resúmenes Universitarios",
         logo: {
-          alt: 'Logo Documentación Académica',
-          src: 'img/logo.svg',
+          alt: "Logo de Resúmenes Universitarios",
+          src: "img/logo.svg",
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'materiasSidebar',
-            position: 'left',
-            label: 'Materias',
+            type: "docSidebar",
+            sidebarId: "materiasSidebar",
+            position: "left",
+            label: "Materias",
           },
-          {to: '/blog', label: 'Novedades', position: 'left'},
           {
-            href: 'https://github.com/usuario/documentacion-academica',
-            label: 'GitHub',
-            position: 'right',
+            href: `https://github.com/${organizationName}/${projectName}`,
+            label: "GitHub",
+            position: "right",
           },
         ],
       },
       footer: {
-        style: 'dark',
+        style: "dark",
         links: [
           {
-            title: 'Documentación',
+            title: "Documentación",
             items: [
               {
-                label: 'Materias',
-                to: '/docs/intro',
+                label: "Materias",
+                to: "/docs/intro",
               },
             ],
           },
           {
-            title: 'Comunidad',
+            title: "Más",
             items: [
               {
-                label: 'Foro de Estudiantes',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'Más',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/usuario/documentacion-academica',
+                label: "GitHub",
+                href: `https://github.com/${organizationName}/${projectName}`,
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Documentación Académica Universitaria. Construido con Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Agustín Arenas. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
-        additionalLanguages: ['cpp', 'java', 'python', 'matlab'],
+        additionalLanguages: ["cpp", "java", "python", "matlab"],
       },
     }),
 };

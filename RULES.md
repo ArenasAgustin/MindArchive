@@ -35,10 +35,8 @@ documentacion-academica/
 
 - **Docusaurus 3.x**: Framework principal
 - **Markdown**: Formato de documentación
-- **React**: Para componentes personalizados (si es necesario)
 - **Mermaid**: Para diagramas y flowcharts
 - **Prism**: Resaltado de sintaxis
-- **Algolia DocSearch**: Búsqueda (opcional)
 
 ## Convenciones de Nomenclatura
 
@@ -60,8 +58,8 @@ documentacion-academica/
 
 ### Estructura de URLs
 
-- Seguir la jerarquía: `/materias/año-X/nombre-materia/categoria/`
-- Ejemplo: `/materias/año-2/programacion-orientada-objetos/apuntes/herencia`
+- Seguir la jerarquía: `/materias/nombre-materia/categoria/`
+- Ejemplo: `/materias/programacion-orientada-objetos/apuntes/herencia`
 
 ## Convenciones de Contenido
 
@@ -69,15 +67,6 @@ documentacion-academica/
 
 ```markdown
 # Nombre de la Materia
-
-## Información General
-
-- **Año**: X
-- **Cuatrimestre**: 1°/2°
-- **Carga horaria**: XX horas
-- **Prerrequisitos**: Lista de materias previas
-- **Profesor/a**: Nombre del docente
-- **Período cursado**: Año-Cuatrimestre
 
 ## Descripción
 
