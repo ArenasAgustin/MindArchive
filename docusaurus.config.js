@@ -5,7 +5,7 @@ import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 
 const organizationName = "ArenasAgustin";
-const projectName = "resumenes-universitarios";
+const projectName = "apuntes";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -35,12 +35,6 @@ const config = {
       ({
         docs: {
           sidebarPath: "./sidebars.js",
-          editUrl: `https://github.com/${organizationName}/${projectName}/tree/main/`,
-          remarkPlugins: [remarkMath],
-          rehypePlugins: [rehypeKatex],
-        },
-        blog: {
-          showReadingTime: true,
           editUrl: `https://github.com/${organizationName}/${projectName}/tree/main/`,
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
