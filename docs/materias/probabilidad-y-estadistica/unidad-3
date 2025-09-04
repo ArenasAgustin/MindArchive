@@ -9,4 +9,4 @@ donde $0 \lep p \lep 1 y n > 0$
 
 - $E(X) = \mu = np$
 - $Var(X) = \sigma^2 = np(1-p)$
-- Funcion de distribución $\Rightarrow F_x(X) = P(X \leq x) = \sum_{k=0}^x \begin{pmatrix} n \\ p \end{pmatrix} p^k (1-p)^{n-k}$
+- Funcion de distribución $\Rightarrow F_X(x) = P(X \leq x) = \sum_{k=0}^x \begin{pmatrix} n \\ p \end{pmatrix} p^k (1-p)^{n-k}$
