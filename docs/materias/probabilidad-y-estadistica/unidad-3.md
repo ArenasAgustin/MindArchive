@@ -1,6 +1,7 @@
 ---
 title: "Unidad 3: Distribuciones de Probabilidad"
 description: "Distribuciones Binomial y Poisson"
+description: "Estudio de las distribuciones de probabilidad discreta Binomial y Poisson, sus propiedades, funciones de probabilidad y aplicaciones en problemas de conteo y eventos raros."
 sidebar_position: 3
 tags: [matematicas, probabilidad, estadistica, distribuciones, binomial, poisson]
 ---

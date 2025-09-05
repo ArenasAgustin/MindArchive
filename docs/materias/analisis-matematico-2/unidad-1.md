@@ -1,8 +1,8 @@
 ---
 title: "Unidad 1: Funciones de Rⁿ en Rᵖ"
-description: "Funciones de Rⁿ en Rᵖ"
+description: "Introducción a las funciones de varias variables, topología en Rⁿ, tipos de funciones, conjuntos asociados y sistemas de coordenadas. Se abordan conceptos fundamentales para el análisis y la representación de funciones en espacios de dimensión superior."
 sidebar_position: 2
-tags: [matematicas, analisis]
+tags: [matematicas, analisis, funciones, topologia, coordenadas]
 ---
 
 ## Topología de Rⁿ
@@ -52,8 +52,6 @@ tags: [matematicas, analisis]
   - **c)** Un conjunto puede no ser ni abierto ni cerrado.
   - **d)** Los únicos conjuntos que son abiertos y cerrados a la vez son $\mathbb{R}^{n}$ y $\emptyset$.
   - **e)** Una **vecindad** de $\overline{x}_{0}$ es un conjunto abierto que lo contiene.
-
----
 
 ## Tipos de Funciones
 
@@ -109,7 +107,6 @@ tags: [matematicas, analisis]
 - Para $\overline{x} = (x_{1}, ..., x_{n})$, $\overline{f}(\overline{x}) = (f_{1}(x_{1},...,x_{n}), ..., f_{p}(x_{1},...,x_{n})) \in \mathbb{R}^{p}$.
 - Las **funciones componentes** son $f_{1}, ..., f_{p}$, cada una escalar.
 
----
 
 ## Conjuntos Asociados a Funciones
 
@@ -135,8 +132,6 @@ tags: [matematicas, analisis]
 - **Definición:** El **gráfico** de $\overline{f}$ es $\text{Gr}_{\overline{f}} = \{(\overline{x}, \overline{f}(\overline{x})) \mid \overline{x} \in D_{\overline{f}}\} \subseteq \mathbb{R}^{n+p}$.
 - Ejemplo: Para $f(x) = \sqrt{4-x^{2}}$, con $x \in [-2,2]$, el gráfico es $\text{Gr}_{f} = \{(x,y) \mid y = \sqrt{4-x^{2}}, x \in [-2,2]\}$.
 
----
-
 ## Representaciones de Conjuntos
 
 - **Definición:** Dado $A \subseteq \mathbb{R}^{n+p}$:
@@ -150,8 +145,6 @@ tags: [matematicas, analisis]
   - $n+p$: dimensión del espacio donde vive $A$.
   - $n$: dimensión del conjunto (grados de libertad).
   - $p$: número de restricciones (ecuaciones que lo definen).
-
----
 
 ## Coordenadas Curvilíneas
 

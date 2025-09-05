@@ -1,8 +1,9 @@
 ---
 title: "Unidad 2: Límites y continuidad"
 description: "Límites y continuidad"
+description: "Extensión de los conceptos de límite y continuidad a funciones de varias variables. Se estudian definiciones, teoremas, condiciones necesarias y suficientes, y su aplicación en el análisis de funciones multivariables."
 sidebar_position: 2
-tags: [matematicas, analisis]
+tags: [matematicas, analisis, limites, continuidad]
 ---
 
 ### Idea

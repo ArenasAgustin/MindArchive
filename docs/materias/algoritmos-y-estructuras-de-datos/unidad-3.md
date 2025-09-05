@@ -1,6 +1,6 @@
 ---
 title: "Unidad 3: Estructuras lineales"
-description: ""
+description: "Introducción a las estructuras de datos lineales como listas enlazadas y vectores, sus diferencias, ventajas, desventajas e implementaciones básicas en C++."
 sidebar_position: 3
 tags: [informatica, algoritmos, estructuras-de-datos, listas, vectores, nodos]
 ---
