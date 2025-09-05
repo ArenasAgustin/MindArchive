@@ -46,7 +46,7 @@ struct Nodo {
     int value;     // Valor del nodo
     Nodo* next;    // Puntero al siguiente nodo
     Nodo(int val); // Constructor
-    void print(); // Método para imprimir el nodo
+    void print();  // Método para imprimir el nodo
 };
 
 // Implementación del constructor
@@ -298,10 +298,10 @@ int main() {
     else
         std::cout << "El vector está vacío." << std::endl;
     
-    std::cout << "vec[2]: " << vec[2] << std::endl; // Acceso al tercer elemento
-    std::cout << "vec.at(3): " << vec.at(3) << std::endl; // Acceso al cuarto elemento con verificación de límites
+    std::cout << "vec[2]: " << vec[2] << std::endl;           // Acceso al tercer elemento
+    std::cout << "vec.at(3): " << vec.at(3) << std::endl;     // Acceso al cuarto elemento con verificación de límites
     std::cout << "vec.front(): " << vec.front() << std::endl; // Primer elemento
-    std::cout << "vec.back(): " << vec.back() << std::endl; // Último elemento
+    std::cout << "vec.back(): " << vec.back() << std::endl;   // Último elemento
 
     return 0;
 }
