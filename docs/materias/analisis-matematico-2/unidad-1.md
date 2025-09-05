@@ -2,7 +2,7 @@
 title: "Unidad 1: Funciones de Rⁿ en Rᵖ"
 description: "Funciones de Rⁿ en Rᵖ"
 sidebar_position: 2
-tags: [matematicas]
+tags: [matematicas, analisis, calculo]
 last_update:
   date: 2025-09-02
   author: Agustin Arenas
