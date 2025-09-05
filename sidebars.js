@@ -40,6 +40,14 @@ export default {
             "materias/probabilidad-y-estadistica/unidad-3",
           ],
         },
+        {
+          type: "category",
+          label: "Algoritmos y Estructuras de Datos",
+          items: [
+            "materias/algoritmos-y-estructuras-de-datos/index",
+            "materias/algoritmos-y-estructuras-de-datos/unidad-3",
+          ],
+        },
       ],
     },
   ],
