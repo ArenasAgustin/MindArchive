@@ -1,0 +1,18 @@
+name: ✨ Propuesta de Mejora
+description: Sugerí una idea o mejora
+title: "[FEATURE] "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: Descripción
+      placeholder: "¿Qué propuesta tenés?"
+      description: "Sé lo más claro posible"
+    validations:
+      required: true
+  - type: textarea
+    id: valor
+    attributes:
+      label: Valor agregado
+      description: "¿Cómo mejora el proyecto esta funcionalidad?"
