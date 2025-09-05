@@ -107,7 +107,6 @@ tags: [matematicas, analisis, funciones, topologia, coordenadas]
 - Para $\overline{x} = (x_{1}, ..., x_{n})$, $\overline{f}(\overline{x}) = (f_{1}(x_{1},...,x_{n}), ..., f_{p}(x_{1},...,x_{n})) \in \mathbb{R}^{p}$.
 - Las **funciones componentes** son $f_{1}, ..., f_{p}$, cada una escalar.
 
-
 ## Conjuntos Asociados a Funciones
 
 ### Dominio
