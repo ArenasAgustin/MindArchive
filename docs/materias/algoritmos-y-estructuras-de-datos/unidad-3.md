@@ -1,14 +1,12 @@
 ---
-title: "Estructuras lineales"
+title: "Unidad 3: Estructuras lineales"
 description: ""
 sidebar_position: 3
-tags: [matematicas]
+tags: [informatica, algoritmos, estructuras-de-datos, listas, vectores, nodos]
 last_update:
   date: 2025-09-04
   author: Agustin Arenas
 ---
-
-## Estructuras lineales
 
 ## Listas enlazadas
 
