@@ -51,9 +51,9 @@ const config = {
     ({
       image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: "Resúmenes Universitarios",
+        title: "Mis apuntes",
         logo: {
-          alt: "Logo de Resúmenes Universitarios",
+          alt: "Logo de mis apuntes",
           src: "img/logo.svg",
         },
         items: [

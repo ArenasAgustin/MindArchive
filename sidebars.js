@@ -21,7 +21,7 @@ export default {
     },
     {
       type: "category",
-      label: "Matemáticas",
+      label: "Materias",
       items: [
         {
           type: "category",
