@@ -1,14 +1,14 @@
-# Documentación Académica Universitaria
+# 📚 Apuntes
 
-Este proyecto es un sitio web de documentación académica construido con [Docusaurus 2](https://docusaurus.io/), un generador de sitios estáticos moderno.
+Este proyecto es un sitio web de apuntes construido con [Docusaurus 2](https://docusaurus.io/), el proyecto va a tener apuntes de materias que voy cursando durante mi transcurso por la carrera Ingeniería en Computación en la facultad FCEFyN en la universidad UNC y otros apuntes de cursos o recursos que me parecen estan buenos para tener.
 
-## Instalación
+## ⬇️ Instalación
 
 ```bash
 npm install
 ```
 
-## Desarrollo Local
+## ⭐ Desarrollo Local
 
 ```bash
 npm start
@@ -16,7 +16,7 @@ npm start
 
 Este comando inicia un servidor de desarrollo local y abre una ventana del navegador. La mayoría de los cambios se reflejan en vivo sin necesidad de reiniciar el servidor.
 
-## Compilación
+## 🦺 Compilación
 
 ```bash
 npm run build
@@ -24,14 +24,15 @@ npm run build
 
 Este comando genera contenido estático en el directorio `build` que puede ser servido por cualquier servicio de alojamiento de contenido estático.
 
-## Estructura del Proyecto
+## 🏗️ Estructura del Proyecto
 
 ```
-documentacion-academica/
+apuntes/
 ├── docs/
 │   ├── index.md
 │   └── materias/
-│       └── analisis-matematico-2/
+│       ├── materia-1/
+│       └── materia-2/
 ├── src/
 │   ├── components/
 │   │   └── HomepageFeatures/
@@ -44,37 +45,17 @@ documentacion-academica/
 │       └── index.module.css
 ├── docusaurus.config.js
 ├── package.json
-├── README.md
-├── RULES.md
 └── sidebars.js
 ```
 
-## Cómo Contribuir
+## 🤝 Contribuir
 
-1. Clona este repositorio
-2. Crea una rama para tu contribución (`git checkout -b feature/nueva-materia`)
-3. Realiza tus cambios
-4. Haz commit de tus cambios (`git commit -m 'Agrega documentación para nueva materia'`)
-5. Envía un pull request
+¡Gracias por querer colaborar en este proyecto!
 
-## Agregar Contenido
+- Para reportar **issues** o enviar **pull requests**, por favor usá las plantillas disponibles.
+- Seguí las normas de commits, ramas y contribución detalladas en [CONTRIBUTING.md](./CONTRIBUTING.md).
 
-### Agregar una nueva materia
-
-1. Crea un nuevo archivo Markdown en la carpeta correspondiente dentro de `docs/`
-2. Agrega el frontmatter con la posición en la barra lateral:
-
-```md
----
-sidebar_position: 3
----
-
-# Nombre de la Materia
-
-Contenido...
-```
-
-1. Actualiza `sidebars.js` si es necesario para incluir la nueva materia
+👉 Leé la guía completa acá: [CONTRIBUTING.md](./CONTRIBUTING.md)
 
 ## Licencia
 
