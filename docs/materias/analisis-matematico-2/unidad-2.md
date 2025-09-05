@@ -5,8 +5,6 @@ sidebar_position: 2
 tags: [matematicas, analisis]
 ---
 
-## UNIDAD 2: LÍMITE Y CONTINUIDAD
-
 ### Idea
 
 - La noción de límite es el concepto central del cálculo.

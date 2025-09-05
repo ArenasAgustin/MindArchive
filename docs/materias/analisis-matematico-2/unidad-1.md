@@ -5,8 +5,6 @@ sidebar_position: 2
 tags: [matematicas, analisis]
 ---
 
-## UNIDAD 1: Funciones de Rⁿ en Rᵖ
-
 ## Topología de Rⁿ
 
 ### Bolas Abiertas y Cerradas
