@@ -3,16 +3,13 @@ title: "Unidad 3: Estructuras lineales"
 description: ""
 sidebar_position: 3
 tags: [informatica, algoritmos, estructuras-de-datos, listas, vectores, nodos]
-last_update:
-  date: 2025-09-04
-  author: Agustin Arenas
 ---
 
 ## Listas enlazadas
 
 Una lista enlazada es una estructura de datos lineal que consiste en una secuencia de elementos, donde cada elemento (nodo) contiene un valor y una referencia (enlace) al siguiente nodo en la secuencia. A diferencia de los arreglos, las listas enlazadas no requieren un bloque contiguo de memoria, lo que permite una inserción y eliminación más eficiente de elementos.
 
-![Comparación de listas vs arreglos](/img/listas-enlazadas.webp)
+![Listas enlazadas](/img/algoritmos-y-estructuras-de-datos/listas-enlazadas.webp)
 
 ### Listas vs Arreglos
 
@@ -27,7 +24,7 @@ Una lista enlazada es una estructura de datos lineal que consiste en una secuenc
   - No requiere memoria contigua.
   - Inserciones y eliminaciones son eficientes (O(1) si se tiene el puntero al nodo anterior).
 
-![Comparación de listas vs arreglos](/img/lista-vs-arreglos.webp)
+![Comparación de listas vs arreglos](/img/algoritmos-y-estructuras-de-datos/lista-vs-arreglos.webp)
 
 ### Estructura recursiva de una lista enlazada
 
@@ -133,6 +130,8 @@ void List::print() {
 ## Templates - Generics
 
 Los templates en C++ permiten crear clases y funciones genéricas que pueden operar con cualquier tipo de dato. Esto es especialmente útil para estructuras de datos como listas enlazadas, donde queremos que la lista pueda contener elementos de cualquier tipo (int, float, objetos personalizados, etc.) sin tener que escribir múltiples versiones de la misma clase o función.
+
+![Templates - Generics](/img/algoritmos-y-estructuras-de-datos/templates-generics.webp)
 
 ### Implementación de Nodo Genérico
 
@@ -250,6 +249,12 @@ void List<T>::print() {
 Un vector es una estructura de datos que almacena elementos en un bloque contiguo de memoria, permitiendo el acceso rápido a los elementos mediante índices. A diferencia de los arreglos tradicionales, los vectores pueden redimensionarse dinámicamente, lo que facilita la gestión de colecciones de datos cuyo tamaño puede variar.
 Se implementan comúnmente en C++ a través de la clase `std::vector` de la biblioteca estándar.
 Tienen funciones miembro para agregar, eliminar y acceder a elementos, así como para gestionar la capacidad y el tamaño del vector.
+
+- Modificación: insert(), erase(), etc.
+- Interacción: begin(), end(), etc.
+- Capacidad: size(), capacity(), etc.
+
+![Vectores](/img/algoritmos-y-estructuras-de-datos/vectores.webp)
 
 ### Implementación básica de un vector
 
