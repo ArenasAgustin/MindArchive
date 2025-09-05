@@ -3,9 +3,6 @@ title: "Algoritmos y Estructuras de Datos"
 description: ""
 sidebar_position: 1
 tags: [informatica, algoritmos, estructuras-de-datos]
-last_update:
-  date: 2025-09-04
-  author: Agustin Arenas
 ---
 
 ## Programa de la materia

@@ -3,9 +3,6 @@ title: "Unidad 3: Distribuciones de Probabilidad"
 description: "Distribuciones Binomial y Poisson"
 sidebar_position: 3
 tags: [matematicas, probabilidad, estadistica, distribuciones, binomial, poisson]
-last_update:
-  date: 2025-09-04
-  author: Agustin Arenas
 ---
 
 ## Distribución Binomial: X ~ Binomial(n,p)

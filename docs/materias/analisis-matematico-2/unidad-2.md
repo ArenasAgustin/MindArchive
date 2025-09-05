@@ -2,10 +2,7 @@
 title: "Unidad 2: Límites y continuidad"
 description: "Límites y continuidad"
 sidebar_position: 2
-tags: [matematicas, analisis, calculo]
-last_update:
-  date: 2025-09-02
-  author: Agustin Arenas
+tags: [matematicas, analisis]
 ---
 
 ## UNIDAD 2: LÍMITE Y CONTINUIDAD
