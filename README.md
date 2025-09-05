@@ -74,22 +74,7 @@ sidebar_position: 3
 Contenido...
 ```
 
-3. Actualiza `sidebars.js` si es necesario para incluir la nueva materia
-
-### Agregar una entrada de blog
-
-Crea un nuevo archivo en la carpeta `blog/` con el formato `YYYY-MM-DD-titulo.md`:
-
-```md
----
-slug: titulo-url-amigable
-title: Título de la Entrada
-authors: [nombre]
-tags: [etiqueta1, etiqueta2]
----
-
-Contenido del blog...
-```
+1. Actualiza `sidebars.js` si es necesario para incluir la nueva materia
 
 ## Licencia
 
