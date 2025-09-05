@@ -12,6 +12,8 @@ last_update:
 
 Una lista enlazada es una estructura de datos lineal que consiste en una secuencia de elementos, donde cada elemento (nodo) contiene un valor y una referencia (enlace) al siguiente nodo en la secuencia. A diferencia de los arreglos, las listas enlazadas no requieren un bloque contiguo de memoria, lo que permite una inserción y eliminación más eficiente de elementos.
 
+![Comparación de listas vs arreglos](/static/img/listas-enlazadas.webp)
+
 ### Listas vs Arreglos
 
 - **Arreglos:**
@@ -24,6 +26,8 @@ Una lista enlazada es una estructura de datos lineal que consiste en una secuenc
   - Acceso secuencial a elementos.
   - No requiere memoria contigua.
   - Inserciones y eliminaciones son eficientes (O(1) si se tiene el puntero al nodo anterior).
+
+![Comparación de listas vs arreglos](/static/img/lista-vs-arreglos.webp)
 
 ### Estructura recursiva de una lista enlazada
 
