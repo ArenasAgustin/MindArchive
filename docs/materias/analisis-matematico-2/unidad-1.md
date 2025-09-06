@@ -13,15 +13,21 @@ tags: [matematicas, analisis, funciones, topologia, coordenadas]
 
   - **a)** La **bola abierta** con centro en $\overline{x}_{0}$ y radio $r$ es:
 
-    $$B_{r}(\overline{x}_{0}) = \{\overline{x} \in \mathbb{R}^{n} \mid ||\overline{x} - \overline{x}_{0}|| < r\}$$
+    $$
+    B_{r}(\overline{x}_{0}) = \{\overline{x} \in \mathbb{R}^{n} \mid ||\overline{x} - \overline{x}_{0}|| < r\}
+    $$
 
   - **b)** La **bola cerrada** con centro en $\overline{x}_{0}$ y radio $r$ es:
 
-    $$\overline{B}_{r}(\overline{x}_{0}) = \{\overline{x} \in \mathbb{R}^{n} \mid ||\overline{x} - \overline{x}_{0}|| \le r\}$$
+    $$
+    \overline{B}_{r}(\overline{x}_{0}) = \{\overline{x} \in \mathbb{R}^{n} \mid ||\overline{x} - \overline{x}_{0}|| \le r\}
+    $$
 
   - **c)** La **bola reducida** con centro en $\overline{x}_{0}$ y radio $r$ es:
 
-    $$B_{r}^\prime(\overline{x}_{0}) = \{\overline{x} \in \mathbb{R}^{n} \mid 0 < ||\overline{x} - \overline{x}_{0}|| < r\}$$
+    $$
+    B_{r}^\prime(\overline{x}_{0}) = \{\overline{x} \in \mathbb{R}^{n} \mid 0 < ||\overline{x} - \overline{x}_{0}|| < r\}
+    $$
 
 ### Puntos Asociados a un Conjunto
 
