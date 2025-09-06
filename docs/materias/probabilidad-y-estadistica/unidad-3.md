@@ -10,7 +10,9 @@ tags: [matematicas, probabilidad, estadistica, distribuciones, binomial, poisson
 La variable aleatoria X tiene distribución Binomial con parámetros n y p, y su
 función de probabilidad es:
 
-$$f(x;p,n) = \binom{n}{x} p^x (1-p)^{n-x}, \quad x = 0,\ldots,n$$
+$$
+f(x;p,n) = \binom{n}{x} p^x (1-p)^{n-x}, \quad x = 0,\ldots,n
+$$
 
 donde $0 \leq p \leq 1$ y $n > 0$
 
@@ -23,7 +25,9 @@ donde $0 \leq p \leq 1$ y $n > 0$
 La variable aleatoria X tiene distribución Poisson con parámetro $\lambda$, y su
 función de probabilidad es:
 
-$$f(x;\lambda) = \frac{e^{-\lambda}\lambda^x}{x!}, \quad x \in \{0, 1, 2, \ldots\}$$
+$$
+f(x;\lambda) = \frac{e^{-\lambda}\lambda^x}{x!}, \quad x \in \{0, 1, 2, \ldots\}
+$$
 
 donde $\lambda \in (0,\infty)$ y representa la Tasa Promedio de ocurrencias del evento por unidad de tiempo, espacio, volumen, etc (es constante!)
 
