@@ -69,6 +69,7 @@ public:
     int getHead();      // Obtener valor del primer nodo
     List* getTail();    // Obtener la sublista sin el primer nodo
     void print();       // Imprimir la lista
+
 private:
     Nodo* head;         // Puntero al primer nodo
 };
@@ -80,6 +81,7 @@ List::List(Nodo* head) : head(head) {}
 // Implementación del destructor
 List::~List() {
     std::cout << "Destruyendo lista..." << std::endl;
+
     while (!isEmpty()) {
         Nodo* temp = head;
         head = head->next;
@@ -101,27 +103,29 @@ bool List::isEmpty() {
 
 // Implementación del método getHead
 int List::getHead() {
-    if (isEmpty()) {
+    if (isEmpty()) 
         throw std::runtime_error("La lista está vacía");
-    }
+    
     return head->value;
 }
 
 // Implementación del método getTail
 List* List::getTail() {
-    if (isEmpty()) {
+    if (isEmpty()) 
         throw std::runtime_error("La lista está vacía");
-    }
+    
     return new List(head->next);
 }
 
 // Implementación del método print
 void List::print() {
     std::cout << "[LISTA] ";
+
     if (isEmpty()) {
         std::cout << "La lista está vacía." << std::endl;
         return;
     }
+
     head->print();
     getTail()->print();
 }
@@ -212,9 +216,8 @@ bool List<T>::isEmpty() {
 // Implementación del método getHead
 template <typename T>
 T List<T>::getHead() {
-    if (isEmpty()) {
+    if (isEmpty()) 
         throw std::runtime_error("La lista está vacía");
-    }
 
     return head->value;
 }
@@ -222,9 +225,8 @@ T List<T>::getHead() {
 // Implementación del método getTail
 template <typename T>
 List<T>* List<T>::getTail() {
-    if (isEmpty()) {
+    if (isEmpty()) 
         throw std::runtime_error("La lista está vacía");
-    }
 
     return new List<T>(head->next);
 }
