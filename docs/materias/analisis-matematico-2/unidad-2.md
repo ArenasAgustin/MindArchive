@@ -29,7 +29,9 @@ tags: [matematicas, analisis, limites, continuidad]
 
 - Sean $f:D_{f}\subseteq \mathbb{R} \rightarrow \mathbb{R}$, $x_{0}\in \text{Acum}(D_{f})$ y $l\in\mathbb{R}$. $f$ tiene límite $l$ en $x_{0}$ si y solo si:
   
-  $$\forall\epsilon\in\mathbb{R} > 0:\exists\delta\in\mathbb{R} > 0 \text{ tal que } \forall x:\{0 < |x-x_{0}| < \delta, x\in D_{f}\}\Rightarrow|f(x)-l| < \epsilon$$
+  $$
+  \forall\epsilon\in\mathbb{R} > 0:\exists\delta\in\mathbb{R} > 0 \text{ tal que } \forall x:\{0 < |x-x_{0}| < \delta, x\in D_{f}\}\Rightarrow|f(x)-l| < \epsilon
+  $$
   
 - En tal caso se denota $\lim_{x\rightarrow x_{0}}f(x)=l$.
 
@@ -37,7 +39,9 @@ tags: [matematicas, analisis, limites, continuidad]
 
 - Sean $\overline{f}:D_{\overline{f}} \subseteq\mathbb{R}^{n}\rightarrow\mathbb{R}^{p}$, $\overline{x}_{0}\in \text{Acum}(D_{f})$, $\overline{l}\in\mathbb{R}^{p}$. $\overline{f}$ tiene límite $\overline{l}$ en $\overline{x}_{0}$ si y solo si:
   
-  $$\forall\epsilon\in\mathbb{R} > 0:\exists\delta\in\mathbb{R} > 0 \text{ tal que } \forall\overline{x}:\{\overline{x}\in D_{\overline{f}}, 0<||\overline{x}-\overline{x}_{0}||<\delta\}\Rightarrow||\overline{f}(\overline{x})-\overline{l}||<\epsilon$$
+  $$
+  \forall\epsilon\in\mathbb{R} > 0:\exists\delta\in\mathbb{R} > 0 \text{ tal que } \forall\overline{x}:\{\overline{x}\in D_{\overline{f}}, 0<||\overline{x}-\overline{x}_{0}||<\delta\}\Rightarrow||\overline{f}(\overline{x})-\overline{l}||<\epsilon
+  $$
   
 - En tal caso, se denota $\lim_{\overline{x}\rightarrow\overline{x}_{0}}\overline{f}(\overline{x})=\overline{l}$.
 
@@ -47,11 +51,15 @@ tags: [matematicas, analisis, limites, continuidad]
 
 - **Enunciado**: Sean $\overline{f}:D_{\overline{f}}\subseteq\mathbb{R}^{n}\rightarrow\mathbb{R}^{p}$, $\overline{x}_{0}\in \text{Acum}(D_{\overline{f}})$, $\overline{l}\in\mathbb{R}^{p}$ donde:
   
-  $$\overline{f}(\overline{x})=\begin{pmatrix}f_{1}(\overline{x})\\ \vdots\\ f_{p}(\overline{x})\end{pmatrix} \quad \text{y} \quad \overline{l}=\begin{pmatrix}l_{1}\\ \vdots\\ l_{p}\end{pmatrix}$$
+  $$
+  \overline{f}(\overline{x})=\begin{pmatrix}f_{1}(\overline{x})\\ \vdots\\ f_{p}(\overline{x})\end{pmatrix} \quad \text{y} \quad \overline{l}=\begin{pmatrix}l_{1}\\ \vdots\\ l_{p}\end{pmatrix}
+  $$
   
   Entonces:
   
-  $$\lim_{\overline{x}\rightarrow\overline{x}_{0}}\overline{f}(\overline{x})=\overline{l}\iff\begin{cases}\lim_{\overline{x}\rightarrow\overline{x}_{0}}f_{1}(\overline{x})=l_{1}\\ \vdots\\ \lim_{\overline{x}\rightarrow\overline{x}_{0}}f_{p}(\overline{x})=l_{p}\end{cases}$$
+  $$
+  \lim_{\overline{x}\rightarrow\overline{x}_{0}}\overline{f}(\overline{x})=\overline{l}\iff\begin{cases}\lim_{\overline{x}\rightarrow\overline{x}_{0}}f_{1}(\overline{x})=l_{1}\\ \vdots\\ \lim_{\overline{x}\rightarrow\overline{x}_{0}}f_{p}(\overline{x})=l_{p}\end{cases}
+  $$
 
 ---
 
@@ -72,7 +80,9 @@ tags: [matematicas, analisis, limites, continuidad]
 
 - **Definición**: Una función $\overline{f}:D_{\overline{f}}\subseteq\mathbb{R}^{n}\rightarrow\mathbb{R}^{p}$ es continua en un punto $\overline{x}_{0}\in D_{\overline{f}}$ si y solo si:
   
-  $$\forall\epsilon\in\mathbb{R} > 0:\exists\delta\in\mathbb{R} > 0 \text{ tal que } \forall\overline{x}:\{\overline{x}\in D_{\overline{f}}, ||\overline{x}-\overline{x}_{0}||<\delta\}\Rightarrow||\overline{f}(\overline{x})-\overline{f}(\overline{x}_{0})||<\epsilon$$
+  $$
+  \forall\epsilon\in\mathbb{R} > 0:\exists\delta\in\mathbb{R} > 0 \text{ tal que } \forall\overline{x}:\{\overline{x}\in D_{\overline{f}}, ||\overline{x}-\overline{x}_{0}||<\delta\}\Rightarrow||\overline{f}(\overline{x})-\overline{f}(\overline{x}_{0})||<\epsilon
+  $$
   
 - **Observaciones**:
   - Si $\overline{x}_{0}$ es un punto aislado del dominio $D_{\overline{f}}$, $\overline{f}$ es automáticamente continua en $\overline{x}_{0}$.
