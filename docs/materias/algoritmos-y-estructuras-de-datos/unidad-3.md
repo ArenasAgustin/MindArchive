@@ -91,7 +91,7 @@ List::~List() {
 
 // Implementación del método push
 void List::push(int val) {
-    auto Nodo* newNode = new Nodo(val);
+    Nodo* newNode = new Nodo(val);
     newNode->next = head;
     head = newNode;
 }
