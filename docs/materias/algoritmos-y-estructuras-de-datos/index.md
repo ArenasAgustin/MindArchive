@@ -5,6 +5,18 @@ sidebar_position: 1
 tags: [informatica, algoritmos, estructuras-de-datos]
 ---
 
+## Descripción de la materia
+
+Esta materia tiene como objetivo introducir a los estudiantes en los conceptos fundamentales de algoritmos y estructuras de datos, esenciales para el desarrollo de software eficiente y efectivo. A lo largo del curso, se explorarán diversas técnicas de programación, análisis de algoritmos y la implementación de estructuras de datos comunes. Se enfatizará la importancia de seleccionar las estructuras de datos adecuadas para resolver problemas específicos y senseñarán métodos para evaluar la eficiencia de los algoritmos en términos de tiempo y espacio.
+
+## Contenidos principales
+
+- Punteros y memoria
+- Conceptos básicos de objetos y clases
+- [Recursión y optimización de memoria](./unidad-2)
+- [Estructuras de datos básicas: arreglos, listas enlazadas, pilas y colas](./unidad-3)
+- Estructuras de datos avanzadas: árboles, grafos y tablas hash
+
 ## Programa de la materia
 
 - **Unidad 1:** Punteros y memorias
@@ -19,7 +31,7 @@ tags: [informatica, algoritmos, estructuras-de-datos]
   - 2.3 Herencia
   - 2.4 Constructores
   - 2.5 usos y ejemplos
-- **Unidad 3:** [Estructuras lineales](./unidad-3)
+- **Unidad 3:** Estructuras lineales
   - 3.1 Arreglos y Vectores
   - 3.2 Listas simplemente enlazadas
   - 3.3 Pilas
