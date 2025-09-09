@@ -1,17 +1,55 @@
 ---
 title: "Unidad 3: Estructuras lineales"
-description: "Introducción a las estructuras de datos lineales como listas enlazadas y vectores, sus diferencias, ventajas, desventajas e implementaciones básicas en C++."
+description: "Algoritmos y Estructuras de Datos - Unidad 3: Estudio de estructuras lineales como listas enlazadas y vectores, implementación con templates y análisis comparativo"
 sidebar_position: 3
-tags: [informatica, algoritmos, estructuras-de-datos, listas, vectores, nodos]
+tags: [algoritmos, estructuras-de-datos, programacion, listas, vectores, nodos, templates]
 ---
 
-## Listas enlazadas
+## 🎯 Objetivos de Aprendizaje
+
+### Objetivo General
+
+Comprender y aplicar las estructuras de datos lineales fundamentales, analizando sus características, implementaciones y casos de uso apropiados.
+
+### Objetivos Específicos
+
+Al finalizar esta unidad, el estudiante será capaz de:
+
+- Implementar y manipular listas enlazadas simples
+- Comparar ventajas y desventajas entre listas y arreglos
+- Aplicar templates para crear estructuras genéricas
+- Utilizar vectores de la STL de C++ eficientemente
+- Seleccionar la estructura apropiada según el contexto del problema
+
+## 📋 Contenidos y recursos
+
+### 3.1 Listas Enlazadas
+
+- **3.1.1** Conceptos fundamentales y características
+- **3.1.2** Comparación con arreglos
+- **3.1.3** Implementación básica de nodos y listas
+
+### 3.2 Programación Genérica
+
+- **3.2.1** Templates en C++
+- **3.2.2** Implementación de estructuras genéricas
+- **3.2.3** Ventajas de la programación genérica
+
+### 3.3 Vectores
+
+- **3.3.1** Características y funcionalidades
+- **3.3.2** Uso de std::vector
+- **3.3.3** Operaciones y métodos principales
+
+## Listas Enlazadas
+
+### 3.1.1 Conceptos fundamentales
 
 Una lista enlazada es una estructura de datos lineal que consiste en una secuencia de elementos, donde cada elemento (nodo) contiene un valor y una referencia (enlace) al siguiente nodo en la secuencia. A diferencia de los arreglos, las listas enlazadas no requieren un bloque contiguo de memoria, lo que permite una inserción y eliminación más eficiente de elementos.
 
 ![Listas enlazadas](/img/algoritmos-y-estructuras-de-datos/listas-enlazadas.webp)
 
-### Listas vs Arreglos
+### 3.1.2 Listas vs Arreglos
 
 - **Arreglos:**
   - Tamaño fijo.
@@ -26,7 +64,7 @@ Una lista enlazada es una estructura de datos lineal que consiste en una secuenc
 
 ![Comparación de listas vs arreglos](/img/algoritmos-y-estructuras-de-datos/lista-vs-arreglos.webp)
 
-### Estructura recursiva de una lista enlazada
+### 3.1.3 Estructura recursiva de una lista enlazada
 
 Un lista tiene una estructura recursiva porque cada nodo contiene un valor y un puntero al siguiente nodo, que a su vez tiene la misma estructura. Esto permite definir operaciones sobre la lista de manera recursiva. Por ejemplo:
 
@@ -35,7 +73,7 @@ Un lista tiene una estructura recursiva porque cada nodo contiene un valor y un 
 - ...
 - Acceder al último elemento (1) => siguiente elemento (0) => NULL (comienzo de la lista)
 
-### Implementación de Nodo
+#### Implementación de Nodo
 
 ```cpp
 // Definición de la estructura del nodo
@@ -55,7 +93,7 @@ void Nodo::print() {
 }
 ```
 
-### Implementación de Lista Enlazada
+#### Implementación de Lista Enlazada
 
 ```cpp
 // Definición de la clase Lista
@@ -131,13 +169,15 @@ void List::print() {
 }
 ```
 
-## Templates - Generics
+## Programación Genérica
+
+### 3.2.1 Templates - Generics
 
 Los templates en C++ permiten crear clases y funciones genéricas que pueden operar con cualquier tipo de dato. Esto es especialmente útil para estructuras de datos como listas enlazadas, donde queremos que la lista pueda contener elementos de cualquier tipo (int, float, objetos personalizados, etc.) sin tener que escribir múltiples versiones de la misma clase o función.
 
 ![Templates - Generics](/img/algoritmos-y-estructuras-de-datos/templates-generics.webp)
 
-### Implementación de Nodo Genérico
+#### Implementación de Nodo Genérico
 
 ```cpp
 // Definición de la estructura del nodo genérico
@@ -160,7 +200,7 @@ void Nodo<T>::print() {
 }
 ```
 
-### Implementación de Lista Enlazada Genérica
+#### Implementación de Lista Enlazada Genérica
 
 ```cpp
 // Definición de la clase Lista genérica
@@ -202,7 +242,7 @@ List<T>::~List() {
 // Implementación del método push
 template <typename T>
 void List<T>::push(T val) {
-    auto Nodo<T>* newNode = new Nodo<T>(val);
+    Nodo<T>* newNode = new Nodo<T>(val);
     newNode->next = head;
     head = newNode;
 }
@@ -248,6 +288,8 @@ void List<T>::print() {
 
 ## Vectores
 
+### 3.3.1 Características de los vectores
+
 Un vector es una estructura de datos que almacena elementos en un bloque contiguo de memoria, permitiendo el acceso rápido a los elementos mediante índices. A diferencia de los arreglos tradicionales, los vectores pueden redimensionarse dinámicamente, lo que facilita la gestión de colecciones de datos cuyo tamaño puede variar.
 Se implementan comúnmente en C++ a través de la clase `std::vector` de la biblioteca estándar.
 Tienen funciones miembro para agregar, eliminar y acceder a elementos, así como para gestionar la capacidad y el tamaño del vector.
@@ -258,7 +300,7 @@ Tienen funciones miembro para agregar, eliminar y acceder a elementos, así como
 
 ![Vectores](/img/algoritmos-y-estructuras-de-datos/vectores.webp)
 
-### Implementación básica de un vector
+### 3.3.2 Implementación básica de un vector
 
 ```cpp
 #include <iostream>

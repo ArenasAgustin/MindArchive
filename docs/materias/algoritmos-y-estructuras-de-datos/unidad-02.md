@@ -1,11 +1,49 @@
 ---
 title: "Unidad 2: Recursividad"
-description: ""
+description: "Algoritmos y Estructuras de Datos - Unidad 2: Estudio de la recursividad, tipos de recursión, optimización y transformación a forma iterativa"
 sidebar_position: 2
-tags: [matematicas, probabilidad, estadistica, distribuciones, binomial, poisson]
+tags: [algoritmos, estructuras-de-datos, programacion, recursividad, funciones, optimizacion]
 ---
 
-### Función recursiva
+## 🎯 Objetivos de Aprendizaje
+
+### Objetivo General
+
+Comprender y aplicar los conceptos de recursividad en el diseño de algoritmos, dominando las técnicas de optimización y transformación a formas iterativas.
+
+### Objetivos Específicos
+
+Al finalizar esta unidad, el estudiante será capaz de:
+
+- Definir y caracterizar las funciones recursivas
+- Identificar y aplicar los diferentes tipos de recursión
+- Optimizar funciones recursivas transformándolas de múltiple a simple
+- Convertir funciones recursivas a iterativas para mejorar eficiencia
+- Analizar el uso de memoria mediante Stack Frames
+
+## 📋 Contenidos y recursos
+
+### 2.1 Fundamentos de Recursividad
+
+- **2.1.1** Definición de función recursiva
+- **2.1.2** Condiciones de una función recursiva
+- **2.1.3** Comparación entre iterativo vs recursivo
+
+### 2.2 Tipos de Recursión
+
+- **2.2.1** Recursión simple vs múltiple
+- **2.2.2** Recursión directa vs indirecta
+- **2.2.3** Ejemplos: Factorial y Fibonacci
+
+### 2.3 Optimización y Transformación
+
+- **2.3.1** Stack Frame y uso de memoria
+- **2.3.2** Recursión de cola
+- **2.3.3** Transformación de recursiva a iterativa
+
+## Fundamentos de Recursividad
+
+### 2.1.1 Definición de función recursiva
 
 Una función es aquella que se llama a si misma en su cuerpo.
 
@@ -13,7 +51,7 @@ $$
 f(x) = \dots f(x) \dots
 $$
 
-### Condiciones de una función recursiva
+### 2.1.2 Condiciones de una función recursiva
 
 - Debe existir condicion de corte de la recursión
 - Se debe garantizar que la condicion sea alcanzada eventualmente
@@ -25,18 +63,20 @@ f(x) = \begin{cases} \dots \Rightarrow \text{si se cumple condición} \\
 x \times f(x-1) \Rightarrow \text{si no se cumple condición} \end{cases}
 $$
 
-### Función iterativa vs función recursiva
+### 2.1.3 Función iterativa vs función recursiva
 
-### Tipos de recursión
+## Tipos de Recursión
+
+### 2.2.1 Clasificación de la recursión
 
 - **Recursión Simple:** Existe una única llama a la función en el cuerpo
 - **Recursión Múltiple:** Hay dos o más llamadas a a función en el cuerpo
 - **Recursión Directa:** La función se llama a sí misma
 - **Recursión Indirecta:** La función a la que una segunda función que vuelve a llamar a la primera
 
-### Ejemplos
+### 2.2.2 Ejemplos clásicos
 
-- Función Factorial
+#### Función Factorial
 
 $$
 fact(n) = \begin{cases} 1 \Rightarrow n = 1 \\
@@ -62,7 +102,7 @@ int fact(int n) {
 }
 ```
 
-- Función Fibonacci
+#### Función Fibonacci
 
 $$
 fib(x) = \begin{cases} 1 \Rightarrow x = 1 \\
@@ -87,7 +127,9 @@ int fib(int x) {
 }
 ```
 
-### Stack Frame
+## Optimización y Transformación
+
+### 2.3.1 Stack Frame y gestión de memoria
 
 Cada vez que se llama a una función se crea una nueva entrada en el Stack. Esta estructura se llama Stack Frame y consite en el los campos necesarios para continuar la ejecución luego de procesar la función.
 
@@ -98,7 +140,7 @@ El Stack Frame tiene:
 - Las variables locales
 - El valor de retorno
 
-### Recursiva doble a recursiva simple
+### 2.3.2 Recursiva doble a recursiva simple
 
 $$
 fib(x) = \begin{cases} 1 \Rightarrow x < 3 \\
@@ -110,7 +152,7 @@ fib_{aux}(y, a_1, a_2, x) = \begin{cases} a_1 + a_2 \Rightarrow y = x \\
 fib_{aux}(y + 1, a_1 + a_2, a_1, x) \Rightarrow y < x \end{cases}
 $$
 
-### Fibonacci recursivo simple
+#### Fibonacci recursivo simple
 
 ```cpp
 int fibaux(int y, int a1, int a2, int x) {
@@ -128,7 +170,7 @@ int fib2(int x) {
 }
 ```
 
-### Optimización de la memoria
+### 2.3.3 Optimización de la memoria y recursión de cola
 
 Sólo la función auxiliar es recursiva
 
@@ -160,7 +202,7 @@ t3 f(t1, t2) {
 }
 ```
 
-Pado a iterativo
+#### Transformación de recursiva a iterativa
 
 ```cpp
 t3 f(t1, t2) {
@@ -172,7 +214,7 @@ t3 f(t1, t2) {
 }
 ```
 
-### Pasos para pasar de recursico a iterativo
+#### Pasos para pasar de recursivo a iterativo
 
 - Identificar las variables de tipo $t_1 \Rightarrow x$
 - Identificar las variables de tipo $t_12\Rightarrow y, a_1, a_2$
@@ -181,7 +223,7 @@ t3 f(t1, t2) {
 - Identificar $s(t_1, t_2)$ (como varían las variables de una iteracíón a otra) $y\prime = y + 1, {a\prime}_1 = a_1 + a_2, {a\prime}_2 = a_2$
 - Estcibir la forma iterativa
 
-### Ejemplo: Encontrar el mayor elemento de un arreglo
+#### Ejemplo práctico: Encontrar el mayor elemento de un arreglo
 
 ```cpp
 int max(x, y) {

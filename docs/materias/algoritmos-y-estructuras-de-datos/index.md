@@ -1,23 +1,32 @@
 ---
 title: "Algoritmos y Estructuras de Datos"
-description: ""
+description: "Documentación completa de Algoritmos y Estructuras de Datos - Apuntes, trabajos prácticos, exámenes y recursos"
 sidebar_position: 1
-tags: [informatica, algoritmos, estructuras-de-datos]
+tags: [algoritmos, estructuras-de-datos, programacion, cpp]
 ---
 
-## Descripción de la materia
+## 📖 Descripción de la Materia
 
-Esta materia tiene como objetivo introducir a los estudiantes en los conceptos fundamentales de algoritmos y estructuras de datos, esenciales para el desarrollo de software eficiente y efectivo. A lo largo del curso, se explorarán diversas técnicas de programación, análisis de algoritmos y la implementación de estructuras de datos comunes. Se enfatizará la importancia de seleccionar las estructuras de datos adecuadas para resolver problemas específicos y senseñarán métodos para evaluar la eficiencia de los algoritmos en términos de tiempo y espacio.
+### Objetivo General
 
-## Contenidos principales
+Introducir a los estudiantes en los conceptos fundamentales de algoritmos y estructuras de datos, esenciales para el desarrollo de software eficiente y efectivo. Se enfatizará la importancia de seleccionar las estructuras de datos adecuadas para resolver problemas específicos y se enseñarán métodos para evaluar la eficiencia de los algoritmos en términos de tiempo y espacio.
 
-- Punteros y memoria
-- Conceptos básicos de objetos y clases
-- [Recursión y optimización de memoria](./unidad-2)
-- [Estructuras de datos básicas: arreglos, listas enlazadas, pilas y colas](./unidad-3)
-- Estructuras de datos avanzadas: árboles, grafos y tablas hash
+### Objetivos Específicos
 
-## Programa de la materia
+- Dominar el uso de punteros y gestión dinámica de memoria
+- Aplicar conceptos de programación orientada a objetos en C++
+- Implementar y optimizar funciones recursivas
+- Diseñar e implementar estructuras de datos lineales y no lineales
+- Analizar la complejidad temporal y espacial de algoritmos
+- Seleccionar algoritmos de ordenamiento y búsqueda apropiados según el contexto
+
+### Competencias a Desarrollar
+
+- **Conceptuales**: Fundamentos teóricos de algoritmos, estructuras de datos y análisis de complejidad
+- **Procedimentales**: Implementación eficiente de estructuras de datos, optimización de algoritmos y resolución de problemas computacionales
+- **Actitudinales**: Pensamiento analítico, atención al detalle y compromiso con la eficiencia en el desarrollo de software
+
+## 📚 Plan de Estudios
 
 - **Unidad 1:** Punteros y memorias
   - 1.1 Variables, memoria y direcciones
@@ -68,3 +77,36 @@ Esta materia tiene como objetivo introducir a los estudiantes en los conceptos f
   - 9.3 Algoritmos de backtracking
 - **Unidad 10:** Visión de conjunto e historia de los algoritmos y las estructuras de datos
   - 10.1 Revisión histórica de los algoritmos y las estructuras de datos
+
+## 🗂️ Índice de Contenidos
+
+### 📝 Apuntes por Unidad
+
+- [📁 Unidad 1: Punteros y Memoria](./unidad-01.md)
+- [📁 Unidad 2: Recursividad](./unidad-02.md)
+- [📁 Unidad 3: Estructuras Lineales](./unidad-03.md)
+- [📁 Unidad 4: Complejidad Algorítmica](./unidad-04.md)
+- [📁 Unidad 5: Ordenamiento y Búsqueda](./unidad-05.md)
+- [📁 Unidad 6: Estructuras Tipo Árbol](./unidad-06.md)
+- [📁 Unidad 7: Otras Estructuras](./unidad-07.md)
+- [📁 Unidad 8: Grafos](./unidad-08.md)
+- [📁 Unidad 9: Estrategias Algorítmicas](./unidad-09.md)
+- [📁 Unidad 10: Visión de Conjunto](./unidad-10.md)
+
+### 📚 Recursos Adicionales
+
+- [📁 Material de Estudio](./recursos/)
+  - [Libros y Referencias](./recursos/bibliografia.md)
+  - [Videos y Tutoriales](./recursos/multimedia.md)
+  - [Herramientas de Desarrollo](./recursos/herramientas.md)
+  - [Enlaces Útiles](./recursos/enlaces.md)
+  - [Documentos y PDFs](./recursos/documentos/)
+
+## 📖 Bibliografía
+
+- Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2009). *Introduction to Algorithms*. MIT Press.
+- Sedgewick, R. & Wayne, K. (2011). *Algorithms*. Addison-Wesley.
+- Weiss, M. A. (2014). *Data Structures and Algorithm Analysis in C++*. Pearson.
+- Material de cátedra específico de la universidad
+- Documentación oficial de C++ y STL
+- Papers y artículos científicos sobre algoritmos avanzados
