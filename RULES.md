@@ -8,7 +8,7 @@ Este proyecto consiste en una página web desarrollada con Docusaurus que centra
 
 ### Estructura de Directorios
 
-```
+```plain
 documentacion-academica/
 ├── docs/                          # Contenido principal de la documentación
 │   ├── materias/                  # Directorio principal de materias
@@ -94,9 +94,6 @@ title: "Título del Documento"
 description: "Descripción breve del contenido"
 sidebar_position: 1
 tags: [etiqueta1, etiqueta2]
-last_update:
-  date: YYYY-MM-DD
-  author: Tu nombre
 ---
 ```
 
@@ -153,37 +150,6 @@ apuntes/
 - Usar Mermaid para diagramas de flujo cuando sea posible
 - Incluir fuente de la imagen si no es propia
 
-## Convenciones de Git
-
-### Estructura de Commits
-
-```
-tipo(scope): descripción breve
-
-Descripción detallada (opcional)
-```
-
-**Tipos permitidos:**
-
-- `feat`: Nueva materia o contenido
-- `docs`: Actualización de apuntes existentes
-- `fix`: Corrección de errores o enlaces rotos
-- `style`: Cambios de formato o estilo
-- `refactor`: Reorganización de contenido
-- `chore`: Tareas de mantenimiento
-
-**Ejemplos:**
-
-- `feat(calculo): agregar apuntes unidad derivadas`
-- `docs(fisica): actualizar ejercicios cinematica`
-- `fix(links): corregir enlaces rotos en algebra`
-
-### Ramas
-
-- `main`: Rama principal (siempre estable)
-- `feature/nombre-materia`: Para agregar nuevas materias
-- `update/materia-existente`: Para actualizar contenido existente
-
 ## Configuración de Docusaurus
 
 ### Plugins Recomendados
@@ -237,39 +203,6 @@ Organizar por año académico y materia, con expansión automática de la secci�
 - Usar lazy loading para contenido pesado
 - Minimizar archivos CSS/JS personalizados
 - Comprimir PDFs grandes
-
-## Ejemplo de Implementación
-
-### Configuración inicial en `docusaurus.config.js`:
-
-```javascript
-module.exports = {
-  title: "Mi Documentación Universitaria",
-  tagline: "Apuntes y recursos académicos organizados",
-  url: "https://tu-usuario.github.io",
-  baseUrl: "/nombre-repositorio/",
-
-  presets: [
-    [
-      "classic",
-      {
-        docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/tu-usuario/nombre-repo/edit/main/",
-        },
-        theme: {
-          customCss: require.resolve("./src/css/custom.css"),
-        },
-      },
-    ],
-  ],
-
-  markdown: {
-    mermaid: true,
-  },
-  themes: ["@docusaurus/theme-mermaid"],
-};
-```
 
 ## Roadmap del Proyecto
 
