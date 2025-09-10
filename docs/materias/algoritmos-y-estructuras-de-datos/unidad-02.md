@@ -65,6 +65,8 @@ $$
 
 ### 2.1.3 Función iterativa vs función recursiva
 
+![Iterativa vs Recursiva](/img/algoritmos-y-estructuras-de-datos/iterativa-vs-recursiva.webp)
+
 ## Tipos de Recursión
 
 ### 2.2.1 Clasificación de la recursión
@@ -73,6 +75,8 @@ $$
 - **Recursión Múltiple:** Hay dos o más llamadas a a función en el cuerpo
 - **Recursión Directa:** La función se llama a sí misma
 - **Recursión Indirecta:** La función a la que una segunda función que vuelve a llamar a la primera
+
+![Tipos de Recursión](/img/algoritmos-y-estructuras-de-datos/tipos-de-recursion.webp)
 
 ### 2.2.2 Ejemplos clásicos
 
@@ -129,6 +133,8 @@ int fib(int x) {
 
 ## Optimización y Transformación
 
+![Optimización y Transformación](/img/algoritmos-y-estructuras-de-datos/optimizacion-de-memoria.webp)
+
 ### 2.3.1 Stack Frame y gestión de memoria
 
 Cada vez que se llama a una función se crea una nueva entrada en el Stack. Esta estructura se llama Stack Frame y consite en el los campos necesarios para continuar la ejecución luego de procesar la función.
@@ -139,6 +145,8 @@ El Stack Frame tiene:
 - Todos los argumentos pasados a la función
 - Las variables locales
 - El valor de retorno
+
+![Stack Frame](/img/algoritmos-y-estructuras-de-datos/stack-frame.webp)
 
 ### 2.3.2 Recursiva doble a recursiva simple
 
