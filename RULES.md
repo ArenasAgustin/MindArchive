@@ -116,7 +116,7 @@ tags: [etiqueta1, etiqueta2]
 
 ### Estructura de Apuntes
 
-```
+```plain
 apuntes/
 ├── unidad-01-introduccion/
 │   ├── index.md               # Resumen de la unidad

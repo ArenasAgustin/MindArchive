@@ -95,18 +95,14 @@ Introducir a los estudiantes en los conceptos fundamentales de algoritmos y estr
 
 ### 📚 Recursos Adicionales
 
-- [📁 Material de Estudio](./recursos/)
-  - [Libros y Referencias](./recursos/bibliografia.md)
-  - [Videos y Tutoriales](./recursos/multimedia.md)
-  - [Herramientas de Desarrollo](./recursos/herramientas.md)
-  - [Enlaces Útiles](./recursos/enlaces.md)
-  - [Documentos y PDFs](./recursos/documentos/)
+- [C Programming Notes](https://www.eskimo.com/~scs/cclass/notes)
+- [Curso C++ sitio conclase](https://conclase.net/c/curso/cap0#inicio)
+- [Curso C++ Univ. Pardue](https://www.cs.purdue.edu/homes/bxd/CandC++)
+- [Documentación oficial de C++](https://en.cppreference.com/w/)
+- [W3Schools C++ Tutorial](https://www.w3schools.com/cpp/)
 
 ## 📖 Bibliografía
 
-- Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2009). *Introduction to Algorithms*. MIT Press.
-- Sedgewick, R. & Wayne, K. (2011). *Algorithms*. Addison-Wesley.
-- Weiss, M. A. (2014). *Data Structures and Algorithm Analysis in C++*. Pearson.
-- Material de cátedra específico de la universidad
-- Documentación oficial de C++ y STL
-- Papers y artículos científicos sobre algoritmos avanzados
+- [Paul Deitel, Harvey Deitel - *Cómo programar C++ 9na Edición*](/pdf/algoritmos-y-estructuras-de-datos/como-programar-cpp-9na-edicion-2014.pdf)
+- [Eliot B. Koffman, Paul A.T. Wolfgang. - *Objects abstraction data structures and design using C++*](/pdf/algoritmos-y-estructuras-de-datos/objects-abstraction-data-structures-anddesign-using-cpp.pdf)
+- [Luis Joyanes A., Lucas Sánchez G., Ignacio Zahonero M. - *Estructura de datos en C++*](/pdf/algoritmos-y-estructuras-de-datos/estructura-de-datos-en-cpp.pdf)
