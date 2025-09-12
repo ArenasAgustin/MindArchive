@@ -2,7 +2,7 @@
 title: "Unidad 2: Recursividad"
 description: "Algoritmos y Estructuras de Datos - Unidad 2: Estudio de la recursividad, tipos de recursión, optimización y transformación a forma iterativa"
 sidebar_position: 2
-tags: [algoritmos, estructuras-de-datos, programacion, recursividad, funciones, optimizacion]
+tags: [algoritmos, estructuras-de-datos, programacion, recursividad, funciones, optimizacion, cpp]
 ---
 
 ## 🎯 Objetivos de Aprendizaje
