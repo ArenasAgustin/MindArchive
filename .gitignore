@@ -21,3 +21,8 @@ out/
 .vercel
 
 build/
+
+# markitdown
+markitdown_env/
+convert_pdf.py
+get-pip.py
