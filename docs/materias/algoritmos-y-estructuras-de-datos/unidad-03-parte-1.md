@@ -2,7 +2,7 @@
 title: "Unidad 3: Estructuras lineales"
 description: "Algoritmos y Estructuras de Datos - Unidad 3: Estudio de estructuras lineales como listas enlazadas y vectores, implementación con templates y análisis comparativo"
 sidebar_position: 3
-tags: [algoritmos, estructuras-de-datos, programacion, listas, vectores, nodos, templates]
+tags: [algoritmos, estructuras-de-datos, programacion, listas, vectores, nodos, templates, cpp]
 ---
 
 ## 🎯 Objetivos de Aprendizaje
