@@ -56,17 +56,13 @@ const config = {
       },
       image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: "Mis apuntes",
-        logo: {
-          alt: "Logo de mis apuntes",
-          src: "img/logo.svg",
-        },
+        title: "📚 Mis Apuntes",
         items: [
           {
             type: "docSidebar",
             sidebarId: "materiasSidebar",
             position: "left",
-            label: "Materias",
+            label: "📖 Materias",
           },
           {
             href: `https://github.com/${organizationName}/${projectName}`,
@@ -79,25 +75,42 @@ const config = {
         style: "dark",
         links: [
           {
-            title: "Documentación",
+            title: "📚 Documentación",
             items: [
               {
-                label: "Materias",
+                label: "📖 Todas las Materias",
                 to: "/docs/",
               },
             ],
           },
           {
-            title: "Más",
+            title: "🚀 Recursos",
             items: [
               {
-                label: "GitHub",
+                label: "📝 Contribuir",
+                href: `https://github.com/${organizationName}/${projectName}/blob/main/README.md`,
+              },
+            ],
+          },
+          {
+            title: "🔗 Enlaces",
+            items: [
+              {
+                label: "📂 GitHub",
                 href: `https://github.com/${organizationName}/${projectName}`,
+              },
+              {
+                label: "📧 Contacto",
+                href: "mailto:arenasagustin7@gmail.com",
+              },
+              {
+                label: "⭐ Dar una estrella",
+                href: `https://github.com/${organizationName}/${projectName}/stargazers`,
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Agustín Arenas. Built with Docusaurus.`,
+        copyright: `📚 Copyright © ${new Date().getFullYear()} Agustín Arenas. Documentación académica construida con ❤️ usando Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
