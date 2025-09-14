@@ -3,9 +3,6 @@ title: "Unidad 1: Funciones de Rⁿ en Rᵖ"
 description: "Análisis Matemático 2 - Unidad 1: Introducción a las funciones de varias variables, topología en Rⁿ, tipos de funciones, conjuntos asociados y sistemas de coordenadas."
 sidebar_position: 2
 tags: [analisis-matematico-2, funciones, topologia, coordenadas, matematicas]
-last_update:
-  date: 2025-09-14
-  author: Agustín Arenas
 ---
 
 ## 🎯 Objetivos de Aprendizaje
