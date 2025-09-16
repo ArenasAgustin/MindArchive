@@ -575,6 +575,7 @@ La gestión de memoria dinámica permite a los programas solicitar y liberar mem
 #### Operador new - Asignación de memoria
 
 **Sintaxis básica:**
+
 ```cpp
 tipo* puntero = new tipo;              // Objeto individual
 tipo* puntero = new tipo(argumentos);  // Objeto individual con constructor

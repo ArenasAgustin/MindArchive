@@ -328,7 +328,7 @@ Para transformar sistemáticamente una función recursiva de cola a su versión 
 
 5. **Identificar función de transición ($s(t_1, t_2)$):** Cómo se actualizan las variables en cada iteración:
    - $y' = y + 1$
-   - $a_1' = a_1 + a_2$ 
+   - $a_1' = a_1 + a_2$
    - $a_2' = a_1$
 
 6. **Escribir la versión iterativa:** Reemplazar la recursión con un bucle while
