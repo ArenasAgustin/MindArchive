@@ -1,6 +1,6 @@
 ---
-title: "Unidad 3 - Parte 1: Estructuras lineales"
-description: "Algoritmos y Estructuras de Datos - Unidad 3: Estudio de estructuras lineales como listas enlazadas y vectores, implementación con templates y análisis comparativo"
+title: "Unidad 3A: Estructuras lineales"
+description: "Algoritmos y Estructuras de Datos - Unidad 3A: Estudio de estructuras lineales como listas enlazadas y vectores, implementación con templates y análisis comparativo"
 sidebar_position: 3
 tags: [algoritmos, estructuras-de-datos, programacion, listas, vectores, nodos, templates, cpp]
 ---
@@ -980,7 +980,7 @@ Un **vector** es una estructura de datos que almacena elementos en un bloque con
 
 Los vectores se implementan comúnmente en C++ a través de la clase `std::vector` de la biblioteca estándar (STL - Standard Template Library). Esta implementación combina las ventajas de los arreglos (acceso rápido) con la flexibilidad de las estructuras dinámicas.
 
-#### Características Principales
+#### Características Principales de los Vectores
 
 **1. Memoria Contigua:**
 

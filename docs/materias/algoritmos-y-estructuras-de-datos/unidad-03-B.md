@@ -1,6 +1,6 @@
 ---
-title: "Unidad 3 - Parte 2: Colas y Pilas"
-description: "Algoritmos y Estructuras de Datos - Unidad 3 - Parte 2: Estructuras de datos lineales: implementación y aplicaciones de pilas (LIFO) y colas (FIFO)"
+title: "Unidad 3B: Colas y Pilas"
+description: "Algoritmos y Estructuras de Datos - Unidad 3B: Estructuras de datos lineales: implementación y aplicaciones de pilas (LIFO) y colas (FIFO)"
 sidebar_position: 4
 tags: [algoritmos, estructuras-de-datos, pilas, colas, LIFO, FIFO, notacion-postfija, balanceo-parentesis]
 ---
