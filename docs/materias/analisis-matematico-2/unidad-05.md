@@ -207,6 +207,8 @@ $$
 **Enunciado:** Sea $\overrightarrow{F}$ un campo vectorial y $C$ una curva que va del punto $A$ al punto $B$. Si $\overrightarrow{F}$ es un **campo conservativo** (es el gradiente de un campo escalar $f$), entonces:
 
 $$
+\int_C \nabla f \cdot d\overrightarrow{x} = f(B) - f(A)
+$$
 
 **Consecuencias importantes:**
 
