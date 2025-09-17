@@ -47,6 +47,11 @@ Al finalizar esta unidad, el estudiante será capaz de:
 - **5.4.2** Campos conservativos
 - **5.4.3** Teorema de Green
 
+### 🔗 Recursos Complementarios
+
+- [Apunte Unidad 5 - Natali](https://res.cloudinary.com/dmwto06rn/raw/upload/v1758149413/pdfs/AM2_-_Notas_U5_-_Integrales_de_L%C3%ADnea_Natali_qs4p47.pdf)
+- [Apunte Unidad 5 - Ferreyra](https://res.cloudinary.com/dmwto06rn/raw/upload/v1758149408/pdfs/Unidad_5_-_AM2_tz2mks.pdf)
+
 ## 💡 Idea Central
 
 Una **función de tipo curva** es un vector de funciones de una variable:

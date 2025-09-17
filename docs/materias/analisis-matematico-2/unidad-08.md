@@ -48,6 +48,11 @@ Al finalizar esta unidad, el estudiante será capaz de:
 - **8.4.2** Condiciones de aplicabilidad
 - **8.4.3** Interpretación geométrica
 
+### 🔗 Recursos Complementarios
+
+- [Apunte Unidad 2 - Natali, Valenzuela]()
+- [Apunte Unidad 2 - Ferreyra]()
+
 ## 💡 Idea Central
 
 Las **ecuaciones diferenciales** son el área de la matemática más motivada por sus aplicaciones en la ciencia y tecnología modernas. Muchos principios de la naturaleza y sistemas en la ingeniería están gobernados por ecuaciones diferenciales.

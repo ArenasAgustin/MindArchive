@@ -48,6 +48,11 @@ Al finalizar esta unidad, el estudiante será capaz de:
 - **7.4.2** Teorema de Stokes (TFC6)
 - **7.4.3** Teorema de Gauss (TFC7)
 
+### 🔗 Recursos Complementarios
+
+- [Apunte Unidad 2 - Natali, Valenzuela]()
+- [Apunte Unidad 2 - Ferreyra]()
+
 ## 💡 Idea Central
 
 Un **campo vectorial** es una función $\overrightarrow{F}$ con tantas variables de entrada como de salida:
