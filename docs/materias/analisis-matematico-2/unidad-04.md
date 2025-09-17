@@ -52,6 +52,16 @@ Al finalizar esta unidad, el estudiante será capaz de:
 - **4.4.3** Momentos de inercia
 - **4.4.4** Aplicaciones en probabilidad
 
+### 🔗 Recursos Complementarios
+
+- [Apunte Unidad 4 - Extremos - Natali, Valenzuela](https://res.cloudinary.com/dmwto06rn/raw/upload/v1758146211/pdfs/AM2_-_Notas_U4_-_Extremos_Natali_bx3yif.pdf)
+- [Apunte Unidad 4 - Extremos Ligados - Natali, Valenzuela](https://res.cloudinary.com/dmwto06rn/raw/upload/v1758146217/pdfs/AM2_-_Notas_U4_-_Extremos_Ligados_Natali_s2opci.pdf)
+- [Apunte Unidad 4 - Extremos Libres y Ligados - Natali, Valenzuela](https://res.cloudinary.com/dmwto06rn/raw/upload/v1758146218/pdfs/AM2_-_Notas_U4_-_Extremos_Libres_y_Ligados_Natali_Valenzuela_fyysfe.pdf)
+- [Apunte Unidad 4 - Integrales Múltiples - Natali, Valenzuela](https://res.cloudinary.com/dmwto06rn/raw/upload/v1758146224/pdfs/AM2_-_Notas_U4_-_Integrales_M%C3%BAltiples_Natali_jydtqw.pdf)
+- [Apunte Unidad 4 - Ejercicios Resueltos de Extremos Ligados - Natali, Valenzuela](https://res.cloudinary.com/dmwto06rn/raw/upload/v1758146204/pdfs/AM2_-_Notas_U4_-_Ejercicios_Resueltos_de_Extremos_Ligados_Natali_pu7kcp.pdf)
+- [Apunte Unidad 4 - Ejercicios Resueltos de Extremos - Natali, Valenzuela](https://res.cloudinary.com/dmwto06rn/raw/upload/v1758146205/pdfs/AM2_-_Notas_U4_-_Ejercicios_Resueltos_de_Extremos_Natali_ug1rb5.pdf)
+- [Apunte Unidad 4 - Ferreyra](https://res.cloudinary.com/dmwto06rn/raw/upload/v1758147004/pdfs/Unidad_4_-_AM2_kztthh.pdf)
+
 ## 💡 Idea Central
 
 Esta unidad da comienzo a la **segunda parte de la materia**, donde desarrollamos el **Cálculo Integral de varias variables**.
