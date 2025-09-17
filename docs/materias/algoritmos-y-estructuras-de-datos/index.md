@@ -84,8 +84,8 @@ Introducir a los estudiantes en los conceptos fundamentales de algoritmos y estr
 
 - [📁 Unidad 1: Punteros y Memoria](./unidad-01.md)
 - [📁 Unidad 2: Recursividad](./unidad-02.md)
-- [📁 Unidad 3: Estructuras Lineales - Parte 1](./unidad-03-parte-1.md)
-- [📁 Unidad 3: Estructuras Lineales - Parte 2](./unidad-03-parte-2.md)
+- [📁 Unidad 3: Estructuras Lineales - Parte 1](./unidad-03-A.md)
+- [📁 Unidad 3: Estructuras Lineales - Parte 2](./unidad-03-B.md)
 - [📁 Unidad 4: Complejidad Algorítmica](./unidad-04.md)
 - [📁 Unidad 5: Ordenamiento y Búsqueda](./unidad-05.md)
 - [📁 Unidad 6: Estructuras Tipo Árbol](./unidad-06.md)
