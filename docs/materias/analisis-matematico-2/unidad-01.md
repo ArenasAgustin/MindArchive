@@ -267,3 +267,196 @@ $$
 $$
 (s,\theta,z) = (r \sin \varphi, \theta, r \cos \varphi)
 $$
+
+## 📝 Ejemplos Resueltos
+
+### Ejemplo 1: Clasificación de Puntos
+
+**Problema:** Dado el conjunto $A = \{(x,y) \in \mathbb{R}^2 : x^2 + y^2 \leq 1\}$, clasifique los siguientes puntos:
+
+a) $(0,0)$
+b) $(1,0)$  
+c) $(2,0)$
+d) $(\frac{1}{2}, \frac{1}{2})$
+
+**Solución:**
+
+a) **Punto $(0,0)$:** Como $0^2 + 0^2 = 0 < 1$, entonces $(0,0) \in A$.
+   Para cualquier $r > 0$ suficientemente pequeño, $B_r(0,0) \subseteq A$.
+   **Conclusión:** $(0,0)$ es un **punto interior** de $A$.
+
+b) **Punto $(1,0)$:** Como $1^2 + 0^2 = 1$, entonces $(1,0) \in A$.
+   Para cualquier $r > 0$, la bola $B_r(1,0)$ contiene puntos dentro y fuera de $A$.
+   **Conclusión:** $(1,0)$ es un **punto frontera** de $A$.
+
+c) **Punto $(2,0)$:** Como $2^2 + 0^2 = 4 > 1$, entonces $(2,0) \notin A$.
+   Existe $r = 1$ tal que $B_1(2,0) \subseteq A^c$.
+   **Conclusión:** $(2,0)$ es un **punto exterior** de $A$.
+
+d) **Punto $(\frac{1}{2}, \frac{1}{2})$:** Como $(\frac{1}{2})^2 + (\frac{1}{2})^2 = \frac{1}{2} < 1$, entonces $(\frac{1}{2}, \frac{1}{2}) \in A$.
+   Existe $r = \frac{1}{4}$ tal que $B_{1/4}(\frac{1}{2}, \frac{1}{2}) \subseteq A$.
+   **Conclusión:** $(\frac{1}{2}, \frac{1}{2})$ es un **punto interior** de $A$.
+
+### Ejemplo 2: Dominio de una Función
+
+**Problema:** Determine el dominio de la función $f(x,y) = \frac{\sqrt{x-y}}{\ln(x^2+y^2-1)}$.
+
+**Solución:**
+
+Para que $f(x,y)$ esté definida se requiere:
+
+1. **Condición del radical:** $x - y \geq 0$, es decir, $x \geq y$
+
+2. **Condición del logaritmo:**
+   - $x^2 + y^2 - 1 > 0$, es decir, $x^2 + y^2 > 1$
+   - $x^2 + y^2 - 1 \neq 1$, es decir, $x^2 + y^2 \neq 2$
+
+3. **Condición del denominador:** $\ln(x^2+y^2-1) \neq 0$
+   - Esto ocurre cuando $x^2 + y^2 - 1 = 1$, es decir, $x^2 + y^2 = 2$
+
+**Dominio:**
+$$
+D_f = \{(x,y) \in \mathbb{R}^2 : x \geq y, \, x^2 + y^2 > 1, \, x^2 + y^2 \neq 2\}
+$$
+
+### Ejemplo 3: Conversión de Coordenadas
+
+**Problema:** Convertir el punto $P = (3, 4, 5)$ de coordenadas cartesianas a:
+a) Coordenadas cilíndricas
+b) Coordenadas esféricas
+
+**Solución:**
+
+a) **Coordenadas cilíndricas $(s, \theta, z)$:**
+
+$$
+s = \sqrt{x^2 + y^2} = \sqrt{3^2 + 4^2} = \sqrt{25} = 5
+$$
+
+$$
+\theta = \arctan\left(\frac{y}{x}\right) = \arctan\left(\frac{4}{3}\right)
+$$
+
+$$
+z = 5
+$$
+
+**Resultado:** $P_{cil} = \left(5, \arctan\left(\frac{4}{3}\right), 5\right)$
+
+b) **Coordenadas esféricas $(r, \varphi, \theta)$:**
+
+$$
+r = \sqrt{x^2 + y^2 + z^2} = \sqrt{3^2 + 4^2 + 5^2} = \sqrt{50} = 5\sqrt{2}
+$$
+
+$$
+\varphi = \arctan\left(\frac{\sqrt{x^2 + y^2}}{z}\right) = \arctan\left(\frac{5}{5}\right) = \arctan(1) = \frac{\pi}{4}
+$$
+
+$$
+\theta = \arctan\left(\frac{y}{x}\right) = \arctan\left(\frac{4}{3}\right)
+$$
+
+**Resultado:** $P_{esf} = \left(5\sqrt{2}, \frac{\pi}{4}, \arctan\left(\frac{4}{3}\right)\right)$
+
+## 🔧 Aplicaciones Prácticas
+
+### Aplicación 1: Modelado de Temperatura
+
+**Contexto:** En meteorología, la temperatura $T(x,y)$ en una región puede modelarse como:
+
+$$T(x,y) = 20 - 0.1(x^2 + y^2)$$
+
+donde $(x,y)$ representa la posición en kilómetros desde una estación base.
+
+**Análisis:**
+
+- **Dominio:** $\mathbb{R}^2$ (toda la región)
+- **Conjuntos de nivel:** Las isotermas $T(x,y) = c$ son circunferencias
+- **Máximo:** En $(0,0)$ con $T(0,0) = 20°C$
+
+### Aplicación 2: Trayectorias de Proyectiles
+
+**Contexto:** Un proyectil lanzado con velocidad inicial $v_0$ y ángulo $\alpha$ tiene trayectoria:
+
+$$
+\gamma(t) = (v_0 \cos \alpha \cdot t, v_0 \sin \alpha \cdot t - \frac{1}{2}gt^2)
+$$
+
+**Características:**
+
+- **Tipo:** Curva paramétrica en $\mathbb{R}^2$
+- **Dominio:** $t \in [0, T]$ donde $T = \frac{2v_0 \sin \alpha}{g}$
+- **Forma implícita:** $y = x \tan \alpha - \frac{gx^2}{2v_0^2 \cos^2 \alpha}$
+
+### Aplicación 3: Campos Magnéticos
+
+**Contexto:** El campo magnético alrededor de un cable infinito con corriente $I$ es:
+
+$$
+\overrightarrow{B}(x,y) = \frac{\mu_0 I}{2\pi(x^2+y^2)} (-y, x)
+$$
+
+**Propiedades:**
+
+- **Tipo:** Campo vectorial en $\mathbb{R}^2 \setminus \{(0,0)\}$
+- **Líneas de campo:** Circunferencias centradas en el origen
+- **Simetría:** Rotacional alrededor del eje $z$
+
+## 🧮 Ejercicios Propuestos
+
+### Ejercicios de Topología
+
+1. **Clasificar puntos:** Para el conjunto $A = \{(x,y) : 0 < x^2 + y^2 < 4\}$, clasifique:
+   - $(0,0)$, $(1,1)$, $(2,0)$, $(3,0)$
+
+2. **Conjuntos abiertos/cerrados:** Determine si los siguientes conjuntos son abiertos, cerrados, ambos o ninguno:
+   - $\{(x,y) : x > 0\}$
+   - $\{(x,y) : x^2 + y^2 = 1\}$
+   - $\{(x,y) : x^2 + y^2 \leq 1, x \geq 0\}$
+
+### Ejercicios de Funciones
+
+1. **Dominios:** Determine el dominio de:
+   - $f(x,y) = \sqrt{4-x^2-y^2} + \ln(x+y)$
+   - $g(x,y,z) = \frac{1}{\sqrt{x^2+y^2}} + \arcsin(z)$
+
+2. **Conjuntos de nivel:** Para $f(x,y) = x^2 - y^2$, describa y grafique los conjuntos de nivel para $c = -1, 0, 1$.
+
+### Ejercicios de Coordenadas
+
+1. **Conversiones:** Convertir entre sistemas de coordenadas:
+   - Cartesianas $(1, \sqrt{3}, 2)$ a esféricas
+   - Cilíndricas $(4, \frac{\pi}{3}, -1)$ a cartesianas
+
+2. **Ecuaciones en diferentes sistemas:** Expresar la esfera $x^2 + y^2 + z^2 = 9$ en:
+   - Coordenadas cilíndricas
+   - Coordenadas esféricas
+
+## 📚 Resumen de Conceptos Clave
+
+### Topología en $\mathbb{R}^n$
+
+- **Bolas:** Herramientas fundamentales para definir proximidad
+- **Clasificación de puntos:** Interior, exterior, frontera, límite, aislado
+- **Conjuntos abiertos/cerrados:** Base para la topología euclidea
+
+### Tipos de Funciones
+
+- **Escalares:** $\mathbb{R}^n \rightarrow \mathbb{R}$ (campos escalares)
+- **Curvas:** $\mathbb{R} \rightarrow \mathbb{R}^p$ (trayectorias)
+- **Superficies:** $\mathbb{R}^2 \rightarrow \mathbb{R}^p$ (variedades)
+- **Vectoriales:** $\mathbb{R}^n \rightarrow \mathbb{R}^n$ (campos vectoriales)
+
+### Representaciones
+
+- **Explícita:** $y = f(x)$ (gráficos)
+- **Implícita:** $F(x,y) = 0$ (conjuntos de nivel)
+- **Paramétrica:** $(x,y) = (f(t), g(t))$ (curvas)
+
+### Sistemas de Coordenadas
+
+- **Cartesianas:** Base rectangular estándar
+- **Polares/Cilíndricas:** Aprovechan simetría circular
+- **Esféricas:** Aprovechan simetría esférica
+- **Conversiones:** Herramientas para simplificar problemas
