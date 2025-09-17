@@ -50,6 +50,11 @@ Al finalizar esta unidad, el estudiante será capaz de:
 - **1.4.3** Coordenadas esféricas
 - **1.4.4** Conversiones entre sistemas
 
+### 🔗 Recursos Complementarios
+
+- [Apunte Unidad 1 - Natali, Valenzuela](https://res.cloudinary.com/dmwto06rn/raw/upload/v1758076580/pdfs/pdf_1758076584_AM2%20-%20Notas%20U1%20%28Natali%2C%20Valenzuela%29.pdf)
+- [Apunte Unidad 1 - Ferreyra](https://res.cloudinary.com/dmwto06rn/raw/upload/v1758076721/pdfs/pdf_1758076726_Unidad%201%20-%20AM2.pdf)
+
 ## Primer tema: 1.1 Topología de Rⁿ
 
 ### 1.1.1 Bolas Abiertas, Cerradas y Reducidas
