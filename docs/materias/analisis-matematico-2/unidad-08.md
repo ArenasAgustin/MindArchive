@@ -50,8 +50,8 @@ Al finalizar esta unidad, el estudiante será capaz de:
 
 ### 🔗 Recursos Complementarios
 
-- [Apunte Unidad 2 - Natali, Valenzuela]()
-- [Apunte Unidad 2 - Ferreyra]()
+- [Apunte Unidad 8 - Natali, Valenzuela](https://res.cloudinary.com/dmwto06rn/raw/upload/v1758149980/pdfs/AM2_-_Notas_U8_Natali_Valenzuela_v65zke.pdf)
+- [Apunte Unidad 8 - Ferreyra](https://res.cloudinary.com/dmwto06rn/raw/upload/v1758149728/pdfs/Unidad_8_-_AM2_efdns0.pdf)
 
 ## 💡 Idea Central
 
