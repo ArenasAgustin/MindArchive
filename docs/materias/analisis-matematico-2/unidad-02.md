@@ -51,7 +51,7 @@ Al finalizar esta unidad, el estudiante será capaz de:
 
 ### 🔗 Recursos Complementarios
 
-- [Apunte Unidad 2 - Natali, Valenzuela](https://res.cloudinary.com/dmwto06rn/raw/upload/v1758076928/pdfs/pdf_1758076932_AM2%20-%20Notas%20U2%20%28Natali%29.pdf)
+- [Apunte Unidad 2 - Natali](https://res.cloudinary.com/dmwto06rn/raw/upload/v1758076928/pdfs/pdf_1758076932_AM2%20-%20Notas%20U2%20%28Natali%29.pdf)
 - [Apunte Unidad 2 - Ferreyra](https://res.cloudinary.com/dmwto06rn/raw/upload/v1758076944/pdfs/pdf_1758076948_Unidad%202%20-%20AM2.pdf)
 
 ## Primer tema: 2.1 Fundamentos Conceptuales
