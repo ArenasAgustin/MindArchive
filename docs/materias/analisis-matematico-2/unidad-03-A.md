@@ -50,6 +50,13 @@ Al finalizar esta unidad, el estudiante será capaz de:
 - **3A.4.2** Teorema de Clairaut-Schwarz
 - **3A.4.3** Continuidad de derivadas parciales
 
+### 🔗 Recursos Complementarios
+
+- [Apunte Unidad 3 - Desarrollo de Taylor - Natali](https://res.cloudinary.com/dmwto06rn/raw/upload/v1758077392/pdfs/pdf_1758077397_AM2%20-%20Notas%20U3%20-%20Desarrollo%20de%20Taylor%20%28Natali%29.pdf)
+- [Apunte Unidad 3 - Derivadas Parciales y Diferenciabilidad - Natali](https://res.cloudinary.com/dmwto06rn/raw/upload/v1758077387/pdfs/pdf_1758077391_AM2%20-%20Notas%20U3%20-%20Derivadas%20Parciales%20y%20Diferenciabilidad%20%28Natali%29.pdf)
+- [Apunte Unidad 3 - Derivada de la Función Compuesta - Natali](https://res.cloudinary.com/dmwto06rn/raw/upload/v1758077381/pdfs/pdf_1758077385_AM2%20-%20Notas%20U3%20-%20Derivada%20de%20la%20Funci%C3%B3n%20Compuesta%20%28Natali%29.pdf)
+- [Apunte Unidad 3A - Ferreyra](https://res.cloudinary.com/dmwto06rn/raw/upload/v1758077714/pdfs/pdf_1758077719_Unidad%203A%20-%20AM2.pdf)
+
 ## 💡 Idea Central
 
 Estudiar funciones es estudiar dependencias entre variables. Esto es, cómo varía una cuando las otras lo hacen. Es decir, **estudiar funciones es estudiar variaciones**.
