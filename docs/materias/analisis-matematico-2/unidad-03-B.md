@@ -50,6 +50,14 @@ Al finalizar esta unidad, el estudiante será capaz de:
 - **3B.4.2** Extremos libres: condiciones necesarias y suficientes
 - **3B.4.3** Extremos ligados: multiplicadores de Lagrange
 
+### 🔗 Recursos Complementarios
+
+
+- [Apunte Unidad 3 - Desarrollo de Taylor - Natali](https://res.cloudinary.com/dmwto06rn/raw/upload/v1758077392/pdfs/pdf_1758077397_AM2%20-%20Notas%20U3%20-%20Desarrollo%20de%20Taylor%20%28Natali%29.pdf)
+- [Apunte Unidad 3 - Derivadas Parciales y Diferenciabilidad - Natali](https://res.cloudinary.com/dmwto06rn/raw/upload/v1758077387/pdfs/pdf_1758077391_AM2%20-%20Notas%20U3%20-%20Derivadas%20Parciales%20y%20Diferenciabilidad%20%28Natali%29.pdf)
+- [Apunte Unidad 3 - Derivada de la Función Compuesta - Natali](https://res.cloudinary.com/dmwto06rn/raw/upload/v1758077381/pdfs/pdf_1758077385_AM2%20-%20Notas%20U3%20-%20Derivada%20de%20la%20Funci%C3%B3n%20Compuesta%20%28Natali%29.pdf)
+- [Apunte Unidad 3B - Ferreyra](https://res.cloudinary.com/dmwto06rn/raw/upload/v1758146076/pdfs/Unidad_3B_-_AM2_dqqcod.pdf)
+
 ## Primer tema: 3B.1 Función Compuesta y Regla de la Cadena
 
 ### 3B.1.1 Derivación Compuesta
