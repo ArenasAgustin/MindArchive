@@ -70,8 +70,12 @@ Sin estas condiciones, la función recursiva continuaría ejecutándose indefini
 Las funciones recursivas se escriben como una función definida por tramos:
 
 $$
-f(x) = \begin{cases} \text{valor base} \Rightarrow \text{si se cumple condición de corte} \\
-\text{expresión con } f(x') \Rightarrow \text{si no se cumple condición, donde } x' \text{ se acerca al caso base} \end{cases}
+\begin{aligned}
+f(x) = \begin{cases}
+    \text{valor base} \Rightarrow \text{si se cumple condición de corte} \\
+    \text{expresión con } f(x') \Rightarrow \text{si no se cumple condición, donde } x' \text{ se acerca al caso base}
+\end{cases}
+\end{aligned}
 $$
 
 ### 2.1.3 Función iterativa vs función recursiva
@@ -125,18 +129,24 @@ La elección del tipo de recursión depende de la naturaleza del problema y los 
 El factorial es uno de los ejemplos clásicos de recursión. Matemáticamente, el factorial de un número n (representado como n!) es el producto de todos los números enteros positivos desde 1 hasta n.
 
 $$
-fact(n) = \begin{cases} 1 \Rightarrow n = 1 \text{ (caso base)} \\
-n \times fact(n-1) \Rightarrow n > 1 \text{ (caso recursivo)} \end{cases}
+\begin{aligned}
+fact(n) = \begin{cases}
+    1 \Rightarrow n = 1 \text{ (caso base)} \\
+    n \times fact(n-1) \Rightarrow n > 1 \text{ (caso recursivo)}
+\end{cases}
+\end{aligned}
 $$
 
 **Proceso de ejecución para fact(5):**
 
 $$
-fact(5) = 5 \times fact(4) \\
-= 5 \times 4 \times fact(3) \\
-= 5 \times 4 \times 3 \times fact(2) \\
-= 5 \times 4 \times 3 \times 2 \times fact(1) \\
-= 5 \times 4 \times 3 \times 2 \times 1 = 120
+\begin{aligned}
+fact(5) &= 5 \times fact(4) \\
+    &= 5 \times 4 \times fact(3) \\
+    &= 5 \times 4 \times 3 \times fact(2) \\
+    &= 5 \times 4 \times 3 \times 2 \times fact(1) \\
+    &= 5 \times 4 \times 3 \times 2 \times 1 = 120
+\end{aligned}
 $$
 
 ```cpp
@@ -163,9 +173,13 @@ La secuencia de Fibonacci es un ejemplo clásico de recursión múltiple, donde 
 **Definición matemática:**
 
 $$
-fib(x) = \begin{cases} 1 \Rightarrow x = 1 \text{ (primer caso base)} \\
-1 \Rightarrow x = 2 \text{ (segundo caso base)} \\
-fib(x-1) + fib(x-2) \Rightarrow x > 2 \text{ (caso recursivo)} \end{cases}
+\begin{aligned}
+fib(x) = \begin{cases}
+    1 \Rightarrow x = 1 \text{ (primer caso base)} \\
+    1 \Rightarrow x = 2 \text{ (segundo caso base)} \\
+    fib(x-1) + fib(x-2) \Rightarrow x > 2 \text{ (caso recursivo)}
+\end{cases}
+\end{aligned}
 $$
 
 **Secuencia de Fibonacci:** 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ...
@@ -173,11 +187,13 @@ $$
 **Proceso de cálculo:**
 
 $$
-fib(1) = 1 \\
-fib(2) = 1 \\
-fib(3) = fib(2) + fib(1) = 1 + 1 = 2 \\
-fib(4) = fib(3) + fib(2) = 2 + 1 = 3 \\
-fib(5) = fib(4) + fib(3) = 3 + 2 = 5
+\begin{aligned}
+fib(1) &= 1 \\
+fib(2) &= 1 \\
+fib(3) &= fib(2) + fib(1) = 1 + 1 = 2 \\
+fib(4) &= fib(3) + fib(2) = 2 + 1 = 3 \\
+fib(5) &= fib(4) + fib(3) = 3 + 2 = 5
+\end{aligned}
 $$
 
 ```cpp
@@ -222,13 +238,21 @@ Cada vez que se llama a una función, el sistema operativo crea una nueva entrad
 ### 2.3.2 Recursiva doble a recursiva simple
 
 $$
-fib(x) = \begin{cases} 1 \Rightarrow x < 3 \\
-fib_{aux}(3, 1, 1, x) \Rightarrow x \geq 3 \end{cases}
+\begin{aligned}
+fib(x) = \begin{cases}
+    1 \Rightarrow x < 3 \\
+    fib_{aux}(3, 1, 1, x) \Rightarrow x \geq 3
+\end{cases}
+\end{aligned}
 $$
 
 $$
-fib_{aux}(y, a_1, a_2, x) = \begin{cases} a_1 + a_2 \Rightarrow y = x \\
-fib_{aux}(y + 1, a_1 + a_2, a_1, x) \Rightarrow y < x \end{cases}
+\begin{aligned}
+fib_{aux}(y, a_1, a_2, x) = \begin{cases}
+    a_1 + a_2 \Rightarrow y = x \\
+    fib_{aux}(y + 1, a_1 + a_2, a_1, x) \Rightarrow y < x
+\end{cases}
+\end{aligned}
 $$
 
 #### Fibonacci recursivo simple
@@ -277,8 +301,12 @@ Si $f$ es una función recursiva de cola $f : T_1 \times T_2 \Rightarrow T_3$, d
 La función tiene la forma:
 
 $$
-f(t_1, t_2) = \begin{cases} h(t_1, t_2) \Rightarrow d(t_1, t_2) \text{ (condición de parada)} \\
-f(t_1, s(t_1, t_2)) \Rightarrow \neg d(t_1, t_2) \text{ (llamada recursiva)} \end{cases}
+\begin{aligned}
+f(t_1, t_2) = \begin{cases}
+    h(t_1, t_2) \Rightarrow d(t_1, t_2) \text{ (condición de parada)} \\
+    f(t_1, s(t_1, t_2)) \Rightarrow \neg d(t_1, t_2) \text{ (llamada recursiva)}
+\end{cases}
+\end{aligned}
 $$
 
 Donde:
