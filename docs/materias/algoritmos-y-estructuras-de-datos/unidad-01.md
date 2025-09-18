@@ -60,6 +60,10 @@ Al finalizar esta unidad, el estudiante será capaz de:
 - **1.6.2** Especialización de templates
 - **1.6.3** Consideraciones de rendimiento y memoria
 
+### 🔗 Recursos Complementarios
+
+- [OOP y Punteros](https://res.cloudinary.com/dmwto06rn/raw/upload/v1758237788/pdfs/OOP_y_punteros_pl52uk.pdf)
+
 ## Primer tema: 1.1 Punteros y Referencias
 
 ### 1.1.1 Conceptos fundamentales y declaración de punteros

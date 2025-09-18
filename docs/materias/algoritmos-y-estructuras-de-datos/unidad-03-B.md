@@ -41,6 +41,10 @@ Al finalizar esta unidad, el estudiante será capaz de:
 - **4.3.2** Evaluación de expresiones postfijas
 - **4.3.3** Balanceo de paréntesis y validación sintáctica
 
+### 🔗 Recursos Complementarios
+
+- [Colas y Pilas](https://res.cloudinary.com/dmwto06rn/raw/upload/v1758238283/pdfs/COLAS_PILAS_drn7kk.pdf)
+
 ## Primer tema: 4.1 Fundamentos de Estructuras Lineales
 
 ### 4.1.1 Concepto de lista y estructuras lineales

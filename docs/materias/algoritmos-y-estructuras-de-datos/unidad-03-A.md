@@ -41,6 +41,10 @@ Al finalizar esta unidad, el estudiante será capaz de:
 - **3.3.2** Uso de std::vector
 - **3.3.3** Operaciones y métodos principales
 
+### 🔗 Recursos Complementarios
+
+- [Listas](https://res.cloudinary.com/dmwto06rn/raw/upload/v1758238101/pdfs/LISTAS_skudo6.pdf)
+
 ## Listas Enlazadas
 
 ### 3.1.1 Conceptos fundamentales

@@ -41,6 +41,11 @@ Al finalizar esta unidad, el estudiante será capaz de:
 - **2.3.2** Recursión de cola
 - **2.3.3** Transformación de recursiva a iterativa
 
+### 🔗 Recursos Complementarios
+
+- [Recursividad](https://res.cloudinary.com/dmwto06rn/raw/upload/v1758237952/pdfs/RECURSIVIDAD_r4v1xg.pdf)
+- [Recursiva a Iterativa](https://res.cloudinary.com/dmwto06rn/raw/upload/v1758238331/pdfs/tail_to_iterative_m9ohxo.pdf)
+
 ## Fundamentos de Recursividad
 
 ### 2.1.1 Definición de función recursiva
