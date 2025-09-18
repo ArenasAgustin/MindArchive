@@ -97,6 +97,7 @@ Introducir a los estudiantes en los conceptos fundamentales de algoritmos y estr
 ### 📚 Recursos Adicionales
 
 - [C Programming Notes](https://www.eskimo.com/~scs/cclass/notes)
+- [Cheat sheets e Infografias](https://hackingcpp.com/cpp/cheat_sheets.html#hfold2a)
 - [Curso C++ sitio conclase](https://conclase.net/c/curso/cap0#inicio)
 - [Curso C++ Univ. Pardue](https://www.cs.purdue.edu/homes/bxd/CandC++)
 - [Documentación oficial de C++](https://en.cppreference.com/w/)
