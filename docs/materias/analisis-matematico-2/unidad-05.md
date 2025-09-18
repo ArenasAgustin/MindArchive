@@ -258,3 +258,46 @@ $$
 $$
 
 **Criterio de conservatividad:** Si $\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} = 0$ en toda la región, entonces $\vec{F}$ es conservativo.
+
+## Ejemplos Resueltos
+
+### Ejemplo 1: Longitud de una curva
+
+Calcular la longitud de la circunferencia de radio $R$:
+\[\gamma(t) = (R\cos t, R\sin t),\ t \in [0, 2\pi]\]
+\[L = \int_0^{2\pi} \|\gamma'(t)\| dt = \int_0^{2\pi} R dt = 2\pi R\]
+
+### Ejemplo 2: Integral de línea escalar
+
+Calcular $\int_C x^2 dl$ sobre $\gamma(t) = (t, t^2),\ t \in [0,1]$:
+\[\gamma'(t) = (1, 2t),\ \|\gamma'(t)\| = \sqrt{1 + 4t^2}\]
+\[\int_0^1 t^2 \sqrt{1 + 4t^2} dt\]
+
+### Ejemplo 3: Trabajo de un campo vectorial
+
+Sea $\vec{F}(x,y) = (y, x)$ y $\gamma(t) = (t, t^2),\ t \in [0,1]$:
+\[\vec{F}(\gamma(t)) = (t^2, t),\ \gamma'(t) = (1, 2t)\]
+\[\int_0^1 (t^2, t) \cdot (1, 2t) dt = \int_0^1 (t^2 + 2t^2) dt = \int_0^1 3t^2 dt = 1\]
+
+### Ejemplo 4: Curvatura de una parábola
+
+Para $\gamma(t) = (t, t^2)$:
+\[\gamma'(t) = (1, 2t),\ \gamma''(t) = (0, 2)\]
+\[\kappa(t) = \frac{|1 \cdot 2 - 0 \cdot 2t|}{(1 + 4t^2)^{3/2}} = \frac{2}{(1 + 4t^2)^{3/2}}\]
+
+### Ejemplo 5: Teorema de Green y área
+
+Calcular el área encerrada por la circunferencia de radio $R$ usando Green:
+\[\text{Área} = \frac{1}{2}\oint_C (x dy - y dx)\]
+Parametrizando $\gamma(t) = (R\cos t, R\sin t),\ t \in [0, 2\pi]$:
+\[x = R\cos t,\ y = R\sin t,\ dx = -R\sin t dt,\ dy = R\cos t dt\]
+\[x dy - y dx = R^2 \cos^2 t dt + R^2 \sin^2 t dt = R^2 dt\]
+\[\text{Área} = \frac{1}{2} \int_0^{2\pi} R^2 dt = \pi R^2\]
+
+## Ejercicios Propuestos
+
+1) Calcular la longitud de la curva $\gamma(t) = (t^3, t^2),\ t \in [0,1]$.
+2) Evaluar $\int_C (x + y) dl$ sobre $\gamma(t) = (t, 1-t),\ t \in [0,1]$.
+3) Calcular el trabajo de $\vec{F}(x,y) = (x, y)$ sobre la curva $\gamma(t) = (\cos t, \sin t),\ t \in [0, \pi]$.
+4) Hallar la curvatura de $\gamma(t) = (\cos t, \sin t)$.
+5) Usar Green para calcular el área encerrada por el triángulo de vértices $(0,0), (1,0), (0,1)$.

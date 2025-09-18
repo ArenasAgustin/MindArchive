@@ -199,6 +199,128 @@ $$
 
 **Criterio:** En una región simplemente conexa, $\overrightarrow{F}$ es conservativo si y solo si $\nabla \times \overrightarrow{F} = \overrightarrow{0}$.
 
+### 7.3.4 Criterios prácticos de conservatividad
+
+Sea $\overrightarrow{F}$ un campo $\mathbb{R}^n \to \mathbb{R}^n$ de clase $\mathcal{C}^1$ en un dominio abierto $D$.
+
+- En $\mathbb{R}^2$ o $\mathbb{R}^3$, si $D$ es **simplemente conexo**, son equivalentes:
+  1. $\exists\, f$ tal que $\overrightarrow{F} = \nabla f$ (conservativo)
+  2. $\nabla \times \overrightarrow{F} = \overrightarrow{0}$ en $D$ (irrotacional)
+  3. La integral de línea es **independiente del camino** entre dos puntos
+  4. Para toda curva cerrada $C\subset D$:
+
+$$
+\oint_C \overrightarrow{F}\cdot d\overrightarrow{l} = 0
+$$
+
+- Si $D$ NO es simplemente conexo (tiene "agujeros"), puede ocurrir $\nabla\times\overrightarrow{F}=\overrightarrow{0}$ y sin embargo $\overrightarrow{F}$ no sea conservativo.
+
+Contraejemplo clásico en $\mathbb{R}^2 \setminus \{(0,0)\}$:
+
+$$
+\overrightarrow{F}(x,y) = \left( -\frac{y}{x^2+y^2},\ \frac{x}{x^2+y^2} \right),\quad (x,y)\neq (0,0)
+$$
+
+Se verifica $\nabla\times\overrightarrow{F} = 0$ en su dominio, pero sobre la circunferencia unitaria $C: x^2+y^2=1$ (orientada en sentido antihorario):
+
+$$
+\oint_C \overrightarrow{F}\cdot d\overrightarrow{l} = 2\pi \neq 0
+$$
+
+Por lo tanto, no existe potencial global en ese dominio perforado.
+
+Procedimiento para hallar un potencial $f$ cuando existe ($\mathbb{R}^3$):
+
+1. Resolver $\nabla f = (P, Q, R)$ integrando por componentes.
+2. Integrar $f_x = P$ respecto de $x$:
+
+$$
+f(x,y,z) = \int P(x,y,z)\, dx + g(y,z)
+$$
+
+1. Derivar y ajustar con $f_y=Q$ y $f_z=R$ para determinar $g(y,z)$ (hasta una constante).
+
+Análogamente en $\mathbb{R}^2$ con $\overrightarrow{F}=(P,Q)$.
+
+## 7.5 Orientación y convenciones; identidades útiles
+
+### Orientación en Green, Stokes y Gauss
+
+- Green (plano): la orientación positiva de la curva frontera $C=\partial R$ es **antihoraria** si la normal al plano $(0,0,1)$ apunta hacia "arriba".
+- Stokes (superficie): la orientación de $\partial S$ viene dada por la **regla de la mano derecha** respecto de la normal elegida en $S$.
+- Gauss (volumen): la normal sobre $\partial V$ es siempre la **saliente** del volumen.
+
+Estas convenciones garantizan la coherencia del signo en las igualdades integrales.
+
+### Identidades de cálculo vectorial
+
+Para campos suficientemente suaves:
+
+- $\nabla \times (\nabla f) = \overrightarrow{0}$
+- $\nabla \cdot (\nabla \times \overrightarrow{F}) = 0$
+- Regla del producto para divergencia: $\nabla \cdot (\phi\,\overrightarrow{F}) = \nabla \phi \cdot \overrightarrow{F} + \phi\, (\nabla \cdot \overrightarrow{F})$
+- Regla del producto para rotacional: $\nabla \times (\phi\,\overrightarrow{F}) = \nabla \phi \times \overrightarrow{F} + \phi\,(\nabla \times \overrightarrow{F})$
+
+## 7.6 Ejemplos resueltos
+
+### 1) Teorema de Green en el círculo unidad
+
+Sea $C$ la circunferencia unidad orientada en sentido antihorario y $R$ su disco.
+Tome $\overrightarrow{F}(x,y)=(-y,\,x)$. Entonces
+
+$$
+  ext{rot}\,\overrightarrow{F} = \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} = 1 - (-1) = 2.
+$$
+
+Por Green:
+
+$$
+\oint_C \overrightarrow{F}\cdot d\overrightarrow{l} = \iint_R 2\, dA = 2\,\text{area}(R) = 2\pi.
+$$
+
+Cálculo directo parametrizando $C(t)=(\cos t,\sin t)$, $t\in[0,2\pi]$:
+
+$$
+\overrightarrow{F}(C(t))=( -\sin t,\, \cos t),\quad d\overrightarrow{l}=(-\sin t,\,\cos t)\, dt \Rightarrow \overrightarrow{F}\cdot d\overrightarrow{l}= dt.
+$$
+
+Así, $\int_0^{2\pi} dt = 2\pi$ (coincide).
+
+### 2) Teorema de Stokes en un disco plano
+
+Sea $S=\{(x,y,0): x^2+y^2\le 1\}$ con normal $\overrightarrow{n}=(0,0,1)$ y $\partial S=C$ la circunferencia unidad antihoraria.
+Con $\overrightarrow{F}(x,y,z)=(-y,\,x,\,0)$ se tiene
+
+$$
+\nabla \times \overrightarrow{F} = (0,0,2).
+$$
+
+Por Stokes:
+
+$$
+\oint_{\partial S} \overrightarrow{F}\cdot d\overrightarrow{l} = \iint_S (\nabla\times\overrightarrow{F})\cdot \overrightarrow{n}\, dA = \iint_S 2\, dA = 2\pi.
+$$
+
+Como se vio en el ejemplo anterior, el lado izquierdo también vale $2\pi$.
+
+### 3) Teorema de Gauss en una esfera
+
+Sea $V$ la bola de radio $R$ y $\partial V$ la esfera correspondiente, con normal saliente. Tome $\overrightarrow{F}(x,y,z)=(x,\,y,\,z)$.
+
+Entonces $\nabla\cdot\overrightarrow{F} = 3$ y, por Gauss,
+
+$$
+\oint_{\partial V} \overrightarrow{F}\cdot d\overrightarrow{a} = \iiint_V 3\, dV = 3\,\text{Vol}(V) = 3\cdot \frac{4\pi R^3}{3} = 4\pi R^3.
+$$
+
+Directamente, sobre la esfera $\lVert \overrightarrow{r} \rVert = R$ se tiene $\overrightarrow{n}=\overrightarrow{r}/R$ y $\overrightarrow{F}\cdot \overrightarrow{n} = \overrightarrow{r}\cdot (\overrightarrow{r}/R)=R$.
+
+Luego
+
+$$
+\oint_{\partial V} \overrightarrow{F}\cdot d\overrightarrow{a} = \int_{\partial V} R\, dA = R\cdot 4\pi R^2 = 4\pi R^3.
+$$
+
 ## Cuarto tema: 7.4 Teoremas de Green, Stokes y Gauss
 
 ### 7.4.1 Teorema de Green (TFC5)
@@ -234,7 +356,7 @@ $$
 **Enunciado:** Relaciona una integral de superficie cerrada $\partial V$ que encierra un volumen $V$ con una integral triple sobre ese volumen de la divergencia del campo.
 
 $$
-oint_{\partial V} \overrightarrow{F} \cdot d\overrightarrow{a} = \iiint_V (\nabla \cdot \overrightarrow{F}) dV
+\oint_{\partial V} \overrightarrow{F} \cdot d\overrightarrow{a} = \iiint_V (\nabla \cdot \overrightarrow{F})\, dV
 $$
 
 **Interpretación:**

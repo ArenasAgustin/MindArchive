@@ -50,6 +50,21 @@ Al finalizar esta unidad, el estudiante será capaz de:
 - **1.4.3** Coordenadas esféricas
 - **1.4.4** Conversiones entre sistemas
 
+### 1.5 Normas y Métricas en Rⁿ
+
+- **1.5.1** Normas: definición, norma euclídea, norma infinito
+- **1.5.2** Métricas inducidas y bolas abiertas; equivalencia de normas
+
+### 1.6 Sucesiones y Límites en Rⁿ
+
+- **1.6.1** Sucesiones en Rⁿ y convergencia
+- **1.6.2** Criterio por componentes; sucesiones de Cauchy y completitud
+
+### 1.7 Límites y Continuidad de Funciones
+
+- **1.7.1** Límite de funciones Rⁿ→Rᵖ (ε–δ y criterio secuencial)
+- **1.7.2** Continuidad: caracterizaciones y propiedades
+
 ### 🔗 Recursos Complementarios
 
 - [Apunte Unidad 1 - Natali, Valenzuela](https://res.cloudinary.com/dmwto06rn/raw/upload/v1758076580/pdfs/pdf_1758076584_AM2%20-%20Notas%20U1%20%28Natali%2C%20Valenzuela%29.pdf)
@@ -63,21 +78,21 @@ Al finalizar esta unidad, el estudiante será capaz de:
 
 - **a)** La **bola abierta** con centro en $\overline{x}_{0}$ y radio $r$ es:
 
-  $$
-  B_{r}(\overline{x}_{0}) = \{\overline{x} \in \mathbb{R}^{n} \mid ||\overline{x} - \overline{x}_{0}|| < r\}
-  $$
+   $$
+   B_{r}(\overline{x}_{0}) = \{\overline{x} \in \mathbb{R}^{n} \mid \lVert\overline{x} - \overline{x}_{0}\rVert < r\}
+   $$
 
 - **b)** La **bola cerrada** con centro en $\overline{x}_{0}$ y radio $r$ es:
 
-  $$
-  \overline{B}_{r}(\overline{x}_{0}) = \{\overline{x} \in \mathbb{R}^{n} \mid ||\overline{x} - \overline{x}_{0}|| \le r\}
-  $$
+   $$
+   \overline{B}_{r}(\overline{x}_{0}) = \{\overline{x} \in \mathbb{R}^{n} \mid \lVert\overline{x} - \overline{x}_{0}\rVert \le r\}
+   $$
 
 - **c)** La **bola reducida** con centro en $\overline{x}_{0}$ y radio $r$ es:
 
-  $$
-  B_{r}^\prime(\overline{x}_{0}) = \{\overline{x} \in \mathbb{R}^{n} \mid 0 < ||\overline{x} - \overline{x}_{0}|| < r\}
-  $$
+   $$
+   B_{r}^\prime(\overline{x}_{0}) = \{\overline{x} \in \mathbb{R}^{n} \mid 0 < \lVert\overline{x} - \overline{x}_{0}\rVert < r\}
+   $$
 
 ### 1.1.2 Puntos Asociados a un Conjunto
 
@@ -197,7 +212,9 @@ En el último ejemplo, los puntos $\gamma(t)$ satisfacen $y=x^{2}$ con $x>0$. El
 
 **Definición:** Dada $\overline{f}: D_{\overline{f}} \rightarrow \mathbb{R}^{p}$ y $\overline{z}_{0} \in \mathbb{R}^{p}$, el **conjunto de nivel** en $\overline{z}_{0}$ es:
 
-$$\text{CN}_{\overline{f}}(\overline{z}_{0}) = \{\overline{x} \in D_{\overline{f}} \mid \overline{f}(\overline{x}) = \overline{z}_{0}\}$$
+$$
+\text{CN}_{\overline{f}}(\overline{z}_{0}) = \{\overline{x} \in D_{\overline{f}} \mid \overline{f}(\overline{x}) = \overline{z}_{0}\}
+$$
 
 **Ejemplo:** $g(x,y) = x^{2}+y^{2}$ con $z_{0}=4$ y $D_{g} = \{(x,y) \mid y \ge 0\}$, entonces $\text{CN}_{g}(4) = \{(x,y) \in D_{g} \mid x^{2}+y^{2} = 4\}$.
 
@@ -205,9 +222,11 @@ $$\text{CN}_{\overline{f}}(\overline{z}_{0}) = \{\overline{x} \in D_{\overline{f
 
 **Definición:** El **gráfico** de $\overline{f}$ es:
 
-$$\text{Gr}_{\overline{f}} = \{(\overline{x}, \overline{f}(\overline{x})) \mid \overline{x} \in D_{\overline{f}}\} \subseteq \mathbb{R}^{n+p}$$
+$$
+\text{Gr}_{\overline{f}} = \{(\overline{x}, \overline{f}(\overline{x})) \mid \overline{x} \in D_{\overline{f}}\} \subseteq \mathbb{R}^{n+p}
+$$
 
-**Ejemplo:** Para $f(x) = \sqrt{4-x^{2}}$, con $x \in [-2,2]$, el gráfico es $\text{Gr}_{f} = \{(x,y) \mid y = \sqrt{4-x^{2}}, x \in [-2,2]\}$.
+**Ejemplo:** Para $f(x) = \sqrt{4-x^{2}}$, con $x \in [-2,2]$, el gráfico es $\text{Gr}_{f} = \{(x,y) \mid y = \sqrt{4-x^{2}},\ x \in [-2,2]\}$.
 
 ### 1.3.4 Representaciones de Conjuntos
 
@@ -272,6 +291,129 @@ $$
 $$
 (s,\theta,z) = (r \sin \varphi, \theta, r \cos \varphi)
 $$
+
+## Quinto tema: 1.5 Normas y Métricas en Rⁿ
+
+### 1.5.1 Normas en Rⁿ
+
+Una norma en $\mathbb{R}^n$ es una aplicación $\lVert\cdot\rVert: \mathbb{R}^n \to [0,\infty)$ que cumple, para todo $\overrightarrow{x}, \overrightarrow{y}\in\mathbb{R}^n$ y $\alpha\in\mathbb{R}$:
+
+- $\lVert \overrightarrow{x} \rVert = 0$ si y solo si $\overrightarrow{x}=\overrightarrow{0}$
+- $\lVert \alpha\, \overrightarrow{x} \rVert = |\alpha|\, \lVert \overrightarrow{x} \rVert$
+- Desigualdad triangular: $\lVert \overrightarrow{x}+\overrightarrow{y} \rVert \le \lVert \overrightarrow{x} \rVert + \lVert \overrightarrow{y} \rVert$
+
+Ejemplos en $\mathbb{R}^n$:
+
+- Norma euclídea: $\lVert \overrightarrow{x} \rVert_2 = \sqrt{x_1^2+\cdots+x_n^2}$
+- Norma infinito: $\lVert \overrightarrow{x} \rVert_\infty = \max\{ |x_1|,\ldots,|x_n| \}$
+
+Todas las normas en $\mathbb{R}^n$ son equivalentes (inducen la misma topología).
+
+### 1.5.2 Métricas inducidas y bolas abiertas
+
+Cada norma induce una métrica $d(\overrightarrow{x},\overrightarrow{y}) = \lVert \overrightarrow{x}-\overrightarrow{y} \rVert$.
+
+La bola abierta de centro $\overrightarrow{x}_0$ y radio $r>0$ en la métrica $d$ es:
+
+$$
+B_r(\overrightarrow{x}_0) = \{\overrightarrow{x}\in\mathbb{R}^n : d(\overrightarrow{x},\overrightarrow{x}_0) < r\} = \{\overrightarrow{x} : \lVert \overrightarrow{x}-\overrightarrow{x}_0 \rVert < r\}.
+$$
+
+Si dos normas son equivalentes, generan las mismas familias de abiertos y, por lo tanto, la misma noción de continuidad.
+
+## Sexto tema: 1.6 Sucesiones y Límites en Rⁿ
+
+### 1.6.1 Sucesiones y convergencia
+
+Una sucesión en $\mathbb{R}^n$ es una aplicación $\overrightarrow{x}_k: \mathbb{N}\to\mathbb{R}^n$.
+
+Decimos que $\overrightarrow{x}_k$ converge a $\overrightarrow{x}_0$ si
+
+$$
+\forall\, \varepsilon>0\, \exists\, N\in\mathbb{N}: k\ge N \Rightarrow \lVert \overrightarrow{x}_k - \overrightarrow{x}_0 \rVert < \varepsilon.
+$$
+
+Equivalencias útiles:
+
+- Convergencia por componentes: $\overrightarrow{x}_k\to\overrightarrow{x}_0$ si y solo si $(x_k^{(i)})\to x_0^{(i)}$ para todo $i$.
+- En $\mathbb{R}^n$, la noción de convergencia es independiente de la norma elegida.
+
+Propiedades:
+
+- Los límites (si existen) son únicos.
+- Toda sucesión convergente es acotada.
+
+### 1.6.2 Sucesiones de Cauchy y completitud
+
+Una sucesión es de Cauchy si
+
+$$
+\forall\, \varepsilon>0\, \exists\, N\in\mathbb{N}: k,\ell\ge N \Rightarrow \lVert \overrightarrow{x}_k - \overrightarrow{x}_\ell \rVert < \varepsilon.
+$$
+
+Con la norma euclídea (y, en general, con cualquier norma), $\mathbb{R}^n$ es completo: toda sucesión de Cauchy converge en $\mathbb{R}^n$.
+
+## Séptimo tema: 1.7 Límites y Continuidad de Funciones
+
+### 1.7.1 Límite de funciones $\mathbb{R}^n\to\mathbb{R}^p$
+
+Sea $\overline{f}:D\subseteq\mathbb{R}^n\to\mathbb{R}^p$ y $\overrightarrow{x}_0\in\mathbb{R}^n$ punto de acumulación de $D$. Decimos que $\lim\limits_{\overrightarrow{x}\to\overrightarrow{x}_0} \overline{f}(\overrightarrow{x}) = \overline{L}$ si
+
+$$
+\forall\, \varepsilon>0\, \exists\, \delta>0: 0<\lVert \overrightarrow{x}-\overrightarrow{x}_0 \rVert<\delta,\ \overrightarrow{x}\in D \Rightarrow \lVert \overline{f}(\overrightarrow{x})-\overline{L} \rVert<\varepsilon.
+$$
+
+Caracterizaciones equivalentes:
+
+- Criterio secuencial: Para toda sucesión $\overrightarrow{x}_k\in D\\\{\overrightarrow{x}_0\}$ con $\overrightarrow{x}_k\to\overrightarrow{x}_0$ se cumple $\overline{f}(\overrightarrow{x}_k)\to\overline{L}$.
+- Por componentes: $\lim \overline{f} = \overline{L}$ si y solo si $\lim f_i = L_i$ para cada componente $i$.
+
+### 1.7.2 Continuidad: caracterizaciones y propiedades
+
+Decimos que $\overline{f}$ es continua en $\overrightarrow{x}_0$ si
+
+$$
+\lim_{\overrightarrow{x}\to\overrightarrow{x}_0} \overline{f}(\overrightarrow{x}) = \overline{f}(\overrightarrow{x}_0).
+$$
+
+Caracterizaciones equivalentes de continuidad en $D$:
+
+- $\overline{f}$ es continua si y solo si la preimagen de abiertos es abierta: para todo abierto $U\subseteq\mathbb{R}^p$, $\overline{f}^{-1}(U)$ es abierto en $D$.
+- Criterio secuencial: $\overrightarrow{x}_k\to\overrightarrow{x}_0 \Rightarrow \overline{f}(\overrightarrow{x}_k)\to\overline{f}(\overrightarrow{x}_0)$.
+- Por componentes: $\overline{f}$ es continua si y solo si cada $f_i$ es continua.
+
+Propiedades de las funciones continuas:
+
+- Álgebra: suma, producto escalar por constante y producto punto de funciones continuas son continuos.
+- Composición: si $\overline{f}$ es continua en $\overrightarrow{x}_0$ y $\overline{g}$ es continua en $\overline{f}(\overrightarrow{x}_0)$, entonces $\overline{g}\circ\overline{f}$ es continua en $\overrightarrow{x}_0$.
+- Normas: $\overrightarrow{x}\mapsto \lVert \overrightarrow{x} \rVert$ es continua.
+- Polinomios y funciones elementales (donde estén definidas) son continuos.
+
+### Ejemplos de límites/continuidad
+
+1) Límite que existe:
+
+Sea $f(x,y)=\dfrac{x^2 y}{x^2+y^2}$ con $f(0,0)=0$. Para $(x,y)\neq (0,0)$,
+
+$$
+|f(x,y)| = \frac{|x|^2 |y|}{x^2+y^2} \le \frac{x^2+y^2}{2}\cdot \frac{1}{x^2+y^2} = \frac{1}{2}\, \sqrt{x^2+y^2}\, \frac{|y|}{\sqrt{x^2+y^2}} \le \frac{1}{2}\, \sqrt{x^2+y^2}.
+$$
+
+Luego $\lim\limits_{(x,y)\to(0,0)} f(x,y)=0$ (por cota con $\varepsilon$–$\delta$ o criterio secuencial).
+
+1) Límite que no existe:
+
+Sea $g(x,y)=\dfrac{x y}{x^2+y^2}$. Tomando rectas $y=m x$ con $m\in\mathbb{R}$,
+
+$$
+\lim_{x\to 0} g(x,mx) = \lim_{x\to 0} \frac{m x^2}{x^2+m^2 x^2} = \frac{m}{1+m^2},
+$$
+
+que depende de $m$. Por lo tanto, el límite en $(0,0)$ no existe.
+
+1) Continuidad por componentes:
+
+Si $\overline{f}(x,y)=(\sin(x+y),\ e^{x}-\ln(1+y))$ con dominio $D=\{(x,y): y>-1\}$, entonces cada componente es continua en $D$ y, por lo tanto, $\overline{f}$ es continua en $D$.
 
 ## 📝 Ejemplos Resueltos
 

@@ -35,6 +35,7 @@ Al finalizar esta unidad, el estudiante será capaz de:
 - **2.2.1** Definición épsilon-delta en varias variables
 - **2.2.2** Teorema del límite por componentes
 - **2.2.3** Álgebra de límites
+- **2.2.4** Criterio secuencial (Heine)
 
 ### 2.3 Continuidad en Varias Variables
 
@@ -48,6 +49,18 @@ Al finalizar esta unidad, el estudiante será capaz de:
 - **2.4.2** Límites restringidos y direccionales
 - **2.4.3** Límites iterados
 - **2.4.4** Teorema del sándwich
+
+### 2.5 Técnicas prácticas para límites
+
+- **2.5.1** Cambio a coordenadas polares/esféricas
+- **2.5.2** Acotaciones y sándwich
+- **2.5.3** Comparación de caminos (rectas y parábolas)
+- **2.5.4** Desigualdades útiles y equivalencia de normas
+- **2.5.5** Reescrituras y trucos frecuentes
+
+### 2.6 Ejemplos resueltos
+
+### 2.7 Ejercicios propuestos
 
 ### 🔗 Recursos Complementarios
 
@@ -129,6 +142,21 @@ Si $\lim_{\overline{x}\rightarrow\overline{x}_{0}}\varphi(\overline{x})=c$, $\li
 2. $\lim_{\overline{x}\rightarrow\overline{x}_{0}}[\overline{f}(\overline{x})\pm\overline{g}(\overline{x})]=\overline{y}_{0}\pm\overline{z}_{0}$
 3. $\lim_{\overline{x}\rightarrow\overline{x}_{0}}[\overline{h}(\overline{f}(\overline{x}))]=\tilde{l}$
 
+### 2.2.4 Criterio Secuencial (Heine)
+
+**Enunciado (criterio secuencial):** Sea $\overline{f}: D\subseteq \mathbb{R}^n \to \mathbb{R}^p$ y $\overrightarrow{x}_0\in\mathbb{R}^n$ punto de acumulación de $D$. Entonces
+
+$$
+\lim_{\overrightarrow{x}\to\overrightarrow{x}_0} \overline{f}(\overrightarrow{x}) = \overline{L}
+\iff
+\exists\text{ }\forall \text{ sucesión }  (\overrightarrow{x}_k)\subset D\setminus\{\overrightarrow{x}_0\} \text{ con } \overrightarrow{x}_k\to\overrightarrow{x}_0,\ \overline{f}(\overrightarrow{x}_k)\to \overline{L}.
+$$
+
+Este criterio es muy útil para:
+
+- Probar límites: basta verificar la convergencia de $\overline{f}(\overrightarrow{x}_k)$ para toda sucesión que converge a $\overrightarrow{x}_0$.
+- Negar la existencia: si existen dos sucesiones $\overrightarrow{x}_k,\overrightarrow{y}_k \to \overrightarrow{x}_0$ tales que $\overline{f}(\overrightarrow{x}_k)$ y $\overline{f}(\overrightarrow{y}_k)$ tienen límites distintos, el límite global no existe.
+
 ## Tercer tema: 2.3 Continuidad en Varias Variables
 
 ### 2.3.1 Definición de Continuidad
@@ -197,3 +225,81 @@ Si $\lim_{(x,y)\rightarrow(x_{0},y_{0})}f(x,y)=l$, entonces:
 - $\lim_{y\rightarrow y_{0}}\lim_{x\rightarrow x_{0}}f(x,y)=l$
 
 **Observación:** Esta es también una condición necesaria, no suficiente. La existencia e igualdad de los límites iterados no garantiza la existencia del límite doble.
+
+## Quinto tema: 2.5 Técnicas Prácticas para Límites
+
+### 2.5.1 Cambio a coordenadas polares/esféricas
+
+Cuando $n=2$, si $\overrightarrow{x}=(x,y)$ y el punto es $(0,0)$, usar $x=r\cos\theta$, $y=r\sin\theta$ y estudiar $r\to 0^{+}$. En $\mathbb{R}^3$, usar esféricas $(r,\varphi,\theta)$ con $r\to 0^{+}$.
+
+- Si el resultado en polares depende de $\theta$, el límite global no existe.
+- Si se obtiene una cota que sólo depende de $r$ y tiende a $0$, suele concluirse el límite (técnica de acotación con $r$).
+
+### 2.5.2 Acotaciones y sándwich
+
+Construir $f\le g \le h$ y forzar el límite de $g$ usando que los de $f$ y $h$ coinciden (Teorema del Sándwich). Útil con funciones acotadas como $\sin$ y $\cos$:
+
+$$
+|\sin t| \le |t|,\quad 1-\cos t \le \tfrac{t^2}{2},\quad |\cos t - 1| \le \tfrac{t^2}{2}.
+$$
+
+### 2.5.3 Comparación de caminos (rectas y parábolas)
+
+Probar por caminos distintos (rectas $y=mx$ o parábolas $y=\alpha x^2$). Si dos caminos producen límites distintos, el límite global no existe. Atención: obtener el mismo valor en varios caminos no garantiza la existencia del límite global (es sólo condición necesaria).
+
+### 2.5.4 Desigualdades útiles y equivalencia de normas
+
+En $\mathbb{R}^2$: $x^2+y^2 \ge 2|xy| \Rightarrow |xy| \le \tfrac{x^2+y^2}{2}$. En general, $\lVert\overrightarrow{x}\rVert_\infty \le \lVert\overrightarrow{x}\rVert_2 \le \sqrt{n}\, \lVert\overrightarrow{x}\rVert_\infty$.
+
+Todas las normas en $\mathbb{R}^n$ son equivalentes: las nociones de límite y continuidad no dependen de la norma elegida.
+
+### 2.5.5 Reescrituras y trucos frecuentes
+
+Factorizar, racionalizar denominadores, multiplicar y dividir por la conjugada, y usar identidades trigonométricas para exponer términos que tienden a $0$.
+
+## Sexto tema: 2.6 Ejemplos Resueltos
+
+### Ejemplo A (existe y vale 0 por acotación)
+
+Sea $f(x,y)=\dfrac{x^2 y^2}{x^2+y^2}$ con $f(0,0)=0$. Para $(x,y)\ne (0,0)$,
+
+$$
+0 \le \left|\frac{x^2 y^2}{x^2+y^2}\right| = \frac{|xy|\,|xy|}{x^2+y^2} \le \frac{\tfrac{x^2+y^2}{2}\, |xy|}{x^2+y^2} = \tfrac{1}{2}\, |xy| \le \tfrac{1}{4}\,(x^2+y^2).
+$$
+
+Luego $\lim\limits_{(x,y)\to(0,0)} f(x,y)=0$ por sándwich.
+
+### Ejemplo B (no existe por caminos)
+
+Sea $g(x,y)=\dfrac{x^2 - y^2}{x^2+y^2}$. Sobre $y=0$ se obtiene $g(x,0)=1$ para $x\ne 0$, mientras que sobre $x=0$ se obtiene $g(0,y)=-1$ para $y\ne 0$. Por lo tanto, el límite en $(0,0)$ no existe.
+
+### Ejemplo C (límites iterados existen e iguales, pero no hay límite doble)
+
+Considere $h(x,y)=\dfrac{x y}{x^2+y^2}$ con $h(0,0)=0$.
+
+- Para todo $x\ne 0$, $\lim\limits_{y\to 0} h(x,y)=0$, luego $\lim\limits_{x\to 0} \bigl(\lim\limits_{y\to 0} h(x,y)\bigr) = 0$.
+- Análogamente, $\lim\limits_{y\to 0} \bigl(\lim\limits_{x\to 0} h(x,y)\bigr) = 0$.
+
+Sin embargo, sobre $y=mx$ se tiene $h(x,mx)=\dfrac{m}{1+m^2}$, que depende de $m$, por lo que el límite doble en $(0,0)$ no existe.
+
+### Ejemplo D (sándwich con función acotada)
+
+Sea $q(x,y)=\dfrac{x\,\sin(x^2+y^2)}{\sqrt{x^2+y^2}}$. Usando $|\sin t|\le |t|$,
+
+$$
+|q(x,y)| \le \frac{|x|\, (x^2+y^2)}{\sqrt{x^2+y^2}} = |x|\, \sqrt{x^2+y^2} \le x^2+y^2 \to 0.
+$$
+
+Luego $\lim\limits_{(x,y)\to(0,0)} q(x,y)=0$.
+
+## Séptimo tema: 2.7 Ejercicios Propuestos
+
+1) Estudiar $\displaystyle \lim_{(x,y)\to(0,0)} \frac{x^3 - y^3}{x^2+y^2}$.
+
+1) Probar (o refutar) que $\displaystyle \lim_{(x,y)\to(0,0)} \frac{x^2 y}{x^2+y^2}$ existe usando caminos y criterio secuencial.
+
+1) Usar polares para evaluar $\displaystyle \lim_{(x,y)\to(0,0)} \frac{\sqrt{x^2+y^2}\, \sin(x^2+y^2)}{x^2+y^2}$.
+
+1) Dar un ejemplo de función con límites iterados existentes e iguales pero sin límite doble en $(0,0)$, y justificar.
+
+1) Demostrar el criterio secuencial de límite para funciones $\mathbb{R}^n\to\mathbb{R}^p$ (pista: usar las definiciones de límite de sucesión y de función).

@@ -155,13 +155,13 @@ $$
 
 Para dominios más complejos, necesitamos describir la región $D$ en términos de desigualdades:
 
-**Región de tipo I:** $D = \{(x,y) : a \leq x \leq b, g_1(x) \leq y \leq g_2(x)\}$
+**Región de tipo I:** $D = \{(x,y) : a \leq x \leq b,\ g_1(x) \leq y \leq g_2(x)\}$
 
 $$
 \iint_D f(x,y) dA = \int_a^b \int_{g_1(x)}^{g_2(x)} f(x,y) dy dx
 $$
 
-**Región de tipo II:** $D = \{(x,y) : c \leq y \leq d, h_1(y) \leq x \leq h_2(y)\}$
+**Región de tipo II:** $D = \{(x,y) : c \leq y \leq d,\ h_1(y) \leq x \leq h_2(y)\}$
 
 $$
 \iint_D f(x,y) dA = \int_c^d \int_{h_1(y)}^{h_2(y)} f(x,y) dx dy
@@ -277,3 +277,71 @@ $$
 $$
 E[Y] = \iint_{\mathbb{R}^2} y f(x,y) dx dy
 $$
+
+## Quinto tema: 4.5 Extremos Libres y Ligados
+
+### 4.5.1 Definición de Extremos Libres
+
+Un punto $\overline{x}_0$ es **extremo libre** (máximo o mínimo) de $f: D \subseteq \mathbb{R}^n \to \mathbb{R}$ si existe un entorno $U$ de $\overline{x}_0$ tal que:
+
+$$
+f(\overline{x}_0) \geq f(\overline{x}), \quad \forall \overline{x} \in U \cap D \quad \text{(máximo)}
+$$
+o
+$$
+f(\overline{x}_0) \leq f(\overline{x}), \quad \forall \overline{x} \in U \cap D \quad \text{(mínimo)}
+$$
+
+### 4.5.2 Condiciones de Primer Orden
+
+Si $f$ es diferenciable, los extremos libres internos se encuentran en los puntos críticos:
+
+$$
+\nabla f(\overline{x}_0) = \overrightarrow{0}
+$$
+
+### 4.5.3 Condiciones de Segundo Orden
+
+Si $f$ es $C^2$, se analiza la matriz Hessiana $H_f(\overline{x}_0)$:
+
+- Si $H_f$ es definida positiva: mínimo local
+- Si $H_f$ es definida negativa: máximo local
+- Si $H_f$ es indefinida: punto de silla
+
+### 4.5.4 Extremos con Restricciones (Ligados)
+
+Para $f: D \subseteq \mathbb{R}^n \to \mathbb{R}$ con restricciones $g_i(\overline{x}) = 0$, se usa el método de **multiplicadores de Lagrange**:
+
+$$
+\nabla f(\overline{x}_0) = \sum_{i=1}^m \lambda_i \nabla g_i(\overline{x}_0)
+$$
+con $g_i(\overline{x}_0) = 0$ para cada $i$.
+
+### 4.5.5 Ejemplo de Extremo Libre
+
+Buscar extremos de $f(x,y) = x^2 + y^2$ en $\mathbb{R}^2$.
+
+\- $\nabla f(x,y) = (2x, 2y) = 0 \implies x=0, y=0$
+\- $H_f = \begin{pmatrix}2 & 0 \\ 0 & 2\end{pmatrix}$ definida positiva $\implies$ mínimo en $(0,0)$.
+
+### 4.5.6 Ejemplo de Extremo Ligado
+
+Buscar extremos de $f(x,y) = x^2 + y^2$ sujeto a $x + y = 1$.
+
+Planteo de Lagrange:
+$$
+\mathcal{L}(x,y,\lambda) = x^2 + y^2 - \lambda(x + y - 1)
+$$
+\- $\frac{\partial \mathcal{L}}{\partial x} = 2x - \lambda = 0$
+\- $\frac{\partial \mathcal{L}}{\partial y} = 2y - \lambda = 0$
+\- $x + y = 1$
+
+Solución: $x = y = 0.5$, $\lambda = 1$.
+
+### 4.5.7 Ejercicios Propuestos
+
+1) Hallar y clasificar los extremos de $f(x,y) = x^2 - 2xy + 2y^2$.
+2) Buscar extremos de $f(x,y) = x^2 + y^2$ sujeto a $x - y = 0$.
+3) Hallar los extremos de $f(x,y) = x^2 + y^2$ en el círculo $x^2 + y^2 \leq 1$.
+4) Buscar extremos de $f(x,y,z) = x^2 + y^2 + z^2$ sujeto a $x + y + z = 1$.
+5) Demostrar las condiciones de segundo orden para extremos libres usando la Hessiana.
