@@ -5,11 +5,11 @@ import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 
 const organizationName = "ArenasAgustin";
-const projectName = "apuntes";
+const projectName = "MindArchive";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Documentación Académica Universitaria",
+  title: "MindArchive",
   tagline:
     "Repositorio centralizado de apuntes, trabajos y recursos académicos",
   favicon: "img/favicon.ico",
@@ -56,7 +56,7 @@ const config = {
       },
       image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: "📚 Mis Apuntes",
+        title: "�️ MindArchive",
         items: [
           {
             type: "docSidebar",
@@ -75,7 +75,7 @@ const config = {
         style: "dark",
         links: [
           {
-            title: "📚 Documentación",
+            title: "�️ MindArchive",
             items: [
               {
                 label: "📖 Todas las Materias",
@@ -110,7 +110,7 @@ const config = {
             ],
           },
         ],
-        copyright: `📚 Copyright © ${new Date().getFullYear()} Agustín Arenas. Documentación académica construida con ❤️ usando Docusaurus.`,
+        copyright: `�️ Copyright © ${new Date().getFullYear()} Agustín Arenas. MindArchive construido con ❤️ usando Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
