@@ -56,7 +56,7 @@ const config = {
       },
       image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: "�️ MindArchive",
+        title: "📚 MindArchive",
         items: [
           {
             type: "docSidebar",
@@ -75,7 +75,7 @@ const config = {
         style: "dark",
         links: [
           {
-            title: "�️ MindArchive",
+            title: "📚 MindArchive",
             items: [
               {
                 label: "📖 Todas las Materias",
