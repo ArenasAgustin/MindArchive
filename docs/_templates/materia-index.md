@@ -3,7 +3,6 @@ title: "[Nombre de la Materia]"
 description: "Documentación completa de [Nombre de la Materia] - Apuntes, trabajos prácticos, exámenes y recursos"
 sidebar_position: 1
 tags: [[área-conocimiento], [tags-específicos]]
-last_update:
 ---
 
 ## 📖 Descripción de la Materia

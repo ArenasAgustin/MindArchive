@@ -3,7 +3,6 @@ title: "Unidad [N]: [Título de la Unidad]"
 description: "[Nombre de la Materia] - Unidad [N]: [Descripción breve de los contenidos principales]"
 sidebar_position: [N]
 tags: [[nombre-materia], [tema-principal], [conceptos-clave]]
-last_update:
 ---
 
 ## 🎯 Objetivos de Aprendizaje
