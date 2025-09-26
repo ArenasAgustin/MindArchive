@@ -118,6 +118,8 @@ El algoritmo de ordenamiento de burbuja compara elementos adyacentes repetidamen
 - **Espacio:** O(1) - ordenamiento in-place
 - **Estabilidad:** Estable
 
+![Animación Bubble Sort](/img/algoritmos-y-estructuras-de-datos/bubble-sort.gif)
+
 #### Especificación Algebraica del Bubble Sort
 
 $$
@@ -170,6 +172,14 @@ El ordenamiento por inserción es un algoritmo simple que construye la secuencia
 
 **Idea principal:** Similar a ordenar cartas en la mano, insertando cada nueva carta en su posición correcta.
 
+**Características:**
+
+- **Complejidad temporal:** O(n²) en el peor caso, O(n) en el mejor caso
+- **Complejidad espacial:** O(1) - ordenamiento in-place
+- **Estabilidad:** Estable
+
+![Animación Insertion Sort](/img/algoritmos-y-estructuras-de-datos/insertion-sort.gif)
+
 #### Proceso Paso a Paso
 
 **Pasada 1:**
@@ -187,12 +197,6 @@ El ordenamiento por inserción es un algoritmo simple que construye la secuencia
 **Pasada 3:**
 
 - Se repite el procedimiento para el resto de los elementos
-
-**Características:**
-
-- **Complejidad temporal:** O(n²) en el peor caso, O(n) en el mejor caso
-- **Complejidad espacial:** O(1) - ordenamiento in-place
-- **Estabilidad:** Estable
 
 #### Implementación del Insertion Sort
 
@@ -246,6 +250,8 @@ El ordenamiento por selección es un algoritmo de ordenamiento in-place que divi
 - **Complejidad temporal:** O(n²) en todos los casos
 - **Complejidad espacial:** O(1) - ordenamiento in-place
 - **Estabilidad:** No estable (puede cambiar el orden de elementos iguales)
+
+![Animación Selection Sort](/img/algoritmos-y-estructuras-de-datos/selection-sort.gif)
 
 #### Especificación Algebraica del Selection Sort
 
@@ -314,6 +320,13 @@ El ordenamiento de Shell es una versión mejorada del ordenamiento por inserció
 - **Complejidad espacial:** O(1)
 - **Estabilidad:** No estable
 
+#### Paso a Paso del Shell Sort
+
+1. Elegir una secuencia de gaps (intervalos)
+2. Para cada gap, realizar un ordenamiento por inserción en los sub-arreglos definidos por ese gap
+3. Reducir el gap y repetir hasta que el gap sea 1
+4. Realizar un último ordenamiento por inserción para asegurar que el arreglo esté completamente ordenado
+
 #### Implementación del Shell Sort
 
 ```cpp
@@ -374,6 +387,8 @@ El ordenamiento por fusión (Merge Sort) es un algoritmo de divide y vencerás q
 Un enfoque natural para la resolución de problemas es "divide y vencerás". En cuanto al ordenamiento, podríamos considerar dividir la lista (a ordenar) en partes, procesarlas (ordenarlas) y luego volver a unirlas. La operación fundamental de este algoritmo es fusionar dos listas ordenadas.
 
 El algoritmo Mergesort se ejecuta en un tiempo de ejecución de O(N log N), en el peor de los casos, y el número de comparaciones utilizadas es casi óptimo. Es un buen ejemplo de algoritmo recursivo.
+
+![Animación Merge Sort](/img/algoritmos-y-estructuras-de-datos/merge-sort.gif)
 
 #### Algoritmo para Merge Sort
 
@@ -470,19 +485,21 @@ void mergeSort(std::vector<int>& arr, int left, int right) {
 
 Quicksort es un algoritmo de "divide y vencerás" que selecciona un elemento 'pivote' del arreglo y particiona los otros elementos en dos sub-arreglos, según si son menores o mayores que el pivote. Los sub-arreglos se ordenan recursivamente.
 
-**Proceso del algoritmo:**
+**Características:**
+
+- **Complejidad temporal:** O(n log n) promedio, O(n²) peor caso
+- **Complejidad espacial:** O(log n)
+- **Estabilidad:** No estable
+
+![Animación Quick Sort](/img/algoritmos-y-estructuras-de-datos/quick-sort.gif)
+
+#### Proceso del algoritmo
 
 1. **Selección del pivote:** Se elige un elemento del arreglo como pivote
 2. **Partición:** Se reorganizan los elementos de manera que:
    - Los elementos menores que el pivote quedan a la izquierda
    - Los elementos mayores que el pivote quedan a la derecha
 3. **Recursión:** Se aplica el mismo proceso a los sub-arreglos izquierdo y derecho
-
-**Características:**
-
-- **Complejidad temporal:** O(n log n) promedio, O(n²) peor caso
-- **Complejidad espacial:** O(log n)
-- **Estabilidad:** No estable
 
 #### Implementación del QuickSort
 
@@ -601,6 +618,8 @@ Heap Sort es un algoritmo de ordenamiento basado en la estructura de datos llama
 - **Complejidad espacial:** O(1) (ordenamiento in-place).
 - **Estabilidad:** No estable (puede cambiar el orden de elementos iguales).
 
+![Animación Heap Sort](/img/algoritmos-y-estructuras-de-datos/heap-sort.gif)
+
 #### Implementación de Heap Sort
 
 ```cpp
@@ -660,6 +679,8 @@ A continuación se presenta una tabla comparativa de los algoritmos de ordenamie
 | Optimizado QuickSort | O(n log n) | O(n log n) | O(n log n) | O(log n) | No |
 
 Los algoritmos de ordenamiento son fundamentales para optimizar el rendimiento de muchas aplicaciones. La elección del algoritmo correcto depende del tamaño de los datos, su estado inicial y los recursos disponibles.
+
+![Comparación de Algoritmos de Ordenamiento](/img/algoritmos-y-estructuras-de-datos/comparacion-ordenamiento.gif)
 
 ### 4.4.2 Casos de uso recomendados
 
