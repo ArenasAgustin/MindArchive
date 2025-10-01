@@ -105,6 +105,6 @@ Introducir a los estudiantes en los conceptos fundamentales de algoritmos y estr
 
 ## 📖 Bibliografía
 
-- [Paul Deitel, Harvey Deitel - *Cómo programar C++ 9na Edición*](/pdf/algoritmos-y-estructuras-de-datos/como-programar-cpp-9na-edicion-2014.pdf)
-- [Eliot B. Koffman, Paul A.T. Wolfgang. - *Objects abstraction data structures and design using C++*](/pdf/algoritmos-y-estructuras-de-datos/objects-abstraction-data-structures-anddesign-using-cpp.pdf)
-- [Luis Joyanes A., Lucas Sánchez G., Ignacio Zahonero M. - *Estructura de datos en C++*](/pdf/algoritmos-y-estructuras-de-datos/estructura-de-datos-en-cpp.pdf)
+- [Paul Deitel, Harvey Deitel - *Cómo programar C++ 9na Edición*](https://res.cloudinary.com/dmwto06rn/raw/upload/v1759277830/pdfs/como-programar-cpp-9na-edicion-2014_compressed_sv0xlh.pdf)
+- [Eliot B. Koffman, Paul A.T. Wolfgang. - *Objects abstraction data structures and design using C++*](https://res.cloudinary.com/dmwto06rn/raw/upload/v1759277844/pdfs/objects-abstraction-data-structures-anddesign-using-cpp_compressed_tvsunn.pdf)
+- [Luis Joyanes A., Lucas Sánchez G., Ignacio Zahonero M. - *Estructura de datos en C++*](https://res.cloudinary.com/dmwto06rn/raw/upload/v1759277828/pdfs/estructura-de-datos-en-cpp_compressed_meofpk.pdf)
