@@ -52,6 +52,7 @@ Al finalizar esta unidad, el estudiante será capaz de:
 - [Ordenamiento](https://res.cloudinary.com/dmwto06rn/raw/upload/v1758667985/pdfs/ORDENAMIENTO_e5lhq0.pdf)
 - [Sorting 01](https://res.cloudinary.com/dmwto06rn/raw/upload/v1758667983/pdfs/AyED_03_-_Sorting_01_staat9.pdf)
 - [Sorting 02](https://res.cloudinary.com/dmwto06rn/raw/upload/v1758667983/pdfs/AyED_03_-_Sorting_02_v5dsxo.pdf)
+- [Big-O Cheat Sheet](https://www.bigocheatsheet.com)
 
 ## Primer tema: 4.1 Fundamentos del Ordenamiento
 
