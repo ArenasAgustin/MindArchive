@@ -1,8 +1,8 @@
 ---
 title: "Unidad 5: Árboles"
-description: "Algoritmos y Estructuras de Datos - Unidad 5: Estructuras de datos jerárquicas - Árboles binarios, ABB, AVL, B y B+"
+description: "Algoritmos y Estructuras de Datos - Unidad 5: Estructuras de datos jerárquicas - Árboles binarios, ABB, AVL, Rojo-Negro, B y B+"
 sidebar_position: 6
-tags: [algoritmos, estructuras-de-datos, arboles, arboles-binarios, abb, avl, b-tree, cpp]
+tags: [algoritmos, estructuras-de-datos, arboles, arboles-binarios, abb, avl, rojo-negro, red-black-tree, b-tree, cpp]
 ---
 
 ## 🎯 Objetivos de Aprendizaje
@@ -23,6 +23,7 @@ Al finalizar esta unidad, el estudiante será capaz de:
 - Comprender y aplicar la propiedad fundamental de los Árboles de Búsqueda Binaria (ABB)
 - Identificar las limitaciones del ABB simple y la necesidad de estructuras auto-equilibradas
 - Comprender el funcionamiento de los Árboles AVL y sus mecanismos de reequilibrio
+- Analizar los Árboles Rojo-Negro y su balance entre eficiencia de inserción y búsqueda
 - Aplicar Árboles B y B+ en el contexto de bases de datos y sistemas de almacenamiento
 - Seleccionar la estructura de árbol adecuada según los requisitos del problema
 
@@ -71,24 +72,31 @@ Al finalizar esta unidad, el estudiante será capaz de:
 - **5.7.3** Rotaciones y reequilibrio
 - **5.7.4** Complejidad y rendimiento
 
-### 5.8 Árboles B (B-Trees)
+### 5.8 Árboles Rojo-Negro (Red-Black Trees)
 
-- **5.8.1** Motivación y contexto de uso
-- **5.8.2** Definición y propiedades
-- **5.8.3** Operaciones básicas
-- **5.8.4** Aplicaciones en sistemas de almacenamiento
+- **5.8.1** Definición y motivación
+- **5.8.2** Propiedades fundamentales
+- **5.8.3** Operaciones y reequilibrio
+- **5.8.4** Comparación con AVL
 
-### 5.9 Árboles B+ (B+ Trees)
+### 5.9 Árboles B (B-Trees)
 
-- **5.9.1** Diferencias con Árboles B
-- **5.9.2** Estructura y propiedades
-- **5.9.3** Ventajas para bases de datos
-- **5.9.4** Comparación de estructuras
+- **5.9.1** Motivación y contexto de uso
+- **5.9.2** Definición y propiedades
+- **5.9.3** Operaciones básicas
+- **5.9.4** Aplicaciones en sistemas de almacenamiento
 
-### 5.10 Recursos y Visualizaciones
+### 5.10 Árboles B+ (B+ Trees)
 
-- **5.10.1** Herramientas de visualización interactiva
-- **5.10.2** Comparación general de estructuras
+- **5.10.1** Diferencias con Árboles B
+- **5.10.2** Estructura y propiedades
+- **5.10.3** Ventajas para bases de datos
+- **5.10.4** Comparación de estructuras
+
+### 5.11 Recursos y Visualizaciones
+
+- **5.11.1** Herramientas de visualización interactiva
+- **5.11.2** Comparación general de estructuras
 
 ### 🔗 Recursos Complementarios
 
@@ -97,6 +105,7 @@ Al finalizar esta unidad, el estudiante será capaz de:
 - [AyED - Arboles](https://res.cloudinary.com/dmwto06rn/raw/upload/v1761174458/pdfs/AyED_-_Arboles_zvalh3.pdf)
 - [Visualización de Árboles AAB](https://www.cs.usfca.edu/~galles/visualization/BST.html)
 - [Visualización de Árboles AVL](https://www.cs.usfca.edu/~galles/visualization/AVLtree.html)
+- [Visualización de Árboles Rojo-Negro](https://www.cs.usfca.edu/~galles/visualization/RedBlack.html)
 - [Visualización de Árboles B](https://www.cs.usfca.edu/~galles/visualization/BTree.html)
 - [Visualización de Árboles B+](https://www.cs.usfca.edu/~galles/visualization/BPlusTree.html)
 
@@ -649,7 +658,7 @@ Para resolver este problema, se han desarrollado varias estructuras de datos que
 | **Rojo-Negro** | Relajado | $O(\log n)$ | Balance entre inserción y búsqueda |
 | **B/B+** | Por niveles | $O(\log_m n)$ | Bases de datos, sistemas de archivos |
 
-En los siguientes temas estudiaremos en detalle los **Árboles AVL**, **Árboles B** y **Árboles B+**.
+En los siguientes temas estudiaremos en detalle los **Árboles AVL**, **Árboles Rojo-Negro**, **Árboles B** y **Árboles B+**.
 
 ## Séptimo tema: 5.7 Árboles AVL
 
@@ -755,9 +764,338 @@ Cuando se rompe la propiedad AVL (el factor de balance es $\pm 2$), se aplican *
 2. **Overhead de memoria:** Necesita almacenar el factor de balance
 3. **Inserción más lenta:** Comparado con ABB simple o árboles Rojo-Negro
 
-## Octavo tema: 5.8 Árboles B (B-Trees)
+## Octavo tema: 5.8 Árboles Rojo-Negro (Red-Black Trees)
 
-### 5.8.1 Motivación y contexto de uso
+### 5.8.1 Definición y motivación
+
+El **Árbol Rojo-Negro** (Red-Black Tree) es un Árbol Binario de Búsqueda **auto-equilibrado** que ofrece un **balance entre la eficiencia de inserción y búsqueda**.
+
+**Nombre:** Proviene del uso de dos colores (rojo y negro) para marcar los nodos y mantener el equilibrio del árbol.
+
+**Inventores:** Rudolf Bayer (1972), formalizados por Leo J. Guibas y Robert Sedgewick (1978)
+
+#### Motivación
+
+Los Árboles Rojo-Negro fueron diseñados para resolver una limitación de los Árboles AVL:
+
+**Problema de AVL:**
+
+- El balanceo estricto (factor de balance ≤ 1) requiere **rotaciones frecuentes**
+- Cada inserción/eliminación puede requerir múltiples rotaciones hacia la raíz
+- Esto hace que las operaciones de escritura sean más costosas
+
+**Solución Rojo-Negro:**
+
+- Criterio de balance **más relajado**
+- **Menos rotaciones** en promedio (máximo 2 rotaciones para inserción, 3 para eliminación)
+- Mejor rendimiento cuando hay muchas inserciones/eliminaciones
+- Mantiene altura garantizada $O(\log n)$, aunque ligeramente mayor que AVL
+
+#### Aplicaciones
+
+Los Árboles Rojo-Negro son ampliamente utilizados en:
+
+1. **Bibliotecas estándar de lenguajes:**
+   - C++ STL: `std::map`, `std::set`
+   - Java: `TreeMap`, `TreeSet`
+   - C#: `SortedDictionary`, `SortedSet`
+
+2. **Kernel de Linux:**
+   - Planificador de procesos CFS (Completely Fair Scheduler)
+   - Gestión de memoria virtual
+
+3. **Bases de datos:**
+   - Implementación de índices en memoria
+
+### 5.8.2 Propiedades fundamentales
+
+Un Árbol Rojo-Negro debe cumplir **cinco propiedades fundamentales**:
+
+#### Las 5 Propiedades
+
+| # | Propiedad | Descripción |
+|---|-----------|-------------|
+| **1** | **Color del nodo** | Cada nodo es **ROJO** o **NEGRO** |
+| **2** | **Raíz negra** | La **raíz** siempre es **NEGRA** |
+| **3** | **Hojas negras** | Todas las **hojas** (nodos NIL/NULL) son **NEGRAS** |
+| **4** | **Hijos de nodo rojo** | Si un nodo es **ROJO**, entonces ambos hijos son **NEGROS** (no puede haber dos nodos rojos consecutivos en un camino) |
+| **5** | **Altura negra uniforme** | Para cada nodo, todos los caminos desde ese nodo hasta cualquier hoja descendiente contienen el **mismo número de nodos negros** |
+
+#### Altura Negra
+
+**Definición:** La **altura negra** de un nodo es el número de nodos negros en cualquier camino desde ese nodo (sin incluirlo) hasta una hoja.
+
+**Notación:** $bh(x)$ = altura negra del nodo $x$
+
+**Importancia:** La propiedad 5 garantiza que la altura negra es la misma para todos los caminos desde un nodo hasta sus hojas.
+
+#### Ejemplo visual
+
+```mermaid
+graph TD
+    N13((13)):::black
+    N8((8)):::red
+    N17((17)):::red
+    N1((1)):::black
+    N11((11)):::black
+    N15((15)):::black
+    N25((25)):::black
+    INVISIBLE1[ ]:::invisible
+    N6((6)):::red
+    N22((22)):::red
+    N27((27)):::red
+    
+    N13 --> N8
+    N13 --> N17
+    N8 --> N1
+    N8 --> N11
+    N17 --> N15
+    N17 --> N25
+    N1 -.-> INVISIBLE1
+    N1 --> N6
+    N25 --> N22
+    N25 --> N27
+    
+    classDef black fill:#2d3748,stroke:#1a202c,stroke-width:3px,color:#fff
+    classDef red fill:#e53e3e,stroke:#c53030,stroke-width:3px,color:#fff
+    classDef invisible fill:none,stroke:none,color:transparent
+```
+
+**Análisis del ejemplo:**
+
+- La raíz (13) es **negra** ✓
+- No hay dos nodos rojos consecutivos ✓
+- Altura negra desde la raíz: 2 (todos los caminos tienen 2 nodos negros) ✓
+
+#### Garantía de altura
+
+**Teorema:** Un Árbol Rojo-Negro con $n$ nodos internos tiene altura máxima:
+
+$$h \le 2\log_2(n+1)$$
+
+**Consecuencia:** La altura está acotada por $O(\log n)$, lo que garantiza operaciones eficientes.
+
+**Comparación de alturas:**
+
+| Estructura | Altura máxima |
+|------------|---------------|
+| AVL | $1.44 \log_2 n$ |
+| Rojo-Negro | $2 \log_2 n$ |
+| ABB desbalanceado | $n$ |
+
+Aunque el Árbol Rojo-Negro tiene una altura mayor que AVL, sigue siendo logarítmica.
+
+### 5.8.3 Operaciones y reequilibrio
+
+#### Búsqueda
+
+La búsqueda en un Árbol Rojo-Negro es **idéntica** a la búsqueda en un ABB normal:
+
+1. Comenzar en la raíz
+2. Comparar el valor buscado con el nodo actual
+3. Si es igual, retornar
+4. Si es menor, ir al hijo izquierdo
+5. Si es mayor, ir al hijo derecho
+6. Repetir hasta encontrar o llegar a NIL
+
+**Complejidad:** $O(\log n)$
+
+**Nota:** Los colores no afectan la búsqueda, solo el balanceo.
+
+#### Inserción
+
+La inserción es más compleja y requiere mantener las 5 propiedades:
+
+**Proceso de inserción:**
+
+1. **Insertar como en ABB normal:**
+   - Buscar la posición correcta
+   - Insertar el nuevo nodo
+
+2. **Colorear el nodo como ROJO:**
+   - Esto minimiza violaciones (no afecta altura negra)
+
+3. **Reparar violaciones:**
+   - Si el padre es NEGRO → listo ✓
+   - Si el padre es ROJO → violación de propiedad 4
+
+**Casos de reequilibrio:**
+
+| Caso | Condición | Acción |
+|------|-----------|--------|
+| **Caso 1** | El tío es ROJO | Recolorear (padre, tío → NEGRO; abuelo → ROJO), propagar hacia arriba |
+| **Caso 2** | El tío es NEGRO y el nodo está en posición "intermedia" (zigzag) | Rotación para convertir a Caso 3 |
+| **Caso 3** | El tío es NEGRO y el nodo está en posición "externa" (línea recta) | Rotación + recoloreo |
+
+**Ejemplo de Caso 1 (Tío Rojo):**
+
+Antes:
+
+```mermaid
+graph TD
+    Abuelo(Abuelo):::black
+    Padre(Padre):::red
+    Tio(Tío):::red
+    Nuevo(Nuevo):::red
+    INVISIBLE1[ ]:::invisible
+    
+    Abuelo --> Padre
+    Abuelo --> Tio
+    Padre --> Nuevo
+    Padre -.-> INVISIBLE1
+    
+    classDef black fill:#2d3748,stroke:#1a202c,stroke-width:3px,color:#fff
+    classDef red fill:#e53e3e,stroke:#c53030,stroke-width:3px,color:#fff
+    classDef invisible fill:none,stroke:none,color:transparent
+```
+
+Después (recolorear):
+
+```mermaid
+graph TD
+    Abuelo(Abuelo):::red
+    Padre(Padre):::black
+    Tio(Tío):::black
+    Nuevo(Nuevo):::red
+    INVISIBLE1[ ]:::invisible
+    
+    Abuelo --> Padre
+    Abuelo --> Tio
+    Padre --> Nuevo
+    Padre -.-> INVISIBLE1
+    
+    classDef black fill:#2d3748,stroke:#1a202c,stroke-width:3px,color:#fff
+    classDef red fill:#e53e3e,stroke:#c53030,stroke-width:3px,color:#fff
+    classDef invisible fill:none,stroke:none,color:transparent
+```
+
+**Complejidad:** $O(\log n)$ - Máximo 2 rotaciones
+
+#### Eliminación
+
+La eliminación es la operación más compleja:
+
+**Proceso:**
+
+1. **Eliminar como en ABB normal:**
+   - Encontrar el nodo a eliminar
+   - Aplicar las reglas estándar de eliminación en ABB
+
+2. **Si el nodo eliminado es ROJO:**
+   - No hay problemas, las propiedades se mantienen ✓
+
+3. **Si el nodo eliminado es NEGRO:**
+   - Se viola la propiedad 5 (altura negra)
+   - Requiere reequilibrio complejo
+
+**Casos de reequilibrio (cuando se elimina un nodo NEGRO):**
+
+- **Caso 1:** Hermano es ROJO
+- **Caso 2:** Hermano es NEGRO y ambos sobrinos son NEGROS
+- **Caso 3:** Hermano es NEGRO, sobrino externo es NEGRO, sobrino interno es ROJO
+- **Caso 4:** Hermano es NEGRO y sobrino externo es ROJO
+
+**Complejidad:** $O(\log n)$ - Máximo 3 rotaciones
+
+### 5.8.4 Comparación con AVL
+
+#### Tabla comparativa detallada
+
+| Característica | Árbol AVL | Árbol Rojo-Negro |
+|----------------|-----------|------------------|
+| **Criterio de balance** | Estricto: diferencia de alturas ≤ 1 | Relajado: propiedades de color |
+| **Altura máxima** | $1.44 \log_2 n$ | $2 \log_2 n$ |
+| **Búsqueda** | Más rápida (árbol más bajo) | Ligeramente más lenta |
+| **Inserción** | Más lenta (más rotaciones) | Más rápida (menos rotaciones) |
+| **Eliminación** | Más lenta (más rotaciones) | Más rápida (menos rotaciones) |
+| **Rotaciones (inserción)** | Hasta $O(\log n)$ rotaciones | Máximo 2 rotaciones |
+| **Rotaciones (eliminación)** | Hasta $O(\log n)$ rotaciones | Máximo 3 rotaciones |
+| **Memoria extra** | Factor de balance (entero) | 1 bit para el color |
+| **Uso común** | Búsquedas muy frecuentes | Balance entre búsqueda e inserción |
+
+#### Cuándo usar cada estructura
+
+**Usar Árbol AVL cuando:**
+
+- Las **búsquedas** son mucho más frecuentes que inserciones/eliminaciones
+- Se requiere el **mínimo tiempo de búsqueda** posible
+- El overhead de rotaciones en inserción/eliminación es aceptable
+
+**Usar Árbol Rojo-Negro cuando:**
+
+- Hay un **balance** entre búsquedas e inserciones/eliminaciones
+- Se necesita **rendimiento predecible** en todas las operaciones
+- Se requiere una implementación estándar (bibliotecas de lenguajes)
+
+#### Comparación de complejidad
+
+| Operación | AVL | Rojo-Negro | Ganador |
+|-----------|-----|------------|---------|
+| Búsqueda | $O(\log n)$ | $O(\log n)$ | AVL (constante menor) |
+| Inserción | $O(\log n)$ con más rotaciones | $O(\log n)$ con ≤2 rotaciones | Rojo-Negro |
+| Eliminación | $O(\log n)$ con más rotaciones | $O(\log n)$ con ≤3 rotaciones | Rojo-Negro |
+| Memoria | Factor de balance | 1 bit de color | Rojo-Negro |
+
+#### Ventajas del Árbol Rojo-Negro
+
+1. **Inserción/Eliminación más rápida:** Menos rotaciones = menos operaciones
+2. **Memoria eficiente:** Solo 1 bit extra por nodo
+3. **Implementación estándar:** Ampliamente usado en bibliotecas
+4. **Balance entre operaciones:** Buen rendimiento general
+
+#### Desventajas del Árbol Rojo-Negro
+
+1. **Búsqueda más lenta:** Árbol ligeramente más alto
+2. **Implementación compleja:** Muchos casos de reequilibrio
+3. **Difícil de entender:** Las propiedades de color son menos intuitivas
+
+### Ejemplo práctico: C++ STL
+
+```cpp
+#include <map>
+#include <set>
+#include <iostream>
+
+int main() {
+    // std::map usa internamente un Árbol Rojo-Negro
+    std::map<int, std::string> mapa;
+    mapa[3] = "tres";
+    mapa[1] = "uno";
+    mapa[5] = "cinco";
+    mapa[2] = "dos";
+    
+    // Las claves se mantienen ordenadas automáticamente
+    for (const auto& par : mapa) {
+        std::cout << par.first << ": " << par.second << std::endl;
+    }
+    
+    // std::set también usa un Árbol Rojo-Negro
+    std::set<int> conjunto = {5, 2, 8, 1, 9};
+    
+    // Búsqueda eficiente O(log n)
+    if (conjunto.find(5) != conjunto.end()) {
+        std::cout << "5 está en el conjunto" << std::endl;
+    }
+    
+    return 0;
+}
+```
+
+**Salida:**
+
+```plain
+1: uno
+2: dos
+3: tres
+5: cinco
+5 está en el conjunto
+```
+
+Los Árboles Rojo-Negro son una excelente opción cuando se necesita un balance entre todas las operaciones, y son la implementación preferida en muchas bibliotecas estándar por su rendimiento consistente y eficiente.
+
+## Noveno tema: 5.9 Árboles B (B-Trees)
+
+### 5.9.1 Motivación y contexto de uso
 
 Los **Árboles B** fueron diseñados específicamente para trabajar con **sistemas de almacenamiento** que acceden a datos en bloques grandes, como discos duros.
 
@@ -781,7 +1119,7 @@ Los **Árboles B** fueron diseñados específicamente para trabajar con **sistem
 2. **Bases de datos:** Índices en MySQL, PostgreSQL, MongoDB
 3. **Sistemas de almacenamiento:** Motores de búsqueda, sistemas distribuidos
 
-### 5.8.2 Definición y propiedades
+### 5.9.2 Definición y propiedades
 
 Un **Árbol B de orden $m$** tiene las siguientes propiedades:
 
@@ -806,7 +1144,7 @@ Un **Árbol B de orden $m$** tiene las siguientes propiedades:
 6. **Las claves dentro de cada nodo se almacenan de forma ascendente**
    - Permite búsqueda binaria dentro del nodo
 
-### 5.8.3 Operaciones básicas
+### 5.9.3 Operaciones básicas
 
 #### Búsqueda
 
@@ -834,7 +1172,7 @@ Más compleja, puede requerir:
 - **Fusión** de nodos si queda con muy pocas claves
 - **Redistribución** de claves entre hermanos
 
-### 5.8.4 Aplicaciones en sistemas de almacenamiento
+### 5.9.4 Aplicaciones en sistemas de almacenamiento
 
 #### Ventajas de los Árboles B
 
@@ -861,9 +1199,9 @@ Para un Árbol B de orden $m = 100$ con 1 millón de claves:
 - **Accesos a disco:** Máximo 3 lecturas
 - **Comparación con ABB:** Un ABB balanceado requeriría $\log_2(1,000,000) \approx 20$ accesos
 
-## Noveno tema: 5.9 Árboles B+ (B+ Trees)
+## Décimo tema: 5.10 Árboles B+ (B+ Trees)
 
-### 5.9.1 Diferencias con Árboles B
+### 5.10.1 Diferencias con Árboles B
 
 El **Árbol B+** es una variación del Árbol B, optimizada específicamente para **bases de datos** y **sistemas de gestión de archivos**.
 
@@ -885,7 +1223,7 @@ El **Árbol B+** es una variación del Árbol B, optimizada específicamente par
    - Las claves se duplican en nodos internos y hojas
    - Los nodos internos sirven solo como guía de navegación
 
-### 5.9.2 Estructura y propiedades
+### 5.10.2 Estructura y propiedades
 
 #### Propiedad Fundamental
 
@@ -922,7 +1260,7 @@ Donde:
 3. **Altura uniforme:** Todas las hojas al mismo nivel
 4. **Orden mantenido:** Tanto en nodos como en la lista de hojas
 
-### 5.9.3 Ventajas para bases de datos
+### 5.10.3 Ventajas para bases de datos
 
 #### Operaciones eficientes
 
@@ -972,7 +1310,7 @@ SELECT * FROM tabla WHERE clave BETWEEN 10 AND 50
    - Índices invertidos
    - Almacenamiento de documentos
 
-### 5.9.4 Comparación de estructuras
+### 5.10.4 Comparación de estructuras
 
 #### Tabla comparativa completa
 
@@ -1001,16 +1339,17 @@ SELECT * FROM tabla WHERE clave BETWEEN 10 AND 50
 - Se trabaja con bases de datos o índices
 - La duplicación de claves no es problema
 
-## Décimo tema: 5.10 Resumen y comparación de estructuras
+## Undécimo tema: 5.11 Resumen y comparación de estructuras
 
-### 5.10.2 Comparación general de estructuras
+### 5.11.2 Comparación general de estructuras
 
 #### Tabla de resumen ejecutivo
 
 | Estructura | Altura | Uso Principal | Ventaja Principal | Desventaja |
 |------------|--------|---------------|-------------------|------------|
 | **ABB** | $O(n)$ peor caso | Búsquedas simples en memoria | Simple de implementar | Puede degenerar |
-| **AVL** | $O(\log n)$ garantizado | Búsquedas frecuentes | Altura balanceada garantizada | Rotaciones costosas |
+| **AVL** | $O(\log n)$ garantizado | Búsquedas muy frecuentes | Altura balanceada garantizada | Rotaciones costosas |
+| **Rojo-Negro** | $O(\log n)$ garantizado | Bibliotecas estándar, balance general | Menos rotaciones que AVL | Búsquedas ligeramente más lentas que AVL |
 | **Árbol B** | $O(\log_m n)$ | Bases de datos, sistemas de archivos | Minimiza accesos a disco | Más complejo de implementar |
 | **Árbol B+** | $O(\log_m n)$ | Índices de bases de datos | Consultas de rango eficientes | Duplicación de claves |
 
@@ -1019,27 +1358,30 @@ SELECT * FROM tabla WHERE clave BETWEEN 10 AND 50
 **Elige la estructura según:**
 
 1. **Tipo de almacenamiento:**
-   - Memoria → AVL o ABB
+   - Memoria → AVL, Rojo-Negro o ABB
    - Disco → Árbol B o B+
 
 2. **Patrón de acceso:**
-   - Búsquedas puntuales → AVL
+   - Búsquedas puntuales muy frecuentes → AVL
+   - Balance búsquedas/inserciones → Rojo-Negro
    - Consultas de rango → B+
 
 3. **Frecuencia de operaciones:**
-   - Muchas búsquedas → AVL
+   - Muchas búsquedas, pocas inserciones → AVL
    - Balance búsquedas/inserciones → Rojo-Negro
-   - Grandes volúmenes → B/B+
+   - Grandes volúmenes en disco → B/B+
 
 4. **Restricciones:**
-   - Memoria limitada → B
-   - Rendimiento predecible → AVL o B+
+   - Memoria limitada → Rojo-Negro (1 bit) o B
+   - Rendimiento predecible → AVL, Rojo-Negro o B+
+   - Implementación estándar → Rojo-Negro
 
 ### Conclusión de la Unidad
 
-Las estructuras de datos avanzadas como AVL, B y B+ son fundamentales en la construcción de sistemas eficientes. Cada una tiene su nicho específico:
+Las estructuras de datos avanzadas como AVL, Rojo-Negro, B y B+ son fundamentales en la construcción de sistemas eficientes. Cada una tiene su nicho específico:
 
-- **AVL:** Cuando necesitas garantías de rendimiento en memoria
+- **AVL:** Cuando necesitas garantías de rendimiento óptimo en búsquedas en memoria
+- **Rojo-Negro:** Para bibliotecas estándar y balance general entre todas las operaciones
 - **Árbol B:** Para sistemas de almacenamiento con acceso a disco
 - **Árbol B+:** Para bases de datos que requieren búsquedas de rango eficientes
 
