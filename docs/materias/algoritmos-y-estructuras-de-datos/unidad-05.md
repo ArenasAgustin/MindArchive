@@ -887,7 +887,7 @@ Aunque el Árbol Rojo-Negro tiene una altura mayor que AVL, sigue siendo logarí
 
 ### 5.8.3 Operaciones y reequilibrio
 
-#### Búsqueda
+#### Búsqueda en Árboles Rojo-Negro
 
 La búsqueda en un Árbol Rojo-Negro es **idéntica** a la búsqueda en un ABB normal:
 
@@ -902,7 +902,7 @@ La búsqueda en un Árbol Rojo-Negro es **idéntica** a la búsqueda en un ABB n
 
 **Nota:** Los colores no afectan la búsqueda, solo el balanceo.
 
-#### Inserción
+#### Inserción en Árboles Rojo-Negro
 
 La inserción es más compleja y requiere mantener las 5 propiedades:
 
@@ -971,7 +971,7 @@ graph TD
 
 **Complejidad:** $O(\log n)$ - Máximo 2 rotaciones
 
-#### Eliminación
+#### Eliminación en Árboles Rojo-Negro
 
 La eliminación es la operación más compleja:
 
@@ -1013,7 +1013,7 @@ La eliminación es la operación más compleja:
 | **Memoria extra** | Factor de balance (entero) | 1 bit para el color |
 | **Uso común** | Búsquedas muy frecuentes | Balance entre búsqueda e inserción |
 
-#### Cuándo usar cada estructura
+#### Cuándo usar AVL vs Rojo-Negro
 
 **Usar Árbol AVL cuando:**
 
@@ -1146,7 +1146,7 @@ Un **Árbol B de orden $m$** tiene las siguientes propiedades:
 
 ### 5.9.3 Operaciones básicas
 
-#### Búsqueda
+#### Búsqueda en Árboles B
 
 1. Comenzar en la raíz
 2. Buscar la clave dentro del nodo (búsqueda binaria)
@@ -1156,7 +1156,7 @@ Un **Árbol B de orden $m$** tiene las siguientes propiedades:
 
 **Complejidad:** $O(\log_m n)$ accesos a disco
 
-#### Inserción
+#### Inserción en Árboles B
 
 1. Buscar la hoja donde insertar
 2. Si la hoja tiene espacio, insertar ordenadamente
@@ -1165,7 +1165,7 @@ Un **Árbol B de orden $m$** tiene las siguientes propiedades:
    - Promover la clave del medio al padre
    - Propagar división hacia arriba si es necesario
 
-#### Eliminación
+#### Eliminación en Árboles B
 
 Más compleja, puede requerir:
 
@@ -1324,7 +1324,7 @@ SELECT * FROM tabla WHERE clave BETWEEN 10 AND 50
 | **Acceso Secuencial** | Requiere recorrido inorden completo del árbol | Muy eficiente, solo recorrer la lista de hojas |
 | **Altura del Árbol** | Menor en algunos casos | Ligeramente menor (más claves por nodo interno) |
 
-#### Cuándo usar cada estructura
+#### Cuándo usar Árbol B vs Árbol B+
 
 **Usar Árbol B cuando:**
 
