@@ -60,6 +60,14 @@ const config = {
         disableSwitch: false,
         respectPrefersColorScheme: true,
       },
+
+      // Sidebar hideable
+      docs: {
+        sidebar: {
+          hideable: true,
+        },
+      },
+
       image: "img/docusaurus-social-card.jpg",
       navbar: {
         title: "📚 MindArchive",
