@@ -9,20 +9,20 @@ tags: [algoritmos, estructuras-de-datos, busqueda, busqueda-binaria, interpolaci
 
 ### Objetivo General
 
-Comprender y aplicar diversos algoritmos de búsqueda y estructuras de datos para conjuntos, analizando su eficiencia y casos de uso óptimos según las características de los datos y los requisitos del sistema.
+Comprender y aplicar diversos algoritmos de búsqueda y estructuras de datos para conjuntos, analizando su eficiencia, casos de uso óptimos y trade-offs entre complejidad temporal, espacial y funcionalidad según las características de los datos y los requisitos del sistema.
 
 ### Objetivos Específicos
 
 Al finalizar esta unidad, el estudiante será capaz de:
 
-- Comprender el concepto fundamental de búsqueda y sus consideraciones clave
-- Analizar la complejidad temporal y espacial de diferentes algoritmos de búsqueda
-- Implementar y aplicar algoritmos de búsqueda en estructuras ordenadas (binaria, interpolación)
-- Utilizar estructuras dinámicas para búsqueda eficiente (ABB)
-- Comprender el funcionamiento de las tablas hash y la gestión de colisiones
-- Aplicar map y unordered_map en C++ para asociaciones clave-valor eficientes
-- Aplicar conjuntos de bits (bitset) para operaciones eficientes sobre conjuntos
-- Seleccionar el algoritmo y estructura de datos adecuados según el contexto del problema
+- Comprender el concepto fundamental de búsqueda, sus consideraciones clave y la relación entre estructura de datos subyacente y algoritmo de búsqueda apropiado.
+- Analizar y comparar la complejidad temporal y espacial de diferentes algoritmos de búsqueda en sus casos mejor, promedio y peor.
+- Implementar y aplicar algoritmos de búsqueda en estructuras ordenadas: binaria ($O(\log n)$) e interpolación ($O(\log \log n)$), comprendiendo sus requisitos y limitaciones.
+- Comprender el funcionamiento de árboles binarios de búsqueda (ABB), analizar su rendimiento y reconocer la necesidad de estructuras auto-balanceadas (AVL, Rojo-Negro).
+- Comprender el funcionamiento de las tablas hash, implementar funciones hash apropiadas, gestionar colisiones mediante encadenamiento y direccionamiento abierto, y controlar el factor de carga.
+- Utilizar eficientemente map y unordered_map de C++ STL, seleccionando la estructura apropiada según la necesidad de ordenamiento, rendimiento y operaciones requeridas.
+- Aplicar conjuntos de bits (bitset) para operaciones eficientes sobre conjuntos de enteros, aprovechando operaciones a nivel de bit y eficiencia de memoria.
+- Evaluar y seleccionar el algoritmo y estructura de datos adecuados según múltiples criterios: tipo de datos, tamaño del conjunto, frecuencia de operaciones, requisitos de ordenamiento y restricciones de memoria.
 
 ## 📋 Contenidos y recursos
 

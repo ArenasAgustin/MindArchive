@@ -15,11 +15,15 @@ Comprender y aplicar los conceptos de recursividad en el diseño de algoritmos, 
 
 Al finalizar esta unidad, el estudiante será capaz de:
 
-- Definir y caracterizar las funciones recursivas
-- Identificar y aplicar los diferentes tipos de recursión
-- Optimizar funciones recursivas transformándolas de múltiple a simple
-- Convertir funciones recursivas a iterativas para mejorar eficiencia
-- Analizar el uso de memoria mediante Stack Frames
+- **Definir y caracterizar funciones recursivas**: Comprender la estructura de funciones que se llaman a sí mismas, identificando caso base y caso recursivo, garantizando convergencia hacia la condición de corte para evitar bucles infinitos
+- **Clasificar tipos de recursión**: Distinguir recursión simple (una llamada) vs múltiple (dos o más llamadas), recursión directa (llamada a sí misma) vs indirecta (llamada mutua entre funciones), evaluando complejidad y casos de uso apropiados
+- **Implementar algoritmos recursivos clásicos**: Desarrollar factorial con complejidad O(n) temporal y espacial, implementar Fibonacci con recursión múltiple O(2^n), analizar el árbol de llamadas y cálculos redundantes
+- **Analizar Stack Frames y gestión de memoria**: Comprender estructura de Stack Frame (puntero retorno, parámetros, variables locales), evaluar acumulación de memoria LIFO, identificar riesgo de stack overflow en recursiones profundas
+- **Optimizar recursión múltiple a simple**: Transformar Fibonacci de O(2^n) a O(n) usando función auxiliar con acumuladores, eliminar cálculos redundantes mediante parámetros adicionales que mantienen estado
+- **Implementar recursión de cola (tail recursion)**: Desarrollar funciones donde la llamada recursiva es la última operación, identificar estructura f(t1, t2) con parámetros constantes (t1) y variables (t2), permitir optimización del compilador
+- **Transformar recursión de cola a iterativa**: Aplicar transformación sistemática identificando d(t1,t2) condición de parada, h(t1,t2) función resultado, s(t1,t2) función transición, reemplazar recursión con bucle while
+- **Comparar eficiencia recursiva vs iterativa**: Evaluar complejidad espacial O(n) recursiva vs O(1) iterativa, analizar overhead de llamadas a función, considerar stack overflow vs memoria constante, elegir implementación según contexto
+- **Aplicar técnicas de optimización de memoria**: Convertir recursión no-tail a tail-recursion mediante acumuladores, transformar a versión iterativa para eficiencia, implementar algoritmos como búsqueda de máximo en arreglo con O(1) espacio
 
 ## 📋 Contenidos y recursos
 

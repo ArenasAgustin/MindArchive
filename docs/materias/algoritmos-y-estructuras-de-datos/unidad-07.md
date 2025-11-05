@@ -9,7 +9,7 @@ tags: [algoritmos, estructuras-de-datos, grafos, recorridos, bfs, dfs, mst, tsp,
 
 ### Objetivo General
 
-Comprender la teoría de grafos, sus representaciones computacionales y algoritmos fundamentales para resolver problemas sobre estructuras relacionales.
+Comprender la teoría de grafos, sus representaciones computacionales, algoritmos fundamentales de optimización y los problemas clásicos de recorridos, distinguiendo entre soluciones eficientes y problemas NP-completos.
 
 ### Objetivos Específicos
 
@@ -17,8 +17,11 @@ Al finalizar esta unidad, el estudiante será capaz de:
 
 - Comprender la definición formal y los componentes fundamentales de un grafo.
 - Conocer las representaciones en memoria (matriz y listas de adyacencia) y sus ventajas/desventajas.
-- Implementar y analizar los recorridos BFS y DFS.
-- Aplicar algoritmos clásicos: ordenamiento topológico (Kahn), árboles de expansión mínima (Prim y Kruskal) y comprender el problema del viajante (TSP).
+- Implementar y analizar los algoritmos de recorrido BFS y DFS, aplicándolos a problemas de componentes conexas, orden topológico y reachability.
+- Aplicar algoritmos de optimización: ordenamiento topológico (Kahn), árboles de expansión mínima (Prim y Kruskal), y algoritmos de caminos mínimos (Dijkstra y Floyd-Warshall).
+- Comprender y distinguir entre caminos eulerianos y hamiltonianos, reconociendo sus diferencias en complejidad computacional.
+- Implementar algoritmos de backtracking para problemas NP-completos como el camino hamiltoniano y el problema del viajante (TSP).
+- Analizar la complejidad temporal y espacial de los algoritmos estudiados, diferenciando entre soluciones polinomiales y exponenciales.
 
 ## 📋 Contenidos y recursos
 
@@ -60,9 +63,10 @@ Al finalizar esta unidad, el estudiante será capaz de:
 - [BFS](https://www.cs.usfca.edu/~galles/visualization/BFS.html)
 - [DFS](https://www.cs.usfca.edu/~galles/visualization/DFS.html)
 - [Ordenamiento Topológico (usando DFS)](https://www.cs.usfca.edu/~galles/visualization/TopoSortDFS.html)
-- [Dijkstra](https://www.cs.usfca.edu/~galles/visualization/Dijkstra.html)
-- [Kruskal](https://www.cs.usfca.edu/~galles/visualization/Kruskal.html)
 - [Prim](https://www.cs.usfca.edu/~galles/visualization/Prim.html)
+- [Kruskal](https://www.cs.usfca.edu/~galles/visualization/Kruskal.html)
+- [Dijkstra](https://www.cs.usfca.edu/~galles/visualization/Dijkstra.html)
+- [Floyd-Warshall](https://www.cs.usfca.edu/~galles/visualization/Floyd.html)
 
 ## Primer tema: 7.1 Definición y Conceptos Fundamentales
 

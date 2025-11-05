@@ -9,16 +9,19 @@ tags: [algoritmos, estructuras-de-datos, programacion, ordenamiento, bubble-sort
 
 ### Objetivo General
 
-Comprender y aplicar los principales algoritmos de ordenamiento, analizando su funcionamiento, complejidad y casos de uso apropiados.
+Comprender y aplicar los principales algoritmos de ordenamiento fundamentales y avanzados, analizando su funcionamiento interno, complejidad temporal y espacial, estabilidad, y criterios de selección según las características de los datos y requisitos del sistema.
 
 ### Objetivos Específicos
 
 Al finalizar esta unidad, el estudiante será capaz de:
 
-- Definir el concepto y características del ordenamiento
-- Implementar algoritmos de ordenamiento fundamentales y avanzados
-- Analizar la complejidad temporal y espacial de cada algoritmo
-- Comparar la eficiencia y estabilidad de diferentes métodos de ordenamiento
+- Definir el concepto de ordenamiento como proceso de organizar elementos en orden específico, comprendiendo características fundamentales como estabilidad, ordenamiento in-place y la notación Big O para análisis de complejidad.
+- Clasificar los algoritmos de ordenamiento según su enfoque: intercambio, inserción, selección, mezcla, distribución, híbridos, distinguiendo entre algoritmos in-place/no in-place y estables/no estables.
+- Implementar y analizar algoritmos fundamentales de ordenamiento: Bubble Sort (O(n²)), Insertion Sort (O(n) mejor caso, O(n²) promedio), Selection Sort (O(n²) todos los casos) y Shell Sort (O(n log n) a O(n²) según secuencia de gaps), comprendiendo su funcionamiento paso a paso y especificación algebraica.
+- Implementar y analizar algoritmos avanzados basados en divide y vencerás: Merge Sort (O(n log n) garantizado, estable, O(n) espacio), QuickSort (O(n log n) promedio, O(n²) peor caso, in-place), y sus optimizaciones (mediana de tres, híbrido con Insertion Sort).
+- Implementar y analizar Heap Sort basado en estructura de heap máximo, comprendiendo el proceso de heapify, construcción del heap y extracción sucesiva, con complejidad O(n log n) garantizada e in-place.
+- Comparar la eficiencia de los algoritmos mediante análisis de complejidad temporal (mejor caso, caso promedio, peor caso), complejidad espacial, estabilidad y aplicabilidad según el tamaño y estado inicial de los datos.
+- Seleccionar el algoritmo de ordenamiento apropiado según el contexto: Bubble/Insertion para listas pequeñas o casi ordenadas, Merge Sort para listas grandes y estabilidad requerida, QuickSort optimizado para casos generales de alto rendimiento, Heap Sort cuando se requiere in-place con complejidad garantizada.
 
 ## 📋 Contenidos y recursos
 

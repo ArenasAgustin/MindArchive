@@ -15,11 +15,14 @@ Comprender y aplicar los conceptos fundamentales de pilas y colas como estructur
 
 Al finalizar esta unidad, el estudiante será capaz de:
 
-- Comprender los conceptos fundamentales de pilas y colas como estructuras de datos lineales
-- Distinguir entre comportamiento LIFO (Last In, First Out) y FIFO (First In, First Out)
-- Implementar pilas y colas usando arrays y listas enlazadas
-- Aplicar pilas en problemas como evaluación de expresiones postfijas y balanceo de paréntesis
-- Resolver problemas prácticos utilizando estas estructuras de datos
+- **Diferenciar estructuras lineales LIFO y FIFO**: Comprender los principios Last In First Out (pilas) y First In First Out (colas), identificando sus características, ventajas y desventajas en diferentes contextos de aplicación
+- **Implementar pilas con arrays y listas enlazadas**: Desarrollar implementaciones de Stack con operaciones push(), pop(), top(), empty() y size(), todas con complejidad temporal O(1), manejando casos de overflow y underflow
+- **Implementar colas con arrays y listas enlazadas**: Desarrollar implementaciones de Queue con operaciones enqueue(), dequeue(), front(), empty() y size(), todas con complejidad temporal O(1), utilizando punteros a frente y final
+- **Aplicar el algoritmo Shunting Yard**: Convertir expresiones aritméticas de notación infija a postfija usando pilas, considerando precedencia de operadores (^, ×÷, +-) y asociatividad, manejando paréntesis correctamente
+- **Evaluar expresiones en notación postfija**: Implementar calculadora postfija usando pilas para procesar operandos y operadores secuencialmente, obteniendo resultados sin necesidad de paréntesis
+- **Validar balanceo de paréntesis**: Desarrollar algoritmos de validación sintáctica usando pilas para verificar el correcto emparejamiento de paréntesis (), corchetes [] y llaves {}, detectando errores de apertura/cierre
+- **Implementar variantes especializadas**: Desarrollar colas circulares (ring buffers) con índices modulares y colas de prioridad usando heaps para procesamiento ordenado por prioridad
+- **Aplicar pilas y colas a problemas reales**: Implementar historial de navegación (undo/redo), buffer de comunicación, scheduler de procesos, algoritmos BFS/DFS, y sistemas de gestión de eventos
 
 ## 📋 Contenidos y recursos
 

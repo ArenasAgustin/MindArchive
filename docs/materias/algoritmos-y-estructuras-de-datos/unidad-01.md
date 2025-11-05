@@ -15,12 +15,16 @@ Comprender y aplicar los conceptos fundamentales de C++ necesarios para el desar
 
 Al finalizar esta unidad, el estudiante será capaz de:
 
-- Manipular punteros y gestionar memoria dinámica de forma segura y eficiente
-- Distinguir entre memoria stack y heap, aplicando cada una según el contexto apropiado
-- Implementar estructuras y clases con constructores, destructores y métodos especializados
-- Aplicar conceptos de herencia, polimorfismo y encapsulación en diseños orientados a objetos
-- Desarrollar código genérico utilizando templates para maximizar la reutilización
-- Identificar y prevenir problemas comunes como memory leaks y errores de punteros
+- **Manipular punteros y referencias en C++**: Declarar punteros con sintaxis `tipo* nombre`, aplicar operadores `&` (dirección) y `*` (desreferenciación), realizar aritmética de punteros (`ptr+n`, `ptr++`), implementar punteros a punteros (`**ptr`) para estructuras dinámicas complejas
+- **Gestionar memoria dinámica con new/delete**: Asignar memoria heap con `new`/`new[]`, liberar con `delete`/`delete[]`, prevenir memory leaks usando RAII, aplicar smart pointers (`unique_ptr`, `shared_ptr`, `weak_ptr`) para gestión automática
+- **Diferenciar Stack vs Heap**: Comprender Stack (gestión automática, LIFO, 1-8MB, O(1) asignación) vs Heap (gestión manual, acceso aleatorio, limitado por RAM, O(log n) asignación), evaluar fragmentación y localidad de cache
+- **Implementar estructuras y clases**: Definir `struct`/`class` con miembros público/privado, usar lista de inicialización para eficiencia, distinguir constructores por defecto/parámetros/copia/movimiento, implementar destructores para liberación de recursos
+- **Aplicar constructores especiales C++11+**: Implementar constructor de copia para deep copy, constructor de movimiento con `std::move` para eficiencia, operadores de asignación por copia/movimiento, seguir reglas de Tres/Cinco/Cero
+- **Prevenir memory leaks sistemáticamente**: Detectar leaks por olvido delete, excepción, pérdida de referencia, usar RAII para gestión automática, emplear herramientas (Valgrind, AddressSanitizer) para validación
+- **Implementar programación orientada a objetos**: Aplicar encapsulación con `public`/`private`/`protected`, implementar herencia simple/múltiple, usar polimorfismo con métodos `virtual`/`override`, diseñar clases abstractas con funciones virtuales puras
+- **Desarrollar código genérico con templates**: Crear templates de funciones con `template<typename T>`, implementar clases template genéricas, realizar especialización total/parcial, aplicar SFINAE para restricciones de tipo
+- **Optimizar gestión de recursos**: Usar contenedores STL (`vector`, `list`, `map`) con gestión automática, aplicar perfect forwarding con `std::forward`, implementar `emplace` para construcción in-place, prevenir invalidación de iteradores
+- **Dominar características avanzadas C++**: Implementar métodos `const`/`noexcept`, usar referencias lvalue/rvalue (`&&`), aplicar `decltype` y `auto` para deducción de tipos, entender copy elision y RVO (Return Value Optimization)
 
 ## 📋 Contenidos y recursos
 

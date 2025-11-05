@@ -15,11 +15,15 @@ Comprender y aplicar las estructuras de datos lineales fundamentales, analizando
 
 Al finalizar esta unidad, el estudiante será capaz de:
 
-- Implementar y manipular listas enlazadas simples
-- Comparar ventajas y desventajas entre listas y arreglos
-- Aplicar templates para crear estructuras genéricas
-- Utilizar vectores de la STL de C++ eficientemente
-- Seleccionar la estructura apropiada según el contexto del problema
+- **Implementar listas enlazadas con nodos**: Desarrollar estructuras Nodo con dato y puntero al siguiente, creando listas con operaciones push() O(1), pop() O(1), getHead() O(1) y getTail(), manejando memoria dinámica con new/delete y aplicando principios RAII
+- **Comparar listas enlazadas vs arreglos**: Analizar acceso aleatorio O(1) en arreglos vs O(n) en listas, inserción/eliminación O(n) en arreglos vs O(1) en listas, evaluar overhead de punteros, localidad de cache y fragmentación de memoria
+- **Comprender la estructura recursiva de listas**: Implementar operaciones recursivas de recorrido, búsqueda y cálculo de longitud, aplicando casos base y recursivos, distinguiendo recursión de cola vs recursión con acumulador
+- **Desarrollar estructuras genéricas con templates**: Implementar clases template con `template <typename T>`, realizar instanciación explícita en archivos .cpp, aplicar especialización total y parcial, usar SFINAE para restricciones de tipo
+- **Implementar semántica de movimiento en C++11+**: Desarrollar constructores de copia y movimiento, operadores de asignación por copia/movimiento, usar perfect forwarding con std::forward, implementar emplace para construcción in-place
+- **Utilizar std::vector de STL eficientemente**: Aplicar operaciones push_back() O(1) amortizado, acceso operator[] O(1), insert() O(n), usar reserve() para pre-allocación, comprender estrategia de crecimiento exponencial (factor 1.5-2.0)
+- **Gestionar capacidad y memoria en vectores**: Diferenciar size() vs capacity(), aplicar reserve() para optimización, usar shrink_to_fit() para reducir memoria, comprender realocación automática y invalidación de iteradores
+- **Implementar iteradores para recorrido seguro**: Desarrollar clase Iterator interna con operator++, operator*, operator!=, implementar begin() y end(), usar range-based for loops, aplicar const_iterator para acceso inmutable
+- **Seleccionar estructura de datos apropiada**: Elegir vectores para acceso aleatorio frecuente y operaciones numéricas, usar listas para inserciones/eliminaciones frecuentes y tamaño variable, evaluar trade-offs de rendimiento vs memoria
 
 ## 📋 Contenidos y recursos
 

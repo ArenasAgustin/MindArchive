@@ -9,23 +9,22 @@ tags: [algoritmos, estructuras-de-datos, arboles, arboles-binarios, abb, avl, ro
 
 ### Objetivo General
 
-Comprender y aplicar la estructura de datos jerárquica de árboles, analizando sus propiedades, operaciones y diferentes formas de recorrido, con énfasis en los Árboles de Búsqueda Binaria y estructuras avanzadas auto-equilibradas.
+Comprender y aplicar estructuras de datos jerárquicas de árboles, analizando sus propiedades fundamentales, operaciones, métodos de recorrido y variantes especializadas, con énfasis en árboles de búsqueda binaria y estructuras auto-equilibradas, evaluando trade-offs entre complejidad, rendimiento y casos de uso específicos.
 
 ### Objetivos Específicos
 
 Al finalizar esta unidad, el estudiante será capaz de:
 
-- Definir el concepto de árbol y sus componentes fundamentales
-- Distinguir entre diferentes tipos de árboles (m-arios, binarios, llenos, completos)
-- Especificar formalmente el Tipo de Dato Abstracto (TDA) de árbol binario
-- Implementar operaciones básicas sobre árboles binarios
-- Aplicar los diferentes métodos de recorrido de árboles
-- Comprender y aplicar la propiedad fundamental de los Árboles de Búsqueda Binaria (ABB)
-- Identificar las limitaciones del ABB simple y la necesidad de estructuras auto-equilibradas
-- Comprender el funcionamiento de los Árboles AVL y sus mecanismos de reequilibrio
-- Analizar los Árboles Rojo-Negro y su balance entre eficiencia de inserción y búsqueda
-- Aplicar Árboles B y B+ en el contexto de bases de datos y sistemas de almacenamiento
-- Seleccionar la estructura de árbol adecuada según los requisitos del problema
+- Definir el concepto de árbol como estructura jerárquica, identificar sus componentes fundamentales (nodo, raíz, padre, hijo, hoja, altura, profundidad) y distinguir entre diferentes tipos de árboles (m-arios, binarios, llenos, completos).
+- Especificar formalmente el Tipo de Dato Abstracto (TDA) de árbol binario, comprendiendo sus operaciones constructoras (crear, plantar) y consultoras (hijoIzq, hijoDer, dato, nulo), y sus axiomas fundamentales.
+- Implementar y aplicar los tres métodos de recorrido de árboles binarios (preorden, inorden, posorden), comprendiendo el orden de visita y sus aplicaciones típicas (copiar árbol, ordenar elementos, eliminar árbol).
+- Comprender y aplicar la propiedad fundamental de los Árboles de Búsqueda Binaria (ABB): para cualquier nodo, todos los valores del subárbol izquierdo son menores y todos los del subárbol derecho son mayores, analizando su complejidad en mejor, promedio y peor caso.
+- Identificar las limitaciones del ABB simple (degeneración en O(n) con inserción ordenada) y comprender la necesidad de estructuras auto-equilibradas que garanticen altura logarítmica.
+- Analizar el funcionamiento de los Árboles AVL: definición de factor de balance, altura garantizada en O(log n), tipos de rotaciones (LL, RR, LR, RL) y cuándo aplicar cada una para mantener el equilibrio estricto.
+- Comprender los Árboles Rojo-Negro: las 5 propiedades fundamentales, concepto de altura negra, procesos de reequilibrio mediante recoloreo y rotaciones, y comparar ventajas/desventajas con AVL (menos rotaciones vs búsqueda más rápida).
+- Analizar Árboles B: motivación para sistemas de almacenamiento en disco, propiedades fundamentales (orden m, claves por nodo, altura balanceada), operaciones de inserción con división de nodos, y aplicaciones en sistemas de archivos y bases de datos.
+- Comprender Árboles B+: diferencias estructurales con Árboles B (separación índice/datos, enlaces entre hojas), ventajas para consultas de rango y escaneo secuencial, y aplicaciones en índices de bases de datos.
+- Evaluar y seleccionar la estructura de árbol adecuada según múltiples criterios: tipo de almacenamiento (memoria/disco), patrón de acceso (búsquedas puntuales/rango), frecuencia de operaciones (búsqueda/inserción/eliminación) y restricciones del sistema (memoria, rendimiento predecible).
 
 ## 📋 Contenidos y recursos
 
