@@ -91,8 +91,6 @@ Introducir a los estudiantes en los conceptos fundamentales de algoritmos y estr
 - [📁 Unidad 6: Estructuras Tipo Árbol](./unidad-06.md)
 - [📁 Unidad 7: Otras Estructuras](./unidad-07.md)
 - [📁 Unidad 8: Grafos](./unidad-08.md)
-- [📁 Unidad 9: Estrategias Algorítmicas](./unidad-09.md)
-- [📁 Unidad 10: Visión de Conjunto](./unidad-10.md)
 
 ### 📚 Recursos Adicionales
 
