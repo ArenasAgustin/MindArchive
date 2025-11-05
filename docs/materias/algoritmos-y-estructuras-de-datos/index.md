@@ -82,14 +82,14 @@ Introducir a los estudiantes en los conceptos fundamentales de algoritmos y estr
 
 ### 📝 Apuntes por Unidad
 
-- [📁 Unidad 1: Punteros y Memoria](./unidad-01.md)
+- [📁 Unidad 1: Fundamentos de C++ y Gestión de Memoria](./unidad-01.md)
 - [📁 Unidad 2: Recursividad](./unidad-02.md)
-- [📁 Unidad 3: Estructuras Lineales - Parte 1](./unidad-03-A.md)
-- [📁 Unidad 3: Estructuras Lineales - Parte 2](./unidad-03-B.md)
+- [📁 Unidad 3A: Estructuras Lineales](./unidad-03-A.md)
+- [📁 Unidad 3B: Colas y Pilas](./unidad-03-B.md)
 - [📁 Unidad 4: Complejidad Algorítmica](./unidad-04.md)
-- [📁 Unidad 5: Ordenamiento y Búsqueda](./unidad-05.md)
-- [📁 Unidad 6: Estructuras Tipo Árbol](./unidad-06.md)
-- [📁 Unidad 7: Otras Estructuras](./unidad-07.md)
+- [📁 Unidad 5: Algoritmos de Ordenamiento](./unidad-05.md)
+- [📁 Unidad 6: Estructuras de datos jerárquicas - Árboles](./unidad-06.md)
+- [📁 Unidad 7: Algoritmos de Búsqueda y Estructuras de Conjuntos](./unidad-07.md)
 - [📁 Unidad 8: Grafos](./unidad-08.md)
 
 ### 📚 Recursos Adicionales

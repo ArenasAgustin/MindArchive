@@ -1,6 +1,6 @@
 ---
-title: "Unidad 7: Grafos"
-description: "Algoritmos y Estructuras de Datos - Unidad 7: Grafos"
+title: "Unidad 7: Estructuras de datos relacionales - Grafos"
+description: "Algoritmos y Estructuras de Datos - Unidad 7: Estructuras de datos relacionales - Grafos, representaciones, recorridos (BFS, DFS), algoritmos clásicos (Dijkstra, Prim, Kruskal, TSP)"
 sidebar_position: 8
 tags: [algoritmos, estructuras-de-datos, grafos, recorridos, bfs, dfs, mst, tsp, ordenamiento-topologico, kruskal, prim, kahn, representacion-de-grafos, dijkstra, floyd-warshall, euleriano, hierholzer, hamiltoniano, backtracking]
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Unidad 5: Árboles"
+title: "Unidad 5: Estructuras de datos jerárquicas - Árboles"
 description: "Algoritmos y Estructuras de Datos - Unidad 5: Estructuras de datos jerárquicas - Árboles binarios, ABB, AVL, Rojo-Negro, B y B+"
 sidebar_position: 6
 tags: [algoritmos, estructuras-de-datos, arboles, arboles-binarios, abb, avl, rojo-negro, red-black-tree, b-tree, cpp]
