@@ -86,11 +86,10 @@ Introducir a los estudiantes en los conceptos fundamentales de algoritmos y estr
 - [📁 Unidad 2: Recursividad](./unidad-02.md)
 - [📁 Unidad 3A: Estructuras Lineales](./unidad-03-A.md)
 - [📁 Unidad 3B: Colas y Pilas](./unidad-03-B.md)
-- [📁 Unidad 4: Complejidad Algorítmica](./unidad-04.md)
-- [📁 Unidad 5: Algoritmos de Ordenamiento](./unidad-05.md)
-- [📁 Unidad 6: Estructuras de datos jerárquicas - Árboles](./unidad-06.md)
-- [📁 Unidad 7: Algoritmos de Búsqueda y Estructuras de Conjuntos](./unidad-07.md)
-- [📁 Unidad 8: Grafos](./unidad-08.md)
+- [📁 Unidad 4: Algoritmos de Ordenamiento](./unidad-04.md)
+- [📁 Unidad 5: Estructuras de datos jerárquicas - Árboles](./unidad-05.md)
+- [📁 Unidad 6: Algoritmos de Búsqueda y Estructuras de Conjuntos](./unidad-06.md)
+- [📁 Unidad 7: Estructuras de datos relacionales - Grafos](./unidad-07.md)
 
 ### 📚 Recursos Adicionales
 
