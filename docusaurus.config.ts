@@ -8,9 +8,9 @@ const organizationName = "ArenasAgustin";
 const projectName = "MindArchive";
 
 // Cargar variables de entorno para Algolia
-const algoliaAppId = process.env.ALGOLIA_APP_ID || 'YOUR_APP_ID';
-const algoliaApiKey = process.env.ALGOLIA_API_KEY || 'YOUR_SEARCH_API_KEY';
-const algoliaIndexName = process.env.ALGOLIA_INDEX_NAME || 'mindarchive';
+const algoliaAppId = process.env.ALGOLIA_APP_ID || "YOUR_APP_ID";
+const algoliaApiKey = process.env.ALGOLIA_API_KEY || "YOUR_SEARCH_API_KEY";
+const algoliaIndexName = process.env.ALGOLIA_INDEX_NAME || "mindarchive";
 
 const config: Config = {
   title: "MindArchive",
@@ -79,7 +79,6 @@ const config: Config = {
     colorMode: {
       defaultMode: "dark",
       disableSwitch: false,
-      respectPrefersColorScheme: true,
     },
     image: "img/docusaurus-social-card.jpg",
     navbar: {

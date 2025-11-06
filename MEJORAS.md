@@ -42,18 +42,6 @@ Este documento contiene una lista de mejoras sugeridas para el proyecto MindArch
 
 ---
 
-## 🎨 Mejoras de UX/UI
-
-### 6. Dark/Light Mode Toggle Visible
-
-**Estado:** Ya configurado, pero el botón podría ser más prominente
-
-**Mejora:** Asegurar que el toggle de tema sea fácil de encontrar y usar. Actualmente tienes `respectPrefersColorScheme: true`.
-
-**Opcional:** Agregar animación suave en la transición de temas.
-
----
-
 ### 8. Tabla de Contenidos Flotante Mejorada
 
 **Descripción:** La tabla de contenidos (TOC) a la derecha debe:
@@ -317,29 +305,6 @@ npm install --save-dev husky lint-staged
 ```
 
 **Beneficio:** Detectar errores de sintaxis antes de publicar.
-
----
-
-### 23. Versioning de Contenido
-
-**Para cuando el programa cambie:**
-
-**Docusaurus Versioning:**
-
-```bash
-npm run docusaurus docs:version 2024
-npm run docusaurus docs:version 2025
-```
-
-**Estructura:**
-
-```
-docs/              -> versión actual (2025)
-versioned_docs/
-  version-2024/    -> archivo histórico
-```
-
-**Beneficio:** Mantener apuntes de años anteriores accesibles.
 
 ---
 
