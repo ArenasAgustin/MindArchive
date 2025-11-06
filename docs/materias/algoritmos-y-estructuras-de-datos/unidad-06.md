@@ -562,7 +562,7 @@ Las **Tablas Hash** proporcionan acceso directo y rápido a los elementos median
 
 Una **función hash** mapea una **clave** a un **índice** (dirección) en un array:
 
-$$h(clave) \rightarrow índice$$
+$$h(\text{clave}) \rightarrow \text{índice}$$
 
 **Objetivo:** Lograr acceso directo en tiempo constante $O(1)$.
 

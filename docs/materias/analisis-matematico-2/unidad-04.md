@@ -322,7 +322,7 @@ con $g_i(\overline{x}_0) = 0$ para cada $i$.
 Buscar extremos de $f(x,y) = x^2 + y^2$ en $\mathbb{R}^2$.
 
 \- $\nabla f(x,y) = (2x, 2y) = 0 \implies x=0, y=0$
-\- $H_f = \begin{pmatrix}2 & 0 \\ 0 & 2\end{pmatrix}$ definida positiva $\implies$ mínimo en $(0,0)$.
+\- $H_f = \begin{pmatrix}2 & 0 \\ 0 & 2\end{pmatrix}$ definida positiva $\implies$ $\text{mínimo en } (0,0)$.
 
 ### 4.5.6 Ejemplo de Extremo Ligado
 
