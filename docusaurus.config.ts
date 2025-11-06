@@ -7,6 +7,11 @@ import rehypeKatex from "rehype-katex";
 const organizationName = "ArenasAgustin";
 const projectName = "MindArchive";
 
+// Cargar variables de entorno para Algolia
+const algoliaAppId = process.env.ALGOLIA_APP_ID || 'YOUR_APP_ID';
+const algoliaApiKey = process.env.ALGOLIA_API_KEY || 'YOUR_SEARCH_API_KEY';
+const algoliaIndexName = process.env.ALGOLIA_INDEX_NAME || 'mindarchive';
+
 const config: Config = {
   title: "MindArchive",
   tagline:
@@ -61,12 +66,12 @@ const config: Config = {
     ],
 
     // Algolia DocSearch configuration
-    // TODO: Aplicar en https://docsearch.algolia.com/apply/
-    // Reemplazar credenciales después de la aprobación
+    // Configurado desde variables de entorno (.env)
+    // Aplica en https://docsearch.algolia.com/apply/ para obtener credenciales
     algolia: {
-      appId: "YOUR_APP_ID",
-      apiKey: "YOUR_SEARCH_API_KEY",
-      indexName: "mindarchive",
+      appId: algoliaAppId,
+      apiKey: algoliaApiKey,
+      indexName: algoliaIndexName,
       contextualSearch: true,
       searchPagePath: "search",
     },

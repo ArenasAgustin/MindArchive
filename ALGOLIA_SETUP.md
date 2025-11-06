@@ -12,9 +12,10 @@ Algolia DocSearch es un servicio gratuito de búsqueda para documentación técn
 
 ### 1. Aplicar al Programa DocSearch de Algolia
 
-**URL de Aplicación**: https://docsearch.algolia.com/apply/
+**URL de Aplicación**: <https://docsearch.algolia.com/apply/>
 
 **Requisitos para la aprobación:**
+
 - ✅ Documentación técnica o educativa pública
 - ✅ Contenido original y de calidad
 - ✅ Sitio ya desplegado y accesible públicamente
@@ -50,11 +51,13 @@ Public: Yes, the documentation is publicly accessible
 ### 2. Después de la Aprobación
 
 Una vez aprobado, recibirás un email con:
+
 - `appId`: Tu Application ID
 - `apiKey`: Tu Search-Only API Key (pública, segura para frontend)
 - `indexName`: Nombre del índice (generalmente el nombre de tu sitio)
 
 **Ejemplo del email:**
+
 ```
 appId: ABC123XYZ
 apiKey: 1234567890abcdef1234567890abcdef
@@ -65,9 +68,39 @@ indexName: mindarchive
 
 ### 3. Actualizar la Configuración
 
-Edita `docusaurus.config.ts` y reemplaza los placeholders:
+#### Opción 1: Usando archivo .env (Recomendado)
+
+1. Crea o edita el archivo `.env` en la raíz del proyecto:
+
+```bash
+# .env
+ALGOLIA_APP_ID=ABC123XYZ
+ALGOLIA_API_KEY=1234567890abcdef1234567890abcdef
+ALGOLIA_INDEX_NAME=mindarchive
+```
+
+2. El proyecto ya está configurado para leer estas variables automáticamente.
+
+**⚠️ Importante**:
+
+- El archivo `.env` está en `.gitignore` y NO se subirá a GitHub (seguridad)
+- Usa `.env.example` como plantilla
+- En producción (GitHub Pages), las variables se pasan automáticamente en build time
+
+#### Opción 2: Editar directamente docusaurus.config.ts
+
+Edita `docusaurus.config.ts` y reemplaza las constantes:
 
 **Antes:**
+
+```typescript
+const algoliaAppId = process.env.ALGOLIA_APP_ID || 'YOUR_APP_ID';
+const algoliaApiKey = process.env.ALGOLIA_API_KEY || 'YOUR_SEARCH_API_KEY';
+const algoliaIndexName = process.env.ALGOLIA_INDEX_NAME || 'mindarchive';
+```
+
+**Después:**
+
 ```typescript
 algolia: {
   appId: 'YOUR_APP_ID',
@@ -79,14 +112,11 @@ algolia: {
 ```
 
 **Después:**
+
 ```typescript
-algolia: {
-  appId: 'ABC123XYZ', // Tu appId real
-  apiKey: '1234567890abcdef1234567890abcdef', // Tu apiKey real
-  indexName: 'mindarchive', // Tu indexName real
-  contextualSearch: true,
-  searchPagePath: 'search',
-},
+const algoliaAppId = 'ABC123XYZ'; // Tu appId real
+const algoliaApiKey = '1234567890abcdef1234567890abcdef'; // Tu apiKey real
+const algoliaIndexName = 'mindarchive'; // Tu indexName real
 ```
 
 ---
@@ -100,7 +130,8 @@ npm run build
 npm run serve
 ```
 
-Abre http://localhost:3000/MindArchive/ y:
+Abre <http://localhost:3000/MindArchive/> y:
+
 - Busca el icono de lupa en la navbar (esquina superior derecha)
 - Presiona `Ctrl+K` o `Cmd+K` para abrir la búsqueda
 - Prueba buscar términos como "algoritmos", "grafos", "derivadas"
@@ -120,7 +151,8 @@ Espera 2-5 minutos para que GitHub Pages actualice el sitio.
 Algolia configurará automáticamente el crawler, pero puedes personalizarlo.
 
 **Accede a tu Dashboard de Algolia:**
-- URL: https://dashboard.algolia.com/
+
+- URL: <https://dashboard.algolia.com/>
 - Navega a: DocSearch → Tu índice → Configuration
 
 **Configuración recomendada para MindArchive:**
@@ -252,16 +284,19 @@ Si quieres personalizar el aspecto del modal de búsqueda, agrega estilos en `sr
 ### Monitorear el Uso
 
 **Dashboard de Algolia:**
-- URL: https://dashboard.algolia.com/
+
+- URL: <https://dashboard.algolia.com/>
 - Ve a: Analytics → Search Analytics
 
 **Métricas a revisar:**
+
 - **Searches**: Número de búsquedas realizadas
 - **Click-through Rate**: % de clicks en resultados
 - **No Results Rate**: % de búsquedas sin resultados (idealmente <10%)
 - **Popular Searches**: Términos más buscados
 
 **Mejoras basadas en datos:**
+
 - Si hay muchas búsquedas sin resultados, considera agregar contenido sobre esos temas
 - Los términos populares indican qué contenido es más valioso para los usuarios
 - El CTR bajo puede indicar que los resultados no son relevantes (ajustar configuración)
@@ -277,6 +312,7 @@ Si quieres personalizar el aspecto del modal de búsqueda, agrega estilos en `sr
 ### ¿Qué pasa si no me aprueban?
 
 Alternativas gratuitas:
+
 1. **Búsqueda local de Docusaurus**: Limitada pero funcional
 2. **Pagefind**: Búsqueda estática generada en build time
 3. **Typesense**: Alternativa open-source a Algolia
@@ -286,6 +322,7 @@ Alternativas gratuitas:
 Algolia configura un **crawler automático** que actualiza el índice periódicamente (generalmente cada 24 horas). Después de desplegar cambios, espera hasta el próximo crawl.
 
 Para forzar una actualización inmediata:
+
 1. Ve a tu dashboard de Algolia
 2. Navega a: Crawler → Run crawler
 3. Click en "Trigger crawl"
@@ -301,6 +338,7 @@ noIndex: true
 ```
 
 O en el crawler config:
+
 ```json
 {
   "stop_urls": [
@@ -335,15 +373,18 @@ Después de configurar Algolia:
 ## 📞 Soporte
 
 **Documentación Oficial:**
-- Algolia DocSearch: https://docsearch.algolia.com/
-- Docusaurus Search: https://docusaurus.io/docs/search
+
+- Algolia DocSearch: <https://docsearch.algolia.com/>
+- Docusaurus Search: <https://docusaurus.io/docs/search>
 
 **Comunidad:**
-- Discord de Docusaurus: https://discord.gg/docusaurus
-- GitHub Discussions: https://github.com/algolia/docsearch/discussions
+
+- Discord de Docusaurus: <https://discord.gg/docusaurus>
+- GitHub Discussions: <https://github.com/algolia/docsearch/discussions>
 
 **Contacto Algolia:**
-- Email: docsearch@algolia.com (para problemas con la aplicación)
+
+- Email: <docsearch@algolia.com> (para problemas con la aplicación)
 
 ---
 
@@ -363,4 +404,4 @@ Después de configurar Algolia:
 - [ ] Verificar funcionamiento de búsqueda
 - [ ] Monitorear analytics y optimizar
 
-**🎯 Acción Inmediata**: Aplicar en https://docsearch.algolia.com/apply/
+**🎯 Acción Inmediata**: Aplicar en <https://docsearch.algolia.com/apply/>
