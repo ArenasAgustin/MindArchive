@@ -1,0 +1,212 @@
+/* Contenedor principal de breadcrumbs */
+.breadcrumbsContainer {
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+  background: var(--ifm-background-color);
+  position: sticky;
+  top: var(--ifm-navbar-height);
+  z-index: 10;
+}
+
+/* Lista de breadcrumbs */
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.9rem;
+}
+
+/* Animación escalonada para cada item */
+.breadcrumbs li {
+  animation: breadcrumbItemFadeIn 0.4s ease backwards;
+}
+
+.breadcrumbs li:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.breadcrumbs li:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.breadcrumbs li:nth-child(3) {
+  animation-delay: 0.15s;
+}
+.breadcrumbs li:nth-child(4) {
+  animation-delay: 0.2s;
+}
+.breadcrumbs li:nth-child(5) {
+  animation-delay: 0.25s;
+}
+.breadcrumbs li:nth-child(6) {
+  animation-delay: 0.3s;
+}
+
+@keyframes breadcrumbItemFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Icono del breadcrumb */
+.breadcrumbIcon {
+  margin-right: 0.35rem;
+  font-size: 1rem;
+  vertical-align: middle;
+}
+
+/* Link de breadcrumb */
+.breadcrumbsLink {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.breadcrumbsLink:hover {
+  color: var(--ifm-color-primary-dark);
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Item de breadcrumb activo (último) */
+.breadcrumbsItemActive {
+  color: var(--ifm-color-emphasis-700);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  padding: 0.25rem 0.5rem;
+}
+
+.breadcrumbsItemActive span:last-child {
+  color: var(--ifm-color-emphasis-900);
+}
+
+/* Animación de entrada */
+@keyframes breadcrumbFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.breadcrumbsContainer {
+  animation: breadcrumbFadeIn 0.3s ease;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .breadcrumbsContainer {
+    position: relative;
+    top: 0;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0;
+  }
+
+  .breadcrumbs {
+    font-size: 0.85rem;
+    gap: 0.25rem;
+  }
+
+  .breadcrumbIcon {
+    font-size: 0.9rem;
+  }
+
+  /* En móvil, ocultar breadcrumbs intermedios si hay más de 3 */
+  .breadcrumbs li:not(:first-child):not(:last-child):not(:nth-last-child(2)) {
+    display: none;
+  }
+
+  /* Mostrar "..." para items ocultos */
+  .breadcrumbs li:nth-child(2)::before {
+    content: "...";
+    margin-right: 0.5rem;
+    color: var(--ifm-color-emphasis-500);
+  }
+}
+
+/* Accesibilidad: focus visible */
+.breadcrumbsLink:focus {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .breadcrumbsContainer {
+    position: static;
+    border-bottom: 1px solid #000;
+    background: none;
+  }
+}
+
+/* Menú contextual */
+.contextMenu {
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 0.5rem;
+  z-index: 9999;
+  min-width: 200px;
+  animation: contextMenuFadeIn 0.2s ease;
+}
+
+@keyframes contextMenuFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.contextMenuItem {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  background: transparent;
+  color: var(--ifm-font-color-base);
+  text-align: left;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.contextMenuItem:hover {
+  background-color: var(--ifm-color-primary-lightest);
+  color: var(--ifm-color-primary-dark);
+  transform: translateX(3px);
+}
+
+[data-theme="dark"] .contextMenu {
+  background: var(--ifm-background-color);
+  border-color: var(--ifm-color-emphasis-200);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .contextMenuItem:hover {
+  background-color: var(--ifm-color-emphasis-200);
+}

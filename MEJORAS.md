@@ -25,63 +25,6 @@ Este documento contiene una lista de mejoras sugeridas para el proyecto MindArch
 
 ---
 
-### 2. 🏠 Landing Page Mejorada
-
-**Prioridad: ALTA**
-
-**Problema que resuelve:** La página de inicio actual (`src/pages/index.js`) es básica y no muestra el valor del proyecto.
-
-**Solución:** Crear una landing page atractiva con:
-
-- Hero section con descripción del proyecto
-- Cards visuales para cada materia con iconos
-- Estadísticas (ej: "3 materias, 25 unidades, 100+ temas")
-- Últimas actualizaciones
-- Call-to-action claro ("Explorar materias")
-
-**Beneficio:** Mejor primera impresión, facilita navegación, muestra profesionalismo.
-
----
-
-### 3. 🤖 CI/CD con GitHub Actions
-
-**Prioridad: ALTA**
-
-**Problema que resuelve:** Deploys manuales, sin validación automática, posibles errores en producción.
-
-**Solución:** Configurar GitHub Actions para:
-
-- Build automático al hacer push a `main`
-- Deploy automático a GitHub Pages
-- Validación de links rotos
-- Lint de Markdown
-- Verificación de sintaxis KaTeX
-
-**Archivo:** `.github/workflows/deploy.yml`
-
-**Beneficio:** Confianza en los cambios, proceso automatizado, detección temprana de errores.
-
----
-
-### 4. 💬 Sistema de Feedback con Giscus
-
-**Prioridad: MEDIA**
-
-**Problema que resuelve:** No hay forma de que los usuarios reporten errores o hagan preguntas sobre el contenido.
-
-**Solución:** Integrar Giscus (comentarios basados en GitHub Discussions):
-
-- Los usuarios pueden comentar en cada página
-- Reportar errores en apuntes
-- Hacer preguntas
-- Sugerir mejoras
-
-**Configuración:** Plugin `@docusaurus/plugin-giscus` o componente custom.
-
-**Beneficio:** Interacción con usuarios, mejora colaborativa del contenido, comunidad activa.
-
----
-
 ### 5. 📱 PWA (Progressive Web App)
 
 **Prioridad: MEDIA**
@@ -108,18 +51,6 @@ Este documento contiene una lista de mejoras sugeridas para el proyecto MindArch
 **Mejora:** Asegurar que el toggle de tema sea fácil de encontrar y usar. Actualmente tienes `respectPrefersColorScheme: true`.
 
 **Opcional:** Agregar animación suave en la transición de temas.
-
----
-
-### 7. Breadcrumbs Mejorados
-
-**Descripción:** Mostrar ruta de navegación completa
-
-**Ejemplo:** `🏠 Inicio > 📚 Materias > 💻 Algoritmos > 📖 Unidad 1`
-
-**Beneficio:** Los usuarios siempre saben dónde están, fácil navegación hacia atrás.
-
-**Implementación:** Docusaurus ya incluye breadcrumbs, verificar configuración en theme.
 
 ---
 
@@ -182,40 +113,11 @@ description: "Descripción breve"
 tags: [algoritmos, fundamentos]
 # Nuevo:
 last_updated: 2025-11-05
-authors: [Agustín Arenas]
-difficulty: beginner  # beginner, intermediate, advanced
-reading_time: 15 min
 prerequisites: []
 ---
 ```
 
 **Beneficio:** Mejor SEO, información útil para estudiantes, organización clara.
-
----
-
-### 12. Recursos Adicionales por Unidad
-
-**Agregar sección al final de cada unidad:**
-
-- 📹 Videos recomendados (YouTube, coursera)
-- 📚 Libros de referencia con capítulos específicos
-- 🔗 Enlaces a ejercicios externos
-- 📄 Cheat sheets descargables (PDF)
-- 💻 Repositorios de código ejemplo
-
-**Ejemplo:**
-
-```markdown
-## 📚 Recursos Adicionales
-
-### Videos Recomendados
-- [Algoritmos de Grafos - MIT OCW](https://...)
-- [Visualización BFS/DFS](https://...)
-
-### Ejercicios
-- [LeetCode - Graph Problems](https://...)
-- [HackerRank - Data Structures](https://...)
-```
 
 ---
 
