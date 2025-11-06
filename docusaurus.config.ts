@@ -15,7 +15,7 @@ const algoliaIndexName = process.env.ALGOLIA_INDEX_NAME || "mindarchive";
 const config: Config = {
   title: "MindArchive",
   tagline:
-    "Repositorio centralizado de apuntes, trabajos y recursos académicos",
+    "Apuntes de Ingeniería en Computación - FCEFyN UNC y recursos de cursos",
   favicon: "img/favicon.ico",
 
   url: `https://${organizationName}.github.io`,
@@ -62,6 +62,84 @@ const config: Config = {
       {
         name: "algolia-site-verification",
         content: "1D930C75B940815D",
+      },
+      // SEO mejorado
+      {
+        name: "keywords",
+        content:
+          "apuntes universitarios, ingeniería en computación, FCEFyN, UNC, Universidad Nacional de Córdoba, apuntes ingeniería, material de estudio, recursos académicos, educación superior, apuntes UNC, programación, matemática universitaria",
+      },
+      {
+        name: "description",
+        content:
+          "MindArchive: Apuntes académicos de Ingeniería en Computación de la FCEFyN - Universidad Nacional de Córdoba (UNC). Material de estudio organizado por materias y recursos de cursos complementarios.",
+      },
+      {
+        name: "author",
+        content: "Agustín Arenas",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      // Open Graph tags
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:site_name",
+        content: "MindArchive",
+      },
+      {
+        property: "og:title",
+        content: "MindArchive - Apuntes de Ingeniería en Computación UNC",
+      },
+      {
+        property: "og:description",
+        content:
+          "Apuntes de Ingeniería en Computación (FCEFyN - UNC). Material de estudio organizado por materias y recursos de cursos.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://arenasagustin.github.io/MindArchive/img/social-preview.png",
+      },
+      {
+        property: "og:url",
+        content: "https://arenasagustin.github.io/MindArchive/",
+      },
+      // Twitter Card tags
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content: "MindArchive - Apuntes Ingeniería en Computación UNC",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Apuntes de Ingeniería en Computación FCEFyN-UNC. Material de estudio y recursos académicos.",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://arenasagustin.github.io/MindArchive/img/social-preview.png",
+      },
+      // Additional SEO
+      {
+        name: "theme-color",
+        content: "#7c3aed",
+      },
+      {
+        name: "apple-mobile-web-app-capable",
+        content: "yes",
+      },
+      {
+        name: "apple-mobile-web-app-status-bar-style",
+        content: "black-translucent",
       },
     ],
 
