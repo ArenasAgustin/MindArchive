@@ -451,7 +451,7 @@ Las medidas de dispersión indican el grado en que las observaciones se distribu
 
 #### Rango (R)
 
-$$R = X_{máx} - X_{mín}$$
+$$R = X_{\text{máx}} - X_{\text{mín}}$$
 
 **Ventajas:**
 
