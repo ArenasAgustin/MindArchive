@@ -53,6 +53,24 @@ const config: Config = {
   ],
 
   themeConfig: {
+    metadata: [
+      {
+        name: "algolia-site-verification",
+        content: "1D930C75B940815D",
+      },
+    ],
+
+    // Algolia DocSearch configuration
+    // TODO: Aplicar en https://docsearch.algolia.com/apply/
+    // Reemplazar credenciales después de la aprobación
+    algolia: {
+      appId: "YOUR_APP_ID",
+      apiKey: "YOUR_SEARCH_API_KEY",
+      indexName: "mindarchive",
+      contextualSearch: true,
+      searchPagePath: "search",
+    },
+
     colorMode: {
       defaultMode: "dark",
       disableSwitch: false,
