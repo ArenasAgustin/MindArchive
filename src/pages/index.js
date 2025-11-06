@@ -75,25 +75,97 @@ function HomepageHeader() {
   );
 }
 
+function Features() {
+  const features = [
+    {
+      icon: "🔍",
+      title: "Búsqueda Inteligente",
+      description:
+        "Encuentra cualquier concepto, fórmula o algoritmo al instante con búsqueda avanzada.",
+    },
+    {
+      icon: "📐",
+      title: "Fórmulas Matemáticas",
+      description:
+        "Renderizado profesional de ecuaciones con KaTeX, igual que en LaTeX.",
+    },
+    {
+      icon: "💻",
+      title: "Código Resaltado",
+      description:
+        "Ejemplos de código en C++, Java, Python con syntax highlighting.",
+    },
+    {
+      icon: "📊",
+      title: "Diagramas Interactivos",
+      description:
+        "Visualizaciones de algoritmos y estructuras de datos con Mermaid.",
+    },
+    {
+      icon: "�",
+      title: "Siempre Actualizado",
+      description:
+        "Contenido revisado y actualizado constantemente con las últimas correcciones.",
+    },
+    {
+      icon: "�📱",
+      title: "100% Responsive",
+      description:
+        "Accede desde cualquier dispositivo: desktop, tablet o móvil.",
+    },
+  ];
+
+  return (
+    <section className={styles.features}>
+      <div className="container">
+        <div className={styles.sectionHeader}>
+          <h2>✨ ¿Por qué elegir MindArchive?</h2>
+          <p>
+            Diseñado para estudiantes, hecho por estudiantes. Todo lo que
+            necesitas en un solo lugar.
+          </p>
+        </div>
+        <div className="row">
+          {features.map((feature, idx) => (
+            <div key={idx} className="col col--4">
+              <div className={styles.featureCard}>
+                <div className={styles.featureIcon}>{feature.icon}</div>
+                <h3>{feature.title}</h3>
+                <p>{feature.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function QuickAccess() {
   const quickLinks = [
     {
-      title: "🧮 Análisis Matemático",
-      description: "Límites, derivadas e integrales",
+      title: "🧮 Análisis Matemático 2",
+      description:
+        "Límites, derivadas, integrales y series. Funciones de varias variables.",
       link: "/docs/materias/analisis-matematico-2/",
-      badge: "Matemáticas",
+      badge: "8 Unidades",
+      icon: "📈",
     },
     {
       title: "📊 Probabilidad y Estadística",
-      description: "Distribuciones y variables aleatorias",
+      description:
+        "Estadística descriptiva, distribuciones y variables aleatorias.",
       link: "/docs/materias/probabilidad-y-estadistica/",
-      badge: "Estadística",
+      badge: "En Progreso",
+      icon: "📉",
     },
     {
-      title: "💻 Algoritmos y Estructuras",
-      description: "Pilas, colas y complejidad algorítmica",
+      title: "💻 Algoritmos y Estructuras de Datos",
+      description:
+        "Recursividad, ordenamiento, árboles, grafos y complejidad algorítmica.",
       link: "/docs/materias/algoritmos-y-estructuras-de-datos/",
-      badge: "Recién Actualizado",
+      badge: "Actualizado",
+      icon: "🌳",
     },
   ];
 
@@ -101,18 +173,20 @@ function QuickAccess() {
     <section className={styles.quickAccess}>
       <div className="container">
         <div className={styles.sectionHeader}>
-          <h2>🚀 Acceso Rápido a Materias</h2>
-          <p>Comienza tu estudio con el material más popular y actualizado</p>
+          <h2>🚀 Materias Disponibles</h2>
+          <p>Contenido académico organizado y listo para estudiar</p>
         </div>
         <div className="row">
           {quickLinks.map((item, idx) => (
             <div key={idx} className="col col--4">
               <Link to={item.link} className={styles.quickCard}>
+                <div className={styles.quickCardIcon}>{item.icon}</div>
                 <div className={styles.quickCardHeader}>
                   <h3>{item.title}</h3>
                   <span
                     className={clsx(styles.badge, {
-                      [styles.badgeNew]: item.badge === "Recién Actualizado",
+                      [styles.badgeNew]: item.badge === "Actualizado",
+                      [styles.badgeProgress]: item.badge === "En Progreso",
                     })}
                   >
                     {item.badge}
@@ -120,11 +194,21 @@ function QuickAccess() {
                 </div>
                 <p>{item.description}</p>
                 <div className={styles.cardFooter}>
-                  <span>Ver contenido →</span>
+                  <span className={styles.cardLink}>
+                    Ver contenido <span className={styles.arrow}>→</span>
+                  </span>
                 </div>
               </Link>
             </div>
           ))}
+        </div>
+        <div className={styles.viewAllContainer}>
+          <Link
+            to="/docs/"
+            className="button button--outline button--primary button--lg"
+          >
+            Ver todas las materias
+          </Link>
         </div>
       </div>
     </section>
@@ -171,6 +255,7 @@ export default function Home() {
     >
       <HomepageHeader />
       <main>
+        <Features />
         <QuickAccess />
         <CallToAction />
       </main>

@@ -168,6 +168,53 @@
   }
 }
 
+/* Features Section */
+.features {
+  padding: 4rem 0;
+  background: var(--ifm-background-surface-color);
+}
+
+.featureCard {
+  text-align: center;
+  padding: 2rem 1rem;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-4px);
+}
+
+.featureIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.featureCard h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+.featureCard p {
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.6;
+  margin: 0;
+}
+
 /* Quick Access Section */
 .quickAccess {
   padding: 4rem 0;
@@ -193,21 +240,49 @@
 }
 
 .quickCard {
-  display: block;
+  display: flex;
+  flex-direction: column;
   background: var(--ifm-card-background-color);
-  border-radius: 12px;
+  border-radius: 16px;
   padding: 2rem;
   height: 100%;
   text-decoration: none !important;
   transition: all 0.3s ease;
-  border: 1px solid var(--ifm-color-emphasis-200);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--ifm-color-emphasis-200);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.quickCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--ifm-color-primary),
+    var(--ifm-color-primary-light)
+  );
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
 }
 
 .quickCard:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
   border-color: var(--ifm-color-primary);
+}
+
+.quickCard:hover::before {
+  transform: scaleX(1);
+}
+
+.quickCardIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 .quickCardHeader {
@@ -215,21 +290,27 @@
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 1rem;
+  gap: 1rem;
 }
 
 .quickCardHeader h3 {
   margin: 0;
-  font-size: 1.3rem;
-  color: var(--ifm-color-emphasis-800);
+  font-size: 1.4rem;
+  color: var(--ifm-color-emphasis-900);
+  font-weight: 600;
+  line-height: 1.3;
 }
 
 .badge {
   background: var(--ifm-color-primary);
   color: white;
   padding: 0.25rem 0.75rem;
-  border-radius: 16px;
-  font-size: 0.75rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
   font-weight: 600;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .badgeNew {
@@ -237,22 +318,25 @@
   animation: pulse 2s infinite;
 }
 
+.badgeProgress {
+  background: var(--ifm-color-warning);
+}
+
 @keyframes pulse {
-  0% {
+  0%,
+  100% {
     opacity: 1;
   }
   50% {
     opacity: 0.7;
   }
-  100% {
-    opacity: 1;
-  }
 }
 
 .quickCard p {
-  color: var(--ifm-color-emphasis-600);
+  color: var(--ifm-color-emphasis-700);
   margin-bottom: 1.5rem;
-  line-height: 1.5;
+  line-height: 1.6;
+  flex-grow: 1;
 }
 
 .cardFooter {
@@ -261,10 +345,27 @@
   border-top: 1px solid var(--ifm-color-emphasis-200);
 }
 
-.cardFooter span {
+.cardLink {
   color: var(--ifm-color-primary);
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.quickCard:hover .arrow {
+  transform: translateX(4px);
+}
+
+.viewAllContainer {
+  text-align: center;
+  margin-top: 3rem;
 }
 
 /* Call to Action Section */
