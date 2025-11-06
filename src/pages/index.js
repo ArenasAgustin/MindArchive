@@ -2,6 +2,7 @@ import React from "react";
 import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import useGlobalData from "@docusaurus/useGlobalData";
 import Layout from "@theme/Layout";
 
 import styles from "./index.module.css";
@@ -142,32 +143,35 @@ function Features() {
 }
 
 function QuickAccess() {
-  const quickLinks = [
-    {
-      title: "🧮 Análisis Matemático 2",
-      description:
-        "Límites, derivadas, integrales y series. Funciones de varias variables.",
-      link: "/docs/materias/analisis-matematico-2/",
-      badge: "8 Unidades",
-      icon: "📈",
-    },
-    {
-      title: "📊 Probabilidad y Estadística",
-      description:
-        "Estadística descriptiva, distribuciones y variables aleatorias.",
-      link: "/docs/materias/probabilidad-y-estadistica/",
-      badge: "En Progreso",
-      icon: "📉",
-    },
-    {
-      title: "💻 Algoritmos y Estructuras de Datos",
-      description:
-        "Recursividad, ordenamiento, árboles, grafos y complejidad algorítmica.",
-      link: "/docs/materias/algoritmos-y-estructuras-de-datos/",
-      badge: "Actualizado",
-      icon: "🌳",
-    },
-  ];
+  const globalData = useGlobalData();
+  const docsPluginData = globalData["docusaurus-plugin-content-docs"]?.default;
+
+  // Obtener todas las materias desde los docs
+  const allDocs = docsPluginData?.docs || [];
+
+  // Filtrar solo los index.md de materias y ordenar por displayOrder
+  const quickLinks = allDocs
+    .filter((doc) => {
+      // Filtrar solo archivos index de materias que tengan featured: true
+      return (
+        doc.id.startsWith("materias/") &&
+        doc.id.endsWith("/index") &&
+        doc.frontMatter?.featured === true
+      );
+    })
+    .sort((a, b) => {
+      // Ordenar por displayOrder (menor primero)
+      const orderA = a.frontMatter?.displayOrder || 999;
+      const orderB = b.frontMatter?.displayOrder || 999;
+      return orderA - orderB;
+    })
+    .map((doc) => ({
+      title: `${doc.frontMatter?.icon || "📚"} ${doc.title}`,
+      description: doc.description || doc.frontMatter?.description || "",
+      link: doc.permalink,
+      badge: doc.frontMatter?.badge || "Disponible",
+      icon: doc.frontMatter?.icon || "📚",
+    }));
 
   return (
     <section className={styles.quickAccess}>
