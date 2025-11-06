@@ -1,8 +1,13 @@
 ---
 title: "Análisis Matemático 2"
-description: "Análisis Matemático 2 es una asignatura fundamental que extiende los conceptos del cálculo diferencial e integral a funciones de varias variables. Esta materia proporciona herramientas matemáticas esenciales para modelar y resolver problemas en ingeniería, física, economía y otras disciplinas científicas."
+description: "Esta materia aborda el cálculo diferencial e integral en varias variables. Se estudian límites y continuidad en ℝⁿ, derivadas parciales y direccionales, optimización con multiplicadores de Lagrange, integrales múltiples, campos vectoriales y los teoremas de Green, Stokes y Gauss."
 sidebar_position: 1
 tags: [matematicas, analisis]
+# Metadata para landing page
+icon: "📈"
+badge: "8 Unidades"
+featured: true
+displayOrder: 1
 ---
 
 ## 📖 Descripción de la Materia
