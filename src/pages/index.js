@@ -103,13 +103,13 @@ function Features() {
         "Visualizaciones de algoritmos y estructuras de datos con Mermaid.",
     },
     {
-      icon: "�",
+      icon: "🕒",
       title: "Siempre Actualizado",
       description:
         "Contenido revisado y actualizado constantemente con las últimas correcciones.",
     },
     {
-      icon: "�📱",
+      icon: "📱",
       title: "100% Responsive",
       description:
         "Accede desde cualquier dispositivo: desktop, tablet o móvil.",
