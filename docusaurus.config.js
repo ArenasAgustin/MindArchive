@@ -71,9 +71,29 @@ const config = {
             label: "📖 Materias",
           },
           {
+            type: "dropdown",
+            label: "🎓 Recursos",
+            position: "left",
+            items: [
+              {
+                label: "📝 Guía de Contribución",
+                to: `https://github.com/${organizationName}/${projectName}/blob/main/CONTRIBUTING.md`,
+              },
+              {
+                label: "📋 Plantillas",
+                to: `https://github.com/${organizationName}/${projectName}/tree/main/docs/_templates`,
+              },
+              {
+                label: "🐛 Reportar un problema",
+                to: `https://github.com/${organizationName}/${projectName}/issues/new`,
+              },
+            ],
+          },
+          {
             href: `https://github.com/${organizationName}/${projectName}`,
-            label: "GitHub",
             position: "right",
+            className: "header-github-link",
+            "aria-label": "GitHub repository",
           },
         ],
       },
