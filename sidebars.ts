@@ -1,7 +1,6 @@
-// @ts-check
+import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
 
-/** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
-export default {
+const sidebars: SidebarsConfig = {
   materiasSidebar: [
     {
       type: "doc",
@@ -20,3 +19,5 @@ export default {
     },
   ],
 };
+
+export default sidebars;
