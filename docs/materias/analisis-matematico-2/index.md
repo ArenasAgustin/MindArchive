@@ -6,8 +6,7 @@ tags: [matematicas, analisis]
 # Metadata para landing page
 icon: "📈"
 badge: "8 Unidades"
-featured: true
-displayOrder: 1
+last_updated: "2025-10-15"
 ---
 
 ## 📖 Descripción de la Materia

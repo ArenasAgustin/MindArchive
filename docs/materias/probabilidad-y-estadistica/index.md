@@ -6,8 +6,7 @@ tags: [matematicas, probabilidad, estadistica]
 # Metadata para landing page
 icon: "📉"
 badge: "En Progreso"
-featured: true
-displayOrder: 2
+last_updated: "2025-11-01"
 ---
 
 

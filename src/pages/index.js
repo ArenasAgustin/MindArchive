@@ -149,36 +149,38 @@ function QuickAccess() {
   // Obtener todas las materias desde los docs
   const allDocs = docsPluginData?.docs || [];
 
-  // Filtrar solo los index.md de materias y ordenar por displayOrder
+  // Filtrar solo los index.md de materias y ordenar por fecha de actualización (más reciente primero)
   const quickLinks = allDocs
     .filter((doc) => {
-      // Filtrar solo archivos index de materias que tengan featured: true
+      // Filtrar solo archivos index de materias que tengan last_updated
       return (
         doc.id.startsWith("materias/") &&
         doc.id.endsWith("/index") &&
-        doc.frontMatter?.featured === true
+        doc.frontMatter?.last_updated
       );
     })
     .sort((a, b) => {
-      // Ordenar por displayOrder (menor primero)
-      const orderA = a.frontMatter?.displayOrder || 999;
-      const orderB = b.frontMatter?.displayOrder || 999;
-      return orderA - orderB;
+      // Ordenar por fecha de actualización (más reciente primero)
+      const dateA = new Date(a.frontMatter?.last_updated || "2000-01-01");
+      const dateB = new Date(b.frontMatter?.last_updated || "2000-01-01");
+      return dateB - dateA; // Descendente (más nuevo primero)
     })
+    .slice(0, 3) // Mostrar solo las 3 más recientes
     .map((doc) => ({
       title: `${doc.frontMatter?.icon || "📚"} ${doc.title}`,
       description: doc.description || doc.frontMatter?.description || "",
       link: doc.permalink,
       badge: doc.frontMatter?.badge || "Disponible",
       icon: doc.frontMatter?.icon || "📚",
+      lastUpdated: doc.frontMatter?.last_updated,
     }));
 
   return (
     <section className={styles.quickAccess}>
       <div className="container">
         <div className={styles.sectionHeader}>
-          <h2>🚀 Materias Disponibles</h2>
-          <p>Contenido académico organizado y listo para estudiar</p>
+          <h2>🚀 Últimas Actualizaciones</h2>
+          <p>Las materias más recientemente actualizadas con nuevo contenido</p>
         </div>
         <div className="row">
           {quickLinks.map((item, idx) => (

@@ -6,8 +6,7 @@ tags: [algoritmos, estructuras-de-datos, programacion, cpp]
 # Metadata para landing page
 icon: "🌳"
 badge: "Actualizado"
-featured: true
-displayOrder: 3
+last_updated: "2025-11-06"
 ---
 
 ## 📖 Descripción de la Materia
