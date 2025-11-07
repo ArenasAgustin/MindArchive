@@ -6,22 +6,96 @@ Este documento contiene una lista de mejoras sugeridas para el proyecto MindArch
 
 ## 🎯 Top 5 Prioridades (Empezar por aquí)
 
-### 1. 🔍 Búsqueda con Algolia DocSearch
+### ⏳ 1. 🔍 Búsqueda con Algolia DocSearch
 
-**Prioridad: CRÍTICA**
+**Prioridad: CRÍTICA**  
+**Estado**: ⏳ **EN PROGRESO** (Configurado, pendiente de funcionar correctamente)
 
 **Problema que resuelve:** Los usuarios no pueden buscar contenido fácilmente entre todas las materias y unidades.
 
 **Solución:** Implementar Algolia DocSearch (gratis para proyectos open source).
 
-**Pasos:**
+**Implementación realizada:**
 
-1. Aplicar en <https://docsearch.algolia.com/apply/>
-2. Proporcionar URL del sitio publicado
-3. Agregar configuración en `docusaurus.config.ts`
-4. Algolia crawleará el sitio automáticamente
+1. ✅ Aplicación enviada a <https://docsearch.algolia.com/apply/>
+2. ✅ URL del sitio proporcionada
+3. ✅ Configuración en `docusaurus.config.ts` completada
+4. ✅ Credenciales recibidas y configuradas en `.env`
+5. ⏳ Pendiente: Crawler de Algolia debe indexar el contenido
+6. ⏳ Pendiente: Verificar funcionamiento en producción
 
-**Beneficio:** Búsqueda instantánea en todo el contenido, autocompletado, resultados relevantes.
+**Archivos modificados:**
+
+- `docusaurus.config.ts` - Configuración de Algolia
+- `.env` - Variables de entorno con credenciales
+- `ALGOLIA_COMPLETE.md` - Documentación completa
+
+**Estado actual:** Configuración técnica completada, pero la búsqueda aún no funciona correctamente. Requiere que Algolia indexe el contenido mediante el crawler automático.
+
+**Próximos pasos:**
+1. Forzar crawl manual en Dashboard de Algolia
+2. Verificar que el índice se llene con contenido
+3. Probar búsqueda en producción
+4. Ajustar configuración del crawler si es necesario
+
+**Beneficio esperado:** Búsqueda instantánea en todo el contenido, autocompletado, resultados relevantes.
+
+---
+
+### 2. 📄 Landing Page Mejorada
+
+**Prioridad: ALTA**  
+**Estado**: ✅ **COMPLETADO** (2025-11-06)
+
+**Problema que resuelve:** Primera impresión profesional del sitio.
+
+**Mejoras implementadas:**
+
+- ✅ Cards con información de materias
+- ✅ Diseño responsive y profesional
+- ✅ Información clara sobre el proyecto (FCEFyN - UNC)
+
+**Beneficio:** Mejor primera impresión y navegación intuitiva.
+
+---
+
+### 3. 🔄 CI/CD con GitHub Actions
+
+**Prioridad: CRÍTICA**  
+**Estado**: ✅ **COMPLETADO** (2025-11-06)
+
+**Implementación:**
+
+- ✅ Workflow de despliegue automático a GitHub Pages
+- ✅ Build y deploy automático en cada push a main
+
+**Beneficio:** Despliegue automático sin intervención manual.
+
+---
+
+### 4. 📚 README.md Profesional
+
+**Prioridad: ALTA**  
+**Estado**: ✅ **COMPLETADO** (2025-11-06)
+
+**Mejoras implementadas:**
+
+- ✅ Badges (Build status, License MIT, Docusaurus, Contributions)
+- ✅ Tabla de contenidos con 12 secciones
+- ✅ Descripción completa del proyecto (FCEFyN - UNC)
+- ✅ Instalación y uso detallado
+- ✅ Estructura del proyecto explicada
+- ✅ Tecnologías utilizadas
+- ✅ Guía de contribución
+- ✅ Roadmap visible
+- ✅ Licencia MIT
+- ✅ Contacto y agradecimientos
+
+**Archivo modificado:**
+
+- `README.md` - Totalmente reescrito (350+ líneas)
+
+**Beneficio:** Documentación profesional que facilita colaboración y onboarding.
 
 ---
 
@@ -42,6 +116,51 @@ Este documento contiene una lista de mejoras sugeridas para el proyecto MindArch
 
 ---
 
+### 6. 🌙 Dark/Light Mode Toggle Mejorado
+
+**Prioridad: MEDIA**  
+**Estado**: ✅ **COMPLETADO** (2025-11-06)
+
+**Mejoras implementadas:**
+
+- ✅ Transiciones suaves entre temas (0.3s cubic-bezier)
+- ✅ Animaciones en el botón toggle
+- ✅ Glow effects (sol dorado, luna azul)
+- ✅ Tooltip informativo
+- ✅ Control manual (sin preferencia del sistema)
+
+**Archivos modificados:**
+
+- `src/css/custom.css` - Transiciones y animaciones
+- `docusaurus.config.ts` - respectPrefersColorScheme: false
+
+**Beneficio:** Mejor experiencia de usuario al cambiar de tema.
+
+---
+
+### 7. 🗺️ Breadcrumbs Mejorados
+
+**Prioridad: MEDIA**  
+**Estado**: ✅ **COMPLETADO** (2025-11-06)
+
+**Mejoras implementadas:**
+
+- ✅ Atajos de teclado (Alt + ← →) para navegación
+- ✅ Menú contextual (clic derecho) para copiar/abrir
+- ✅ Animaciones (highlight, cascading, wave effect)
+- ✅ Tooltip visible con hints de teclado
+- ✅ Iconos contextuales (🏠 📚 🌳 📊)
+
+**Archivos creados/modificados:**
+
+- `src/theme/DocBreadcrumbs/index.tsx`
+- `src/theme/DocBreadcrumbs/styles.module.css`
+- `BREADCRUMBS_IMPROVEMENTS.md` - Documentación
+
+**Beneficio:** Navegación más rápida e intuitiva entre páginas.
+
+---
+
 ### 8. Tabla de Contenidos Flotante Mejorada
 
 **Descripción:** La tabla de contenidos (TOC) a la derecha debe:
@@ -54,25 +173,37 @@ Este documento contiene una lista de mejoras sugeridas para el proyecto MindArch
 
 ---
 
-## 📚 Contenido y Organización
+### 9. 🔍 SEO Mejorado
 
-### 9. README.md Profesional
+**Prioridad: ALTA**  
+**Estado**: ✅ **COMPLETADO** (2025-11-06)
 
-**Mejoras necesarias:**
+**Mejoras implementadas:**
 
-- Agregar badges (build status, license, contributors)
-- Screenshots del sitio en acción
-- Sección "Cómo contribuir" detallada
-- Estructura del proyecto explicada
-- Roadmap de desarrollo
-- Créditos y agradecimientos
+✅ **Keywords SEO**: ingeniería en computación, FCEFyN, UNC, apuntes universitarios
 
-**Ejemplo de badges:**
+✅ **Meta description**: Optimizada para motores de búsqueda
 
-```markdown
-![Build Status](https://github.com/ArenasAgustin/MindArchive/workflows/Deploy/badge.svg)
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-```
+✅ **Author**: Agustín Arenas
+
+✅ **Robots**: index, follow (permite indexación)
+
+✅ **Open Graph tags**: Para compartir en Facebook, LinkedIn
+
+✅ **Twitter Card tags**: Para compartir en Twitter/X
+
+✅ **Theme color**: #7c3aed (púrpura del sitio)
+
+✅ **Mobile tags**: Apple mobile web app compatible
+
+✅ **Sitemap.xml**: Generado automáticamente con todas las páginas
+
+**Archivos modificados:**
+
+- `docusaurus.config.ts` - Metadata SEO completa
+- `build/sitemap.xml` - Generado automáticamente
+
+**Beneficio:** Mejor posicionamiento en buscadores, previews atractivos al compartir en redes sociales.
 
 ---
 
@@ -89,6 +220,8 @@ Este documento contiene una lista de mejoras sugeridas para el proyecto MindArch
 **Beneficio:** Encontrar todos los temas relacionados con "recursividad" o "optimización" en todas las materias.
 
 ---
+
+## 📚 Contenido y Organización
 
 ### 11. Metadata Rica en Archivos MD
 
@@ -110,6 +243,22 @@ prerequisites: []
 ---
 
 ## 🔧 Funcionalidad
+
+### 12. Sistema de Feedback con Giscus
+
+**Prioridad: MEDIA**
+
+**Descripción:** Permitir comentarios en cada página usando GitHub Discussions.
+
+**Implementación:**
+
+- Instalar `@giscus/react`
+- Configurar en `docusaurus.config.ts`
+- Habilitar GitHub Discussions en el repositorio
+
+**Beneficio:** Feedback directo de estudiantes, discusiones sobre temas específicos.
+
+---
 
 ### 13. Exportar a PDF
 
@@ -179,25 +328,6 @@ prerequisites: []
 - Búsquedas fallidas (contenido faltante)
 
 **Plugin:** `@docusaurus/plugin-google-gtag` o `@docusaurus/plugin-plausible`
-
----
-
-### 17. Sitemap y SEO Mejorado
-
-**Verificar que `sitemap.xml` esté bien generado:**
-
-- Incluye todas las páginas
-- Frecuencia de actualización correcta
-- Prioridades asignadas
-
-**Agregar en `docusaurus.config.ts`:**
-
-```typescript
-metadata: [
-  {name: 'keywords', content: 'apuntes, universidad, algoritmos, matemática'},
-  {name: 'description', content: 'Repositorio de apuntes académicos'},
-]
-```
 
 ---
 
@@ -514,7 +644,7 @@ npm run changelog
 
 **Formato de commits:**
 
-```
+```plain
 feat: agregar Unidad 8 de Algoritmos
 fix: corregir fórmula en Análisis Matemático
 docs: mejorar README con badges
@@ -604,25 +734,32 @@ Optimización lograda mediante...
 
 ## ✅ Checklist de Implementación
 
-### Fase 1: Esenciales (1-2 semanas)
+### Fase 1: Esenciales (Casi completada - 2025-11-06)
 
-- [ ] CI/CD con GitHub Actions
-- [ ] Landing page mejorada
-- [ ] README.md profesional
-- [ ] Algolia DocSearch aplicado
+- [~] **Punto 1**: Algolia DocSearch ⏳ (configurado, pendiente de funcionar)
+- [x] **Punto 2**: Landing page mejorada ✅
+- [x] **Punto 3**: CI/CD con GitHub Actions ✅
+- [x] **Punto 4**: README.md profesional ✅
 
-### Fase 2: Mejoras UX (2-3 semanas)
+### Fase 2: UX Mejorada ✅ (COMPLETADA - 2025-11-06)
 
-- [ ] PWA configurado
-- [ ] Sistema de feedback (Giscus)
-- [ ] Analytics configurado
-- [ ] Página de tags visible
+- [x] **Punto 6**: Dark/Light Mode Toggle mejorado ✅
+- [x] **Punto 7**: Breadcrumbs con atajos de teclado ✅
+- [x] **Punto 9**: SEO optimizado (meta tags, Open Graph) ✅
 
-### Fase 3: Contenido (Ongoing)
+### Fase 3: Mejoras UX (En progreso)
 
+- [ ] **Punto 5**: PWA configurado
+- [ ] **Punto 12**: Sistema de feedback (Giscus)
+- [ ] **Punto 16**: Analytics configurado
+- [ ] **Punto 10**: Página de tags visible
+
+### Fase 4: Contenido (Ongoing)
+
+- [ ] **Punto 11**: Metadata completa en frontmatter
+- [ ] **Punto 14**: Ejercicios interactivos
+- [ ] **Punto 15**: Live code editors
 - [ ] Recursos adicionales en cada unidad
-- [ ] Metadata completa en frontmatter
-- [ ] Ejercicios con soluciones
 - [ ] Visualizaciones interactivas
 
 ### Fase 4: Optimización (1 semana)
@@ -665,7 +802,7 @@ Optimización lograda mediante...
 
 **Matriz de priorización:**
 
-```
+```plain
 Alto Impacto + Bajo Esfuerzo = HACER PRIMERO ⭐
 Alto Impacto + Alto Esfuerzo = PLANEAR BIEN 📅
 Bajo Impacto + Bajo Esfuerzo = RELLENO ✅
