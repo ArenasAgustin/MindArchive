@@ -33,6 +33,7 @@ Este documento contiene una lista de mejoras sugeridas para el proyecto MindArch
 **Estado actual:** Configuración técnica completada, pero la búsqueda aún no funciona correctamente. Requiere que Algolia indexe el contenido mediante el crawler automático.
 
 **Próximos pasos:**
+
 1. Forzar crawl manual en Dashboard de Algolia
 2. Verificar que el índice se llene con contenido
 3. Probar búsqueda en producción
@@ -99,20 +100,48 @@ Este documento contiene una lista de mejoras sugeridas para el proyecto MindArch
 
 ---
 
-### 5. 📱 PWA (Progressive Web App)
+### ✅ 5. 📱 PWA (Progressive Web App)
 
-**Prioridad: MEDIA**
+**Prioridad: MEDIA**  
+**Estado**: ✅ **COMPLETADO** (2025-11-07)
 
 **Problema que resuelve:** Los estudiantes no pueden acceder a los apuntes sin internet.
 
-**Solución:** Convertir el sitio en PWA usando `@docusaurus/plugin-pwa`:
+**Solución:** Convertir el sitio en PWA usando `@docusaurus/plugin-pwa`.
 
-- Funcionamiento offline
-- Instalable en dispositivos móviles
-- Caché inteligente
-- Actualizaciones en background
+**Implementación realizada:**
 
-**Beneficio:** Acceso offline para estudiar en cualquier lugar, experiencia de app nativa.
+✅ **Plugin instalado**: `@docusaurus/plugin-pwa`
+
+✅ **Configuración en `docusaurus.config.ts`**:
+- Estrategias de activación offline: appInstalled, standalone, queryString
+- Meta tags para PWA (theme-color, apple-mobile-web-app)
+- Manifest link configurado
+
+✅ **Manifest creado** (`static/manifest.json`):
+- Nombre: "MindArchive - Apuntes Ingeniería en Computación UNC"
+- Display: standalone (app nativa)
+- Theme color: #7c3aed (púrpura)
+- Íconos: 192x192 y 512x512
+- Categorías: education, productivity
+- Idioma: es-AR
+
+✅ **Service Worker**: Generado automáticamente en build
+
+**Funcionalidades habilitadas:**
+- ✅ Funcionamiento offline (contenido cacheado)
+- ✅ Instalable en dispositivos móviles (Android, iOS)
+- ✅ Caché inteligente de recursos
+- ✅ Actualizaciones en background
+- ✅ Modo standalone (sin barra del navegador)
+- ✅ Splash screen personalizado
+
+**Archivos creados/modificados:**
+- `docusaurus.config.ts` - Configuración del plugin PWA
+- `static/manifest.json` - Web App Manifest
+- `build/sw.js` - Service Worker (generado automáticamente)
+
+**Beneficio:** Acceso offline para estudiar en cualquier lugar, experiencia de app nativa, instalable en home screen.
 
 ---
 
@@ -749,7 +778,7 @@ Optimización lograda mediante...
 
 ### Fase 3: Mejoras UX (En progreso)
 
-- [ ] **Punto 5**: PWA configurado
+- [x] **Punto 5**: PWA configurado ✅ (2025-11-07)
 - [ ] **Punto 12**: Sistema de feedback (Giscus)
 - [ ] **Punto 16**: Analytics configurado
 - [ ] **Punto 10**: Página de tags visible
