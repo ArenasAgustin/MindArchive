@@ -26,31 +26,47 @@ Al finalizar esta unidad, el estudiante será capaz de:
 
 ## 📋 Contenidos y recursos
 
-### 4.1 Fundamentos de Estructuras Lineales
+### 3.4 Fundamentos de Estructuras Lineales
 
-- **4.1.1** Concepto de lista y estructuras lineales
-- **4.1.2** Diferencias entre pilas y colas
-- **4.1.3** Principios LIFO y FIFO
+- **3.4.1** Concepto de lista y estructuras lineales
+- **3.4.2** Diferencias entre pilas y colas
+- **3.4.3** Principios LIFO y FIFO
 
-### 4.2 Implementación de Pilas y Colas
+### 3.5 Implementación de Pilas y Colas
 
-- **4.2.1** Principios fundamentales de implementación
-- **4.2.2** Operaciones básicas de pilas (Stack)
-- **4.2.3** Operaciones básicas de colas (Queue)
+- **3.5.1** Principios fundamentales de implementación
+- **3.5.2** Operaciones básicas de pilas (Stack)
+- **3.5.3** Operaciones básicas de colas (Queue)
 
-### 4.3 Aplicaciones Algorítmicas
+### 3.6 Aplicaciones Algorítmicas
 
-- **4.3.1** Notaciones de expresiones algebraicas
-- **4.3.2** Evaluación de expresiones postfijas
-- **4.3.3** Balanceo de paréntesis y validación sintáctica
+- **3.6.1** Notaciones de expresiones algebraicas
+- **3.6.2** Evaluación de expresiones postfijas
+- **3.6.3** Balanceo de paréntesis y validación sintáctica
+
+### 3.7 Calculadora Postfija
+
+- **3.7.1** Notaciones de expresiones algebraicas
+- **3.7.2** Ventajas de la notación postfija
+- **3.7.3** Evaluación de expresiones postfijas
+
+### 3.8 Ejercicios y Aplicaciones
+
+- **3.8.1** Ejercicios de conversión y evaluación
+- **3.8.2** Ejercicios de precedencia y paréntesis
+
+### 3.9 Balanceo de Paréntesis
+
+- **3.9.1** Algoritmo básico
+- **3.9.2** Extensiones y manejo de errores
 
 ### 🔗 Recursos Complementarios
 
 - [Colas y Pilas](https://res.cloudinary.com/dmwto06rn/raw/upload/v1758238283/pdfs/COLAS_PILAS_drn7kk.pdf)
 
-## Primer tema: 4.1 Fundamentos de Estructuras Lineales
+## Cuarto tema: 3.4 Fundamentos de Estructuras Lineales
 
-### 4.1.1 Concepto de lista y estructuras lineales
+### 3.4.1 Concepto de lista y estructuras lineales
 
 Una **estructura de datos lineal** es aquella en la que los elementos están organizados de forma secuencial, donde cada elemento tiene un único predecesor y un único sucesor (excepto el primero y el último).
 
@@ -63,7 +79,7 @@ Una **estructura de datos lineal** es aquella en la que los elementos están org
 
 Una **lista** es una estructura de datos que almacena una cadena de datos mediante una referencia (puntero) al siguiente elemento, permitiendo el crecimiento dinámico y la inserción/eliminación eficiente en cualquier posición.
 
-### 4.1.2 Diferencias entre pilas y colas
+### 3.4.2 Diferencias entre pilas y colas
 
 Las **pilas** y **colas** son estructuras de datos lineales fundamentales en ciencias de la computación:
 
@@ -72,7 +88,7 @@ Las **pilas** y **colas** son estructuras de datos lineales fundamentales en cie
 - Al igual que las listas, son estructuras **lineales contenedoras** de datos
 - Hacemos referencia a una pila o cola de datos de tipo `T`
 
-### 4.1.3 Principios LIFO y FIFO
+### 3.4.3 Principios LIFO y FIFO
 
 #### Principio LIFO (Last In, First Out)
 
@@ -112,9 +128,9 @@ El principio **FIFO** establece que el primer elemento que entra es el primero e
 - Implementación más compleja que LIFO
 - Requiere mantener referencias al frente y final
 
-## Segundo tema: 4.2 Implementación de Pilas y Colas
+## Quinto tema: 3.5 Implementación de Pilas y Colas
 
-### 4.2.1 Concepto de pila (Stack)
+### 3.5.1 Concepto de pila (Stack)
 
 **Característica principal:** Es una estructura **LIFO** (Last In, First Out)
 
@@ -139,7 +155,7 @@ Cuando navegas por sitios web: Sitio A → B → C → D
 - **Compiladores** para análisis sintáctico
 - **Evaluación de expresiones** aritméticas
 
-### 4.2.2 Concepto de cola (Queue)
+### 3.5.2 Concepto de cola (Queue)
 
 **Característica principal:** Es una estructura **FIFO** (First In, First Out)
 
@@ -182,7 +198,7 @@ Cuando navegas por sitios web: Sitio A → B → C → D
 | `empty()` | $O(1)$ | $O(1)$ |
 | `size()` | $O(1)$ | $O(1)$ |
 
-### 4.2.3 Implementación práctica
+### 3.5.3 Implementación práctica
 
 #### Implementación de Pila con Array
 
@@ -305,14 +321,14 @@ public:
 };
 ```
 
-## Tercer tema: 4.3 Aplicaciones Algorítmicas
+## Sexto tema: 3.6 Aplicaciones Algorítmicas
 
-### 4.3.1 Principios fundamentales de implementación
+### 3.6.1 Principios fundamentales de implementación
 
 - **Debe respetarse** el comportamiento específico de cada tipo (FIFO/LIFO)
 - Puede utilizarse un **array** o una **lista enlazada** (memoria estática/dinámica)
 
-### 4.3.2 Operaciones básicas de estructuras lineales
+### 3.6.2 Operaciones básicas de estructuras lineales
 
 #### Implementación de Pila (Stack)
 
@@ -342,7 +358,7 @@ public:
 };
 ```
 
-### 4.3.3 Notaciones y evaluación de expresiones
+### 3.6.3 Notaciones y evaluación de expresiones
 
 #### Algoritmo de conversión Infija a Postfija (Shunting Yard)
 
@@ -385,9 +401,9 @@ El **algoritmo Shunting Yard**, desarrollado por Edsger Dijkstra, convierte expr
 | `+`, `-` | 2 | Izquierda |
 | `(`, `)` | 1 | N/A |
 
-## Cuarto tema: Calculadora Postfija
+## Septimo tema: 3.7 Calculadora Postfija
 
-### Notaciones de expresiones algebraicas
+### 3.7.1 Notaciones de expresiones algebraicas
 
 #### Expresión algebraica ejemplo
 
@@ -411,13 +427,13 @@ $$a - c \times d + e \Rightarrow a - (c \times d) + e$$
    - Ejemplos: $(1 \; 2 \; +)$, $(2 \; 3 \; *)$
    - **Más eficiente** para computadoras
 
-### Ventajas de la notación postfija
+### 3.7.2 Ventajas de la notación postfija
 
 - **No requiere paréntesis** para determinar precedencia
 - **Evaluación más eficiente** usando una pila
 - **Menos ambigüedad** en la interpretación
 
-### Evaluación de expresiones postfijas
+### 3.7.3 Evaluación de expresiones postfijas
 
 #### Algoritmo básico
 
@@ -459,9 +475,9 @@ $$a - c \times d + e \Rightarrow a - (c \times d) + e$$
 
 **El resultado final es el último valor en la pila:** 22
 
-## Quinto tema: Ejercicios y Aplicaciones
+## Octavo tema: 3.8 Ejercicios y Aplicaciones
 
-### Ejercicio 1: Conversión a postfijo
+### 3.8.1 Ejercicio 1: Conversión a postfijo
 
 **Expresión infija:**
 
@@ -471,7 +487,7 @@ $$2 \times 3 + 3 - 2 \times 1 = 6 + 3 - 2 = 7$$
 
 $$2 \; 3 \; * \; 3 \; + \; 2 \; 1 \; * \; -$$
 
-### Ejercicio 2: Expresión compleja
+### 3.8.2 Ejercicio 2: Expresión compleja
 
 **Convertir a postfijo y resolver:**
 
@@ -504,7 +520,7 @@ $$2 \; 3 \; 3 \; + \; 2 \; - \; * \; 1 \; *$$
 
 **Resultado final:** 8
 
-### Ejercicio 3: Evaluación con precedencia
+### 3.8.3 Ejercicio 3: Evaluación con precedencia
 
 **Expresión infija con precedencia:**
 
@@ -535,7 +551,7 @@ $$5 \; 3 \; 2 \; 2 \; \hat{} \; \times \; + \; 1 \; -$$
 | 8 | 1 | [17, 1] | Apilar |
 | 9 | - | [16] | $17 - 1 = 16$ |
 
-### Ejercicio 4: Expresión compleja con múltiples paréntesis
+### 3.8.4 Ejercicio 4: Expresión compleja con múltiples paréntesis
 
 **Expresión:**
 
@@ -551,19 +567,19 @@ $$((15 \div (7 - (1 + 1))) \times 3) - (2 + (1 + 1))$$
 
 **Postfijo:** $15 \; 7 \; 1 \; 1 \; + \; - \; \div \; 3 \; \times \; 2 \; 1 \; 1 \; + \; + \; -$
 
-## Sexto tema: Balanceo de Paréntesis
+## Noveno tema: 3.9 Balanceo de Paréntesis
 
-### Problema
+### 3.9.1 Problema
 
 Determinar si una expresión tiene los paréntesis correctamente balanceados.
 
-### Algoritmo usando pila
+### 3.9.2 Algoritmo usando pila
 
 1. **Por cada paréntesis** $($: apilar en la pila
 2. **Por cada paréntesis** $)$: desapilar de la pila
 3. **Al final**: si la pila está vacía, la expresión está balanceada
 
-### Ejemplos
+### 3.9.3 Ejemplos
 
 #### Expresión balanceada: $((()))$
 
