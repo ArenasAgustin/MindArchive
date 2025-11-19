@@ -13,6 +13,267 @@ Este documento reúne ejemplos, operaciones habituales y consejos de uso para la
 
 ---
 
+## Arrays nativos (`[]`) y `std::array`
+
+### Arrays nativos (`T arr[N]`)
+
+- **Propósito:** arreglo de tamaño fijo en tiempo de compilación, almacenado en stack (o static).
+- **Acceso:** O(1) mediante `arr[i]`.
+- **Limitaciones:** no conoce su propio tamaño, decay a puntero, sin verificación de límites, no se puede copiar/asignar directamente.
+
+Ejemplo básico:
+
+```cpp
+#include <iostream>
+
+int main() {
+    int arr[5] = {1, 2, 3, 4, 5};  // declaración e inicialización
+    
+    // acceso directo
+    std::cout << arr[0] << '\n';   // 1
+    arr[2] = 10;                    // modificación
+    
+    // iteración manual (debe conocer el tamaño)
+    for (int i = 0; i < 5; ++i) {
+        std::cout << arr[i] << ' ';
+    }
+    
+    // tamaño en tiempo de compilación con sizeof
+    size_t size = sizeof(arr) / sizeof(arr[0]);  // 5
+    
+    return 0;
+}
+```
+
+**Inicialización con todos los valores iguales:**
+
+```cpp
+#include <algorithm>
+
+int main() {
+    // Inicializar todos a 0 (forma directa)
+    int arr1[100] = {0};  // todos los elementos = 0
+    
+    // Para otros valores, solo el primero se asigna directamente
+    int arr2[100] = {5};  // ❌ solo arr2[0] = 5, el resto = 0
+    
+    // Forma correcta para llenar con cualquier valor
+    int arr3[100];
+    std::fill_n(arr3, 100, 42);  // todos = 42
+    
+    // Alternativamente con bucle manual
+    int arr4[100];
+    for (int i = 0; i < 100; ++i) {
+        arr4[i] = 7;
+    }
+    
+    return 0;
+}
+```
+
+**Problemas comunes:**
+
+```cpp
+void func(int arr[]) {
+    // arr decay a puntero: sizeof(arr) da tamaño del puntero, NO del array
+    // debe pasarse el tamaño como parámetro adicional
+}
+
+int main() {
+    int arr[5] = {1,2,3,4,5};
+    func(arr);  // decay a int*
+    
+    // int arr2[5] = arr;  // ❌ ERROR: no se puede copiar
+    // arr = arr2;          // ❌ ERROR: no se puede asignar
+}
+```
+
+**Cuándo usar:**
+
+- Arrays pequeños de tamaño conocido en compilación cuando se necesita máximo rendimiento.
+- Buffers en stack para evitar allocaciones dinámicas.
+- Interfaz con APIs C.
+
+**Alternativa recomendada:** use `std::array` para obtener semántica moderna sin perder rendimiento.
+
+---
+
+### `std::array` (C++11)
+
+- **Propósito:** wrapper sobre array nativo que provee interfaz STL completa.
+- **Ventajas:** conoce su tamaño (`.size()`), no decay a puntero, soporta copia/asignación, compatible con algoritmos STL.
+- **Rendimiento:** idéntico a array nativo (zero-overhead abstraction).
+- **Complejidad:** acceso O(1), tamaño fijo en compilación.
+
+Ejemplo básico:
+
+```cpp
+#include <array>
+#include <iostream>
+#include <algorithm>
+
+int main() {
+    std::array<int, 5> arr = {1, 2, 3, 4, 5};  // tamaño en template
+    
+    // acceso seguro
+    std::cout << arr[0] << '\n';      // sin verificación
+    std::cout << arr.at(0) << '\n';   // con verificación (lanza exception si out of bounds)
+    
+    // tamaño conocido
+    std::cout << "size: " << arr.size() << '\n';
+    
+    // iteración con range-for
+    for (int x : arr) {
+        std::cout << x << ' ';
+    }
+    
+    // compatible con algoritmos STL
+    std::sort(arr.begin(), arr.end());
+    auto it = std::find(arr.begin(), arr.end(), 3);
+    
+    // copia y asignación funcionan
+    std::array<int, 5> arr2 = arr;  // ✅ OK
+    arr2 = arr;                      // ✅ OK
+    
+    return 0;
+}
+```
+
+**Funciones útiles:**
+
+```cpp
+#include <array>
+#include <iostream>
+
+int main() {
+    std::array<int, 5> arr = {1, 2, 3, 4, 5};
+    
+    // acceso a extremos
+    std::cout << arr.front() << '\n';  // primer elemento
+    std::cout << arr.back() << '\n';   // último elemento
+    
+    // acceso a memoria subyacente
+    int* ptr = arr.data();  // puntero al array interno
+    
+    // verificación
+    std::cout << arr.empty() << '\n';  // siempre false para size > 0
+    std::cout << arr.size() << '\n';   // tamaño fijo
+    
+    // llenar con valor
+    arr.fill(0);  // todos los elementos = 0
+    
+    // swap eficiente
+    std::array<int, 5> other = {10, 20, 30, 40, 50};
+    arr.swap(other);  // O(n), intercambia contenidos
+    
+    return 0;
+}
+```
+
+**Inicialización con todos los valores iguales:**
+
+```cpp
+#include <array>
+#include <algorithm>
+
+int main() {
+    // Forma 1: usar .fill() (más clara)
+    std::array<int, 100> arr1;
+    arr1.fill(0);   // todos = 0
+    
+    std::array<int, 100> arr2;
+    arr2.fill(42);  // todos = 42
+    
+    // Forma 2: inicialización con lista (solo para valores pequeños)
+    std::array<int, 5> arr3 = {7, 7, 7, 7, 7};
+    
+    // Forma 3: con algoritmos STL
+    std::array<int, 100> arr4;
+    std::fill(arr4.begin(), arr4.end(), 99);  // todos = 99
+    
+    return 0;
+}
+```
+
+**Iteradores:**
+
+```cpp
+#include <array>
+#include <iostream>
+#include <algorithm>
+
+int main() {
+    std::array<int, 5> arr = {1, 2, 3, 4, 5};
+    
+    // iteradores (aleatorios, como vector)
+    for (auto it = arr.begin(); it != arr.end(); ++it) {
+        *it *= 2;
+    }
+    
+    // const iterators
+    for (auto it = arr.cbegin(); it != arr.cend(); ++it) {
+        std::cout << *it << ' ';
+    }
+    
+    // iteradores inversos
+    for (auto rit = arr.rbegin(); rit != arr.rend(); ++rit) {
+        std::cout << *rit << ' ';
+    }
+    
+    return 0;
+}
+```
+
+**Comparación array nativo vs `std::array`:**
+
+| Característica | `int arr[N]` | `std::array<int, N>` |
+|----------------|--------------|----------------------|
+| Tamaño conocido | No (sizeof trick) | Sí (`.size()`) |
+| Iteradores STL | No | Sí |
+| Copia/asignación | No | Sí |
+| Decay a puntero | Sí (automático) | No (explícito con `.data()`) |
+| Verificación bounds | No | Sí (con `.at()`) |
+| Overhead | Ninguno | Ninguno (zero-cost) |
+| Compatible con algoritmos | No directo | Sí |
+
+**Consejos:**
+
+- **Use `std::array`** en código moderno C++ cuando el tamaño sea conocido en compilación.
+- **Use array nativo** solo para compatibilidad C o casos muy específicos de bajo nivel.
+- Para tamaño dinámico use `std::vector`.
+- `std::array` puede usarse en contextos `constexpr` (C++17+).
+
+**Ejemplo práctico: matriz 2D con `std::array`:**
+
+```cpp
+#include <array>
+#include <iostream>
+
+int main() {
+    // matriz 3x3
+    std::array<std::array<int, 3>, 3> matriz = {{
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    }};
+    
+    // acceso bidimensional
+    std::cout << matriz[1][2] << '\n';  // 6
+    
+    // iteración
+    for (const auto& fila : matriz) {
+        for (int val : fila) {
+            std::cout << val << ' ';
+        }
+        std::cout << '\n';
+    }
+    
+    return 0;
+}
+```
+
+---
+
 ## `std::vector`
 
 - Propósito: arreglo dinámico con acceso aleatorio O(1).
@@ -45,12 +306,38 @@ int main() {
     return 0;
 }
 
-    Funciones útiles:
+```
 
-    ### Ejemplos de iteradores
+**Inicialización con todos los valores iguales:**
 
-    ```cpp
-    // Iteradores en std::vector: iterador aleatorio, const_iterator y reverse_iterator
+```cpp
+#include <vector>
+#include <algorithm>
+
+int main() {
+    // Forma 1: constructor con tamaño y valor (más eficiente)
+    std::vector<int> v1(100, 0);   // 100 elementos, todos = 0
+    std::vector<int> v2(100, 42);  // 100 elementos, todos = 42
+    
+    // Forma 2: resize + fill
+    std::vector<int> v3;
+    v3.resize(100, 7);  // redimensiona a 100 con valor 7
+    
+    // Forma 3: crear vacío y luego llenar con std::fill
+    std::vector<int> v4(100);
+    std::fill(v4.begin(), v4.end(), 99);  // todos = 99
+    
+    // Forma 4: inicialización con lista
+    std::vector<int> v5 = {5, 5, 5, 5, 5};  // solo para pocos elementos
+    
+    return 0;
+}
+```
+
+### Ejemplos de iteradores
+
+```cpp
+// Iteradores en std::vector: iterador aleatorio, const_iterator y reverse_iterator
     #include <algorithm>
     #include <vector>
     #include <iostream>
@@ -115,6 +402,32 @@ int main() {
     L.splice(std::next(L.begin(),2), A, A.begin());
 
     for (int x : L) std::cout << x << ' ';
+}
+```
+
+**Inicialización con todos los valores iguales:**
+
+```cpp
+#include <list>
+#include <algorithm>
+
+int main() {
+    // Forma 1: constructor con tamaño y valor
+    std::list<int> L1(100, 0);   // 100 elementos, todos = 0
+    std::list<int> L2(100, 42);  // 100 elementos, todos = 42
+    
+    // Forma 2: resize con valor
+    std::list<int> L3;
+    L3.resize(100, 7);  // redimensiona a 100 con valor 7
+    
+    // Forma 3: crear y luego llenar con std::fill
+    std::list<int> L4(100);
+    std::fill(L4.begin(), L4.end(), 99);
+    
+    // Forma 4: inicialización con lista
+    std::list<int> L5 = {5, 5, 5, 5, 5};
+    
+    return 0;
 }
 ```
 
@@ -362,6 +675,38 @@ int main() {
 }
 ```
 
+**Inicialización completa:**
+
+```cpp
+#include <map>
+#include <string>
+
+int main() {
+    // Forma 1: inicialización con lista de pares
+    std::map<std::string, int> m1 = {
+        {"alice", 10},
+        {"bob", 20},
+        {"charlie", 30}
+    };
+    
+    // Forma 2: con make_pair
+    std::map<int, std::string> m2 = {
+        std::make_pair(1, "uno"),
+        std::make_pair(2, "dos"),
+        std::make_pair(3, "tres")
+    };
+    
+    // Forma 3: inserción múltiple
+    std::map<int, int> m3;
+    m3.insert({{1, 100}, {2, 200}, {3, 300}});
+    
+    // Nota: no existe forma directa de llenar con el mismo valor
+    // para todas las claves (map requiere claves únicas)
+    
+    return 0;
+}
+```
+
 Funciones y técnicas útiles:
 
 - `m.lower_bound(k)`, `m.upper_bound(k)`, `m.erase(it)`, `m.emplace(k,v)`.
@@ -404,6 +749,32 @@ int main() {
     S.insert(2);
     if (S.count(3)) { /* existe */ }
     for (int x : S) std::cout << x << ' ';
+}
+```
+
+**Inicialización completa:**
+
+```cpp
+#include <set>
+#include <vector>
+
+int main() {
+    // Forma 1: inicialización con lista
+    std::set<int> S1 = {1, 2, 3, 4, 5};
+    
+    // Forma 2: desde iteradores (vector, array, etc.)
+    std::vector<int> v = {10, 20, 30, 20, 10};  // duplicados serán ignorados
+    std::set<int> S2(v.begin(), v.end());       // S2 = {10, 20, 30}
+    
+    // Forma 3: inserción múltiple
+    std::set<int> S3;
+    S3.insert({7, 8, 9, 7});  // el 7 duplicado se ignora
+    
+    // Forma 4: desde array C
+    int arr[] = {5, 4, 3, 2, 1};
+    std::set<int> S4(arr, arr + 5);
+    
+    return 0;
 }
 ```
 
@@ -451,6 +822,36 @@ int main() {
 
     // iteración en orden arbitrario
     for (auto &p : um) std::cout << p.first << ' ' << p.second << '\n';
+}
+```
+
+**Inicialización completa:**
+
+```cpp
+#include <unordered_map>
+#include <string>
+
+int main() {
+    // Forma 1: inicialización con lista de pares
+    std::unordered_map<std::string, int> um1 = {
+        {"alice", 10},
+        {"bob", 20},
+        {"charlie", 30}
+    };
+    
+    // Forma 2: con make_pair
+    std::unordered_map<int, std::string> um2 = {
+        std::make_pair(1, "uno"),
+        std::make_pair(2, "dos"),
+        std::make_pair(3, "tres")
+    };
+    
+    // Forma 3: inserción múltiple con reserve previo
+    std::unordered_map<int, int> um3;
+    um3.reserve(3);  // evita rehashing
+    um3.insert({{1, 100}, {2, 200}, {3, 300}});
+    
+    return 0;
 }
 ```
 
@@ -502,6 +903,37 @@ int main() {
     std::cout << b.count() << '\n'; // número de bits a 1
     std::cout << b.test(3) << '\n';
     std::cout << b.to_string() << '\n';
+}
+```
+
+**Inicialización completa:**
+
+```cpp
+#include <bitset>
+#include <string>
+
+int main() {
+    // Forma 1: todos los bits a 0 (por defecto)
+    std::bitset<8> b1;  // 00000000
+    
+    // Forma 2: desde valor entero
+    std::bitset<8> b2(42);  // 00101010 (42 en binario)
+    
+    // Forma 3: desde string binario
+    std::bitset<8> b3("10101010");
+    std::bitset<8> b4(std::string("11110000"));
+    
+    // Forma 4: todos los bits a 1
+    std::bitset<8> b5;
+    b5.set();  // 11111111 (todos a 1)
+    
+    // Forma 5: patrón específico desde string con prefijo
+    std::bitset<16> b6("0b1010101010101010");  // C++14+
+    
+    // Forma 6: desde unsigned long long
+    std::bitset<32> b7(0xDEADBEEF);  // desde hexadecimal
+    
+    return 0;
 }
 ```
 
@@ -593,6 +1025,35 @@ int main() {
         } else ++it;
     }
 
+    return 0;
+}
+```
+
+**Inicialización completa:**
+
+```cpp
+#include <unordered_set>
+#include <vector>
+#include <string>
+
+int main() {
+    // Forma 1: inicialización con lista
+    std::unordered_set<int> S1 = {1, 2, 3, 4, 5};
+    std::unordered_set<std::string> S2 = {"alice", "bob", "charlie"};
+    
+    // Forma 2: desde iteradores
+    std::vector<int> v = {10, 20, 30, 20, 10};  // duplicados ignorados
+    std::unordered_set<int> S3(v.begin(), v.end());  // S3 = {10, 20, 30}
+    
+    // Forma 3: inserción múltiple con reserve previo
+    std::unordered_set<int> S4;
+    S4.reserve(5);  // evita rehashing
+    S4.insert({7, 8, 9, 7});  // duplicado ignorado
+    
+    // Forma 4: desde array C
+    int arr[] = {5, 4, 3, 2, 1};
+    std::unordered_set<int> S5(arr, arr + 5);
+    
     return 0;
 }
 ```
