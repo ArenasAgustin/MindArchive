@@ -1,7 +1,6 @@
 ---
 title: "Algoritmos y Estructuras de Datos"
 description: "En esta materia se aprende programación en C++ enfocada en la eficiencia. Los temas dados incluyen recursividad, análisis de complejidad, algoritmos de ordenamiento (Quick Sort, Merge Sort, Heap Sort), estructuras lineales (listas, pilas, colas), árboles (AVL, B-tree) y algoritmos de grafos (BFS, DFS, Dijkstra, Floyd-Warshall)."
-sidebar_position: 3
 tags: [algoritmos, estructuras-de-datos, programacion, cpp]
 # Metadata para landing page
 icon: "🌳"

@@ -1,7 +1,6 @@
 ---
 title: "Análisis Matemático 2"
 description: "Esta materia aborda el cálculo diferencial e integral en varias variables. Se estudian límites y continuidad en ℝⁿ, derivadas parciales y direccionales, optimización con multiplicadores de Lagrange, integrales múltiples, campos vectoriales y los teoremas de Green, Stokes y Gauss."
-sidebar_position: 1
 tags: [matematicas, analisis]
 # Metadata para landing page
 icon: "📈"
