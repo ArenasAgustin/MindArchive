@@ -511,6 +511,31 @@ $$\left\| \frac{a}{b} \right\|$$
 Usa `\left` y `\right` para que los delimitadores se ajusten automáticamente al tamaño del contenido.
 :::
 
+### Notación de Dirac (Braket)
+
+La notación braket se usa en mecánica cuántica para vectores de estado y productos internos.
+
+| Notación | Código | Resultado | Descripción |
+|----------|--------|-----------|-------------|
+| Ket | `$\lvert \psi \rangle$` | $\lvert \psi \rangle$ | Vector de estado |
+| Bra | `$\langle \phi \rvert$` | $\langle \phi \rvert$ | Vector dual |
+| Braket | `$\langle \phi \| \psi \rangle$` | $\langle \phi \| \psi \rangle$ | Producto interno |
+| Operador | `$\langle \phi \| \hat{H} \| \psi \rangle$` | $\langle \phi \| \hat{H} \| \psi \rangle$ | Elemento de matriz |
+
+**Ejemplos:**
+
+```latex
+$$\lvert 0 \rangle, \lvert 1 \rangle$$
+$$\langle \psi \| \psi \rangle = 1$$
+$$\hat{H} \lvert \psi \rangle = E \lvert \psi \rangle$$
+```
+
+$$\lvert 0 \rangle, \lvert 1 \rangle$$
+
+$$\langle \psi \| \psi \rangle = 1$$
+
+$$\hat{H} \lvert \psi \rangle = E \lvert \psi \rangle$$
+
 ---
 
 ## 📌 Ejemplos Completos
