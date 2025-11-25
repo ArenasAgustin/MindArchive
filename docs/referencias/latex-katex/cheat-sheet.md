@@ -515,12 +515,12 @@ Usa `\left` y `\right` para que los delimitadores se ajusten automáticamente al
 
 La notación braket se usa en mecánica cuántica para vectores de estado y productos internos.
 
-| Notación | Código | Resultado | Descripción |
-|----------|--------|-----------|-------------|
-| Ket | `$\lvert \psi \rangle$` | $\lvert \psi \rangle$ | Vector de estado |
-| Bra | `$\langle \phi \rvert$` | $\langle \phi \rvert$ | Vector dual |
-| Braket | `$\langle \phi \| \psi \rangle$` | $\langle \phi \| \psi \rangle$ | Producto interno |
-| Operador | `$\langle \phi \| \hat{H} \| \psi \rangle$` | $\langle \phi \| \hat{H} \| \psi \rangle$ | Elemento de matriz |
+| Notación | Código | Resultado |
+|----------|--------|-----------|
+| Ket | `$\lvert \psi \rangle$` | $\lvert \psi \rangle$ |
+| Bra | `$\langle \phi \rvert$` | $\langle \phi \rvert$ |
+| Braket | `$\langle \phi \| \psi \rangle$` | $\langle \phi \| \psi \rangle$ |
+| Braket Simple | `$\braket{\phi, \psi}$` | $\braket{\phi, \psi}$ |
 
 **Ejemplos:**
 
