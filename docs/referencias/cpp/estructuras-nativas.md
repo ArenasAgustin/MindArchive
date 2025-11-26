@@ -364,9 +364,6 @@ int main() {
 
         return 0;
     }
-    ```
-
-    Funciones útiles:
 ```
 
 Funciones útiles:
