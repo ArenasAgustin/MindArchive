@@ -201,7 +201,6 @@ slug: /
   </div>
   <div className="card__body">
     <p>Este es un proyecto colaborativo que crece con la participación de la comunidad estudiantil.</p>
-    
     <div className="row">
       <div className="col col--6">
         <h4>📝 Puedes contribuir con:</h4>
