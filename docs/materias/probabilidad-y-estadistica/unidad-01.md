@@ -32,33 +32,21 @@ Al finalizar esta unidad, el estudiante será capaz de:
 ### 1.2 Clasificación de Variables
 
 - **1.2.1** Variables Cualitativas
-- **1.2.2** Variables Cuantitativas Discretas
-- **1.2.3** Variables Cuantitativas Continuas
+- **1.2.2** Variables Cuantitativas
 
-### 1.3 Tratamiento de Datos
+### 1.3 Frecuencias y Tablas
 
-- **1.3.1** Tablas de frecuencias
-- **1.3.2** Representaciones gráficas
-- **1.3.3** Medidas descriptivas
+- **1.3.1** Frecuencias y Porcentajes
+- **1.3.2** Tablas de frecuencias por tipo de variable
+- **1.3.3** Representaciones gráficas
+- **1.3.4** Medidas descriptivas
 
-### 1.4 Ventajas y Desventajas de Medidas Estadísticas
+### 1.4 Medidas Estadísticas
 
-- **1.4.1** Medidas de tendencia central
-- **1.4.2** Medidas de dispersión
-- **1.4.3** Análisis comparativo
-
-### 1.5 Medidas de Posición y Forma
-
-- **1.5.1** Cuartiles, Deciles y Percentiles
-- **1.5.2** Medidas de tendencia central (detalle)
-- **1.5.3** Medidas de forma
-- **1.5.4** Diagrama de Caja (Box Plot)
-
-### 1.6 Medidas de Dispersión
-
-- **1.6.1** Medidas de dispersión absoluta
-- **1.6.2** Medidas de dispersión relativa
-- **1.6.3** Medidas de forma avanzadas
+- **1.4.1** Medidas de Tendencia Central
+- **1.4.2** Medidas de Posición: Cuartiles, Deciles y Percentiles
+- **1.4.3** Medidas de Dispersión y Forma
+- **1.4.4** Diagrama de Caja (Box Plot)
 
 ### 🔗 Recursos Complementarios
 
@@ -113,45 +101,308 @@ Las variables cualitativas expresan atributos o características que no pueden m
 - No se pueden realizar operaciones aritméticas
 - Se pueden ordenar (ordinales) o no (nominales)
 
+Se dividen en dos subtipos:
+
+#### Variables Cualitativas Nominales
+
+Son aquellas que **no tienen un orden natural** entre sus categorías. Las categorías son mutuamente excluyentes pero no existe una jerarquía o secuencia lógica entre ellas.
+
+**Características:**
+
+- No existe ordenamiento natural entre categorías
+- Solo se puede determinar igualdad o diferencia
+- La única medida de tendencia central aplicable es la **moda**
+
 **Ejemplos:**
 
-- Color de ojos (azul, verde, marrón)
-- Estado civil (soltero, casado, divorciado)
-- Nivel educativo (primario, secundario, universitario)
+- **Color de ojos:** azul, verde, marrón, negro
+- **Estado civil:** soltero, casado, divorciado, viudo
+- **Tipo de sangre:** A, B, AB, O
+- **Nacionalidad:** argentino, brasileño, chileno
+- **Marca de automóvil:** Ford, Toyota, Chevrolet
+- **Profesión:** ingeniero, médico, abogado, docente
 
-### 1.2.2 Variables Cuantitativas Discretas
+#### Variables Cualitativas Ordinales
 
-Las variables cuantitativas discretas toman valores numéricos específicos, generalmente números enteros.
-
-| Tipo de Variable | Ejemplos |
-|------------------|----------|
-| **DISCRETA** | Número de hijos, unidades defectuosas |
-
-**Características:**
-
-- Valores numéricos contables
-- Espacios entre valores posibles
-- Generalmente números enteros
-
-### 1.2.3 Variables Cuantitativas Continuas
-
-Las variables cuantitativas continuas pueden tomar cualquier valor dentro de un rango determinado.
-
-| Tipo de Variable | Ejemplos |
-|------------------|----------|
-| **CONTINUA** | Peso, altura, temperatura, resistencia del hormigón |
+Son aquellas que **sí tienen un orden natural** entre sus categorías. Las categorías pueden ordenarse de manera lógica, aunque la distancia entre categorías no es necesariamente uniforme.
 
 **Características:**
 
-- Valores numéricos en un continuo
+- Existe un ordenamiento lógico y natural entre categorías
+- Se puede determinar si una categoría es mayor, menor o igual a otra
+- Las medidas aplicables son la **moda** y la **mediana**
+
+**Ejemplos:**
+
+- **Nivel educativo:** primario < secundario < universitario < posgrado
+- **Nivel de satisfacción:** muy insatisfecho < insatisfecho < neutral < satisfecho < muy satisfecho
+- **Grado militar:** soldado < cabo < sargento < teniente < capitán
+- **Categoría de un hotel:** 1 estrella < 2 estrellas < 3 estrellas < 4 estrellas < 5 estrellas
+- **Tamaño de prenda:** XS < S < M < L < XL < XXL
+- **Nivel socioeconómico:** bajo < medio-bajo < medio < medio-alto < alto
+- **Grado de acuerdo:** totalmente en desacuerdo < en desacuerdo < neutral < de acuerdo < totalmente de acuerdo
+
+### 1.2.2 Variables Cuantitativas
+
+Las variables cuantitativas expresan cantidades o magnitudes que pueden medirse numéricamente. Permiten realizar operaciones aritméticas como suma, resta, multiplicación y división.
+
+**Características:**
+
+- Representan valores numéricos
+- Se pueden realizar operaciones matemáticas
+- Admiten medidas de tendencia central (media, mediana, moda)
+- Admiten medidas de dispersión (varianza, desviación estándar, rango)
+- Pueden ser de dos tipos: discretas o continuas
+
+Se dividen en dos subtipos:
+
+#### Variables Cuantitativas Discretas
+
+Son aquellas que toman valores numéricos específicos y **contables**, generalmente números enteros. Entre dos valores consecutivos no puede haber valores intermedios.
+
+**Características:**
+
+- Valores numéricos contables (se pueden enumerar)
+- Espacios o "saltos" entre valores posibles
+- Generalmente números enteros (aunque no siempre)
+- Resultan de contar elementos o unidades
+
+**Ejemplos:**
+
+- **Número de hijos:** 0, 1, 2, 3, 4, ... (no puede haber 2.5 hijos)
+- **Unidades defectuosas en una producción:** 0, 1, 2, 3, ...
+- **Número de estudiantes en un aula:** 15, 20, 25, 30, ...
+- **Cantidad de goles en un partido:** 0, 1, 2, 3, 4, ...
+- **Número de habitaciones en una vivienda:** 1, 2, 3, 4, 5, ...
+- **Llamadas telefónicas recibidas por día:** 5, 10, 15, 20, ...
+- **Cantidad de accidentes por mes:** 0, 1, 2, 3, ...
+
+#### Variables Cuantitativas Continuas
+
+Son aquellas que pueden tomar **cualquier valor** dentro de un rango o intervalo determinado. Entre dos valores cualesquiera siempre es posible encontrar infinitos valores intermedios.
+
+**Características:**
+
+- Valores numéricos en un continuo (no hay "saltos")
 - Pueden tomar infinitos valores en un intervalo
 - Requieren instrumentos de medición
+- Resultan de medir magnitudes físicas o dimensiones
+- La precisión depende del instrumento de medición utilizado
 
-## Tercer tema: 1.3 Tratamiento de Datos
+**Ejemplos:**
+
+- **Peso:** 65.3 kg, 70.125 kg, 58.99 kg (puede tomar cualquier valor)
+- **Altura:** 1.75 m, 1.8234 m, 1.62 m
+- **Temperatura:** 23.5°C, 18.75°C, 36.8°C
+- **Resistencia del hormigón:** 12.45 MPa, 13.78 MPa, 14.12 MPa
+- **Tiempo de ejecución:** 45.23 segundos, 1.234 horas
+- **Distancia recorrida:** 5.7 km, 12.345 km, 0.89 km
+- **Velocidad:** 85.6 km/h, 120.45 km/h, 60.123 km/h
+- **Presión atmosférica:** 1013.25 hPa, 1020.5 hPa
+
+## Tercer tema: 1.3 Frecuencias y Tablas
+
+### 1.3.1 Frecuencias y Porcentajes
+
+Las **frecuencias** son medidas que indican cuántas veces aparece cada valor o categoría en un conjunto de datos. Son fundamentales para organizar y resumir información estadística.
+
+#### Tipos de Frecuencias
+
+##### Frecuencia Absoluta (FA)
+
+Es el **número de veces** que aparece cada valor o categoría en el conjunto de datos.
+
+**Notación:** $f_i$ o FA
+
+**Propiedades:**
+
+1. Es un número entero no negativo: $f_i \geq 0$
+2. La suma de todas las frecuencias absolutas es igual al tamaño de la muestra:
+
+$$
+\sum_{i=1}^{k} f_i = n
+$$
+
+Donde:
+
+- $k$ = número de categorías o valores distintos
+- $n$ = tamaño total de la muestra
+
+**Ejemplo:**
+
+En una encuesta a 50 personas sobre su color favorito:
+
+- Azul: 20 personas → FA = 20
+- Rojo: 15 personas → FA = 15
+- Verde: 10 personas → FA = 10
+- Amarillo: 5 personas → FA = 5
+
+Verificación: $20 + 15 + 10 + 5 = 50$ ✓
+
+##### Frecuencia Relativa (FR)
+
+Es la **proporción** que representa cada valor o categoría respecto al total de observaciones.
+
+**Fórmula:**
+
+$$
+FR_i = \frac{f_i}{n}
+$$
+
+Donde:
+
+- $f_i$ = frecuencia absoluta del valor $i$
+- $n$ = tamaño total de la muestra
+
+**Propiedades:**
+
+1. Es un número decimal entre 0 y 1: $0 \leq FR_i \leq 1$
+2. La suma de todas las frecuencias relativas es igual a 1:
+
+$$
+\sum_{i=1}^{k} FR_i = 1
+$$
+
+3. Se puede expresar como porcentaje multiplicando por 100:
+
+$$
+\text{Porcentaje} = FR_i \times 100\%
+$$
+
+**Ejemplo (continuando con el caso anterior):**
+
+- Azul: $FR = \frac{20}{50} = 0.40 = 40\%$
+- Rojo: $FR = \frac{15}{50} = 0.30 = 30\%$
+- Verde: $FR = \frac{10}{50} = 0.20 = 20\%$
+- Amarillo: $FR = \frac{5}{50} = 0.10 = 10\%$
+
+Verificación: $0.40 + 0.30 + 0.20 + 0.10 = 1.00$ ✓
+
+##### Frecuencia Absoluta Acumulada (FAA)
+
+Es la **suma acumulativa** de las frecuencias absolutas hasta un determinado valor. Solo tiene sentido para variables cuantitativas o cualitativas ordinales (con orden).
+
+**Fórmula:**
+
+$$
+FAA_i = \sum_{j=1}^{i} f_j
+$$
+
+**Propiedades:**
+
+1. Es una sucesión creciente: $FAA_1 \leq FAA_2 \leq ... \leq FAA_k$
+2. La última frecuencia acumulada es igual al tamaño de la muestra: $FAA_k = n$
+3. Solo se calcula para datos ordenables
+
+**Ejemplo (edades de estudiantes):**
+
+| Edad | FA | FAA |
+|------|----|----- |
+| 18   | 5  | 5   |
+| 19   | 8  | 13  |
+| 20   | 12 | 25  |
+| 21   | 7  | 32  |
+| 22   | 3  | 35  |
+
+Interpretación: FAA(20) = 25 significa que hay 25 estudiantes con edad ≤ 20 años.
+
+##### Frecuencia Relativa Acumulada (FRA)
+
+Es la **proporción acumulativa** de observaciones hasta un determinado valor.
+
+**Fórmula:**
+
+$$
+FRA_i = \frac{FAA_i}{n} = \sum_{j=1}^{i} FR_j
+$$
+
+**Propiedades:**
+
+1. Es una sucesión creciente: $0 \leq FRA_1 \leq FRA_2 \leq ... \leq FRA_k = 1$
+2. La última frecuencia relativa acumulada es igual a 1: $FRA_k = 1$
+3. Se puede expresar como porcentaje acumulado
+
+**Ejemplo (continuando con edades):**
+
+| Edad | FA | FR   | FAA | FRA  |
+|------|----| -----|-----|----- |
+| 18   | 5  | 0.14 | 5   | 0.14 |
+| 19   | 8  | 0.23 | 13  | 0.37 |
+| 20   | 12 | 0.34 | 25  | 0.71 |
+| 21   | 7  | 0.20 | 32  | 0.91 |
+| 22   | 3  | 0.09 | 35  | 1.00 |
+
+Interpretación: FRA(20) = 0.71 significa que el 71% de los estudiantes tienen 20 años o menos.
+
+#### Tabla Resumen de Frecuencias
+
+Para un conjunto de datos, la tabla completa de frecuencias incluye:
+
+| Valor/Categoría | FA ($f_i$) | FR | FAA | FRA |
+|-----------------|------------|-----|-----|-----|
+| $x_1$           | $f_1$      | $\frac{f_1}{n}$ | $f_1$ | $\frac{f_1}{n}$ |
+| $x_2$           | $f_2$      | $\frac{f_2}{n}$ | $f_1 + f_2$ | $\frac{f_1 + f_2}{n}$ |
+| $x_3$           | $f_3$      | $\frac{f_3}{n}$ | $f_1 + f_2 + f_3$ | $\frac{f_1 + f_2 + f_3}{n}$ |
+| ...             | ...        | ... | ... | ... |
+| $x_k$           | $f_k$      | $\frac{f_k}{n}$ | $n$ | $1.00$ |
+| **Total**       | **$n$**    | **1.00** | | |
+
+#### Propiedades Importantes
+
+**1. Relación entre frecuencias:**
+
+$$
+FR_i = \frac{FA_i}{n}
+$$
+
+$$
+FRA_i = \frac{FAA_i}{n}
+$$
+
+**2. Suma de frecuencias relativas:**
+
+$$
+\sum_{i=1}^{k} FR_i = 1
+$$
+
+**3. Última frecuencia acumulada:**
+
+$$
+FAA_k = n \quad \text{y} \quad FRA_k = 1
+$$
+
+**4. Relación entre FR y FRA:**
+
+$$
+FRA_i = FRA_{i-1} + FR_i
+$$
+
+#### Ejemplo Completo
+
+**Datos:** Número de hermanos de 20 estudiantes: 0, 1, 1, 2, 0, 1, 3, 2, 1, 0, 2, 1, 1, 0, 2, 1, 3, 1, 2, 1
+
+**Tabla de frecuencias:**
+
+| N° Hermanos | FA | FR   | FAA | FRA  |
+|-------------|----| -----|-----|----- |
+| 0           | 4  | 0.20 | 4   | 0.20 |
+| 1           | 9  | 0.45 | 13  | 0.65 |
+| 2           | 5  | 0.25 | 18  | 0.90 |
+| 3           | 2  | 0.10 | 20  | 1.00 |
+| **Total**   | **20** | **1.00** | | |
+
+**Interpretación:**
+
+- El 20% de los estudiantes no tiene hermanos
+- El 45% tiene 1 hermano (la moda)
+- El 65% tiene 1 hermano o menos
+- El 90% tiene 2 hermanos o menos
+
+### 1.3.2 Tablas de Frecuencias por Tipo de Variable
 
 El tratamiento adecuado de los datos depende del tipo de variable con la que trabajemos.
 
-### 1.3.1 Variable Cualitativa
+#### Variable Cualitativa
 
 **Tablas de frecuencias:**
 
@@ -165,11 +416,32 @@ El tratamiento adecuado de los datos depende del tipo de variable con la que tra
 - Pictogramas
 - Gráfico de Pareto
 
+#### Ejemplo: Preferencia de Color de Ojos
+
+**Tabla de frecuencias:**
+
+| Color | FA | FR   |
+|-------|----|----- |
+| Marrón| 45 | 0.45 |
+| Azul  | 30 | 0.30 |
+| Verde | 15 | 0.15 |
+| Negro | 10 | 0.10 |
+| **Total** | **100** | **1.00** |
+
+**Diagrama de barras:**
+
+![Diagrama de barras - Color de ojos](https://quickchart.io/chart?width=400&height=200&c=%7Btype%3A%27bar%27%2Cdata%3A%7Blabels%3A%5B%27Marr%C3%B3n%27%2C%27Azul%27%2C%27Verde%27%2C%27Negro%27%5D%2Cdatasets%3A%5B%7Blabel%3A%27Frecuencia%27%2Cdata%3A%5B45%2C30%2C15%2C10%5D%2CbackgroundColor%3A%5B%27rgb%28139%2C69%2C19%29%27%2C%27rgb%2830%2C144%2C255%29%27%2C%27rgb%2834%2C139%2C34%29%27%2C%27rgb%280%2C0%2C0%29%27%5D%7D%5D%7D%2Coptions%3A%7Bplugins%3A%7Btitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27Distribuci%C3%B3n%20de%20Color%20de%20Ojos%27%7D%7D%2Cscales%3A%7By%3A%7BbeginAtZero%3Atrue%2Ctitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27Frecuencia%20Absoluta%27%7D%7D%7D%7D%7D)
+
+**Diagrama de sectores (torta):**
+
+![Diagrama de torta - Color de ojos](https://quickchart.io/chart?width=400&height=200&c=%7Btype%3A%27outlabeledPie%27%2Cdata%3A%7Blabels%3A%5B%27Marr%C3%B3n%20%2845%25%29%27%2C%27Azul%20%2830%25%29%27%2C%27Verde%20%2815%25%29%27%2C%27Negro%20%2810%25%29%27%5D%2Cdatasets%3A%5B%7Bdata%3A%5B45%2C30%2C15%2C10%5D%2CbackgroundColor%3A%5B%27rgb%28139%2C69%2C19%29%27%2C%27rgb%2830%2C144%2C255%29%27%2C%27rgb%2834%2C139%2C34%29%27%2C%27rgb%280%2C0%2C0%29%27%5D%7D%5D%7D%2Coptions%3A%7Bplugins%3A%7Btitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27Proporci%C3%B3n%20de%20Color%20de%20Ojos%27%7D%2Clegend%3A%7Bposition%3A%27bottom%27%7D%7D%7D%7D)
+
 **Medidas:**
 
 - Moda: La categoría que aparece con mayor frecuencia
+- En este ejemplo: **Marrón** (FA = 45, FR = 0.45)
 
-### 1.3.2 Variable Cuantitativa Discreta
+#### Variable Cuantitativa Discreta
 
 **Tablas de frecuencias:**
 
@@ -183,12 +455,34 @@ El tratamiento adecuado de los datos depende del tipo de variable con la que tra
 - Diagrama de barras
 - Polígono de frecuencias
 
+#### Ejemplo: Número de Hijos por Familia
+
+**Tabla de frecuencias:**
+
+| Nº Hijos | FA | FR   | FAA | FRA  |
+|----------|----| -----|-----|------|
+| 0        | 12 | 0.24 | 12  | 0.24 |
+| 1        | 18 | 0.36 | 30  | 0.60 |
+| 2        | 15 | 0.30 | 45  | 0.90 |
+| 3        | 4  | 0.08 | 49  | 0.98 |
+| 4        | 1  | 0.02 | 50  | 1.00 |
+| **Total**| **50** | **1.00** | | |
+
+**Diagrama de barras:**
+
+![Diagrama de barras - Número de hijos](https://quickchart.io/chart?width=400&height=200&c=%7Btype%3A%27bar%27%2Cdata%3A%7Blabels%3A%5B%270%27%2C%271%27%2C%272%27%2C%273%27%2C%274%27%5D%2Cdatasets%3A%5B%7Blabel%3A%27Frecuencia%27%2Cdata%3A%5B12%2C18%2C15%2C4%2C1%5D%2CbackgroundColor%3A%27rgb%2875%2C192%2C192%29%27%7D%5D%7D%2Coptions%3A%7Bplugins%3A%7Btitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27N%C3%BAmero%20de%20Hijos%20por%20Familia%27%7D%7D%2Cscales%3A%7By%3A%7BbeginAtZero%3Atrue%2Ctitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27Frecuencia%20Absoluta%27%7D%7D%2Cx%3A%7Btitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27N%C3%BAmero%20de%20Hijos%27%7D%7D%7D%7D%7D)
+
+**Polígono de frecuencias:**
+
+![Polígono de frecuencias - Número de hijos](https://quickchart.io/chart?width=400&height=200&c=%7Btype%3A%27line%27%2Cdata%3A%7Blabels%3A%5B%270%27%2C%271%27%2C%272%27%2C%273%27%2C%274%27%5D%2Cdatasets%3A%5B%7Blabel%3A%27Frecuencia%27%2Cdata%3A%5B12%2C18%2C15%2C4%2C1%5D%2CborderColor%3A%27rgb%28255%2C99%2C132%29%27%2CbackgroundColor%3A%27rgba%28255%2C99%2C132%2C0.2%29%27%2Cfill%3Atrue%2Ctension%3A0.1%7D%5D%7D%2Coptions%3A%7Bplugins%3A%7Btitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27Pol%C3%ADgono%20de%20Frecuencias%27%7D%7D%2Cscales%3A%7By%3A%7BbeginAtZero%3Atrue%2Ctitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27Frecuencia%20Absoluta%27%7D%7D%2Cx%3A%7Btitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27N%C3%BAmero%20de%20Hijos%27%7D%7D%7D%7D%7D)
+
 **Medidas:**
 
 - **De posición:** Media aritmética, Mediana, Moda
 - **De dispersión:** Rango, Varianza, Desviación estándar
+- En este ejemplo: Media = 1.28 hijos, Mediana = 1, Moda = 1
 
-### 1.3.3 Variable Cuantitativa Continua
+#### Variable Cuantitativa Continua
 
 **Tablas de frecuencias para datos agrupados:**
 
@@ -207,11 +501,33 @@ Los datos continuos se agrupan en clases o intervalos:
 - Gráfico de Caja (Box Plot)
 - Densidad de puntos
 
+#### Ejemplo: Alturas de Estudiantes (cm)
+
+**Tabla de frecuencias agrupadas:**
+
+| Clase | LI  | LS  | MC  | FA | FR   | FAA | FRA  |
+|-------|-----|-----|-----|----| -----|-----|------|
+| 1     | 150 | 160 | 155 | 8  | 0.16 | 8   | 0.16 |
+| 2     | 160 | 170 | 165 | 15 | 0.30 | 23  | 0.46 |
+| 3     | 170 | 180 | 175 | 18 | 0.36 | 41  | 0.82 |
+| 4     | 180 | 190 | 185 | 7  | 0.14 | 48  | 0.96 |
+| 5     | 190 | 200 | 195 | 2  | 0.04 | 50  | 1.00 |
+| **Total** |  |     |     | **50** | **1.00** | | |
+
+**Histograma:**
+
+![Histograma - Alturas](https://quickchart.io/chart?width=400&height=200&c=%7Btype%3A%27bar%27%2Cdata%3A%7Blabels%3A%5B%27150-160%27%2C%27160-170%27%2C%27170-180%27%2C%27180-190%27%2C%27190-200%27%5D%2Cdatasets%3A%5B%7Blabel%3A%27Frecuencia%27%2Cdata%3A%5B8%2C15%2C18%2C7%2C2%5D%2CbackgroundColor%3A%27rgb%2854%2C162%2C235%29%27%2CbarPercentage%3A1.0%2CcategoryPercentage%3A1.0%7D%5D%7D%2Coptions%3A%7Bplugins%3A%7Btitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27Distribuci%C3%B3n%20de%20Alturas%27%7D%7D%2Cscales%3A%7By%3A%7BbeginAtZero%3Atrue%2Ctitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27Frecuencia%20Absoluta%27%7D%7D%2Cx%3A%7Btitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27Altura%20%28cm%29%27%7D%7D%7D%7D%7D)
+
+**Ojiva (Frecuencias Acumuladas):**
+
+![Ojiva - Alturas](https://quickchart.io/chart?width=400&height=200&c=%7Btype%3A%27line%27%2Cdata%3A%7Blabels%3A%5B%27150%27%2C%27160%27%2C%27170%27%2C%27180%27%2C%27190%27%2C%27200%27%5D%2Cdatasets%3A%5B%7Blabel%3A%27Frecuencia%20Acumulada%27%2Cdata%3A%5B0%2C8%2C23%2C41%2C48%2C50%5D%2CborderColor%3A%27rgb%28153%2C102%2C255%29%27%2CbackgroundColor%3A%27rgba%28153%2C102%2C255%2C0.2%29%27%2Cfill%3Atrue%2Ctension%3A0.1%7D%5D%7D%2Coptions%3A%7Bplugins%3A%7Btitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27Ojiva%20-%20Alturas%27%7D%7D%2Cscales%3A%7By%3A%7BbeginAtZero%3Atrue%2Ctitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27Frecuencia%20Acumulada%27%7D%7D%2Cx%3A%7Btitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27Altura%20%28cm%29%27%7D%7D%7D%7D%7D)
+
 **Medidas:**
 
 - **De posición:** Media, Mediana, Moda, Cuartiles
 - **De dispersión:** Rango, Varianza, Desviación estándar
 - **De forma:** Asimetría, Curtosis
+- En este ejemplo: Media ≈ 171.8 cm, Mediana ≈ 172.5 cm, Rango = 50 cm
 
 ### Ejemplo Práctico: Resistencia del Hormigón
 
@@ -238,13 +554,92 @@ Los datos continuos se agrupan en clases o intervalos:
 
 Este ejemplo ilustra cómo la estadística descriptiva nos permite organizar y resumir información compleja de manera comprensible, facilitando la toma de decisiones en ingeniería y control de calidad.
 
-## Cuarto tema: 1.4 Ventajas y Desventajas de Medidas Estadísticas
+### 1.3.3 Representaciones Gráficas
 
-Para tomar decisiones informadas, es fundamental comprender las fortalezas y limitaciones de cada medida estadística. A continuación se presenta un análisis comparativo de las principales medidas descriptivas.
+Las representaciones gráficas permiten visualizar la distribución de los datos de forma intuitiva. Según el tipo de variable, se utilizan diferentes tipos de gráficos (ver ejemplos en sección 1.3.2).
+
+### 1.3.4 Medidas Descriptivas
+
+Las medidas descriptivas resumen las características principales de un conjunto de datos. Se clasifican en medidas de tendencia central, dispersión y forma (ver temas 1.4, 1.5 y 1.6).
+
+## Cuarto tema: 1.4 Medidas Estadísticas
+
+Las medidas estadísticas son herramientas fundamentales para resumir y comprender conjuntos de datos. Incluyen medidas de posición, tendencia central, dispersión y forma. Para tomar decisiones informadas, es fundamental comprender las fortalezas y limitaciones de cada medida.
 
 ### 1.4.1 Medidas de Tendencia Central
 
+Las principales medidas de tendencia central son:
+
+- **Media** (μ para poblacional, x̄ para muestral)
+- **Mediana**
+- **Moda**
+- **Media ponderada**
+
+#### Media $$(\bar{X} \text{ o } \mu)$$
+
+Se calcula como la suma de todos los valores dividida por el número de datos (n):
+
+$$
+\bar{X} = \frac{\sum_{i=1}^{n} x_i}{n}
+$$
+
+**Para datos poblacionales:** se denota como μ
+
+**Para datos agrupados simples:** Se utiliza la frecuencia absoluta (FA):
+k es el número de valores distintos
+
+$$
+\bar{X} = \frac{\sum_{j=1}^{k} x_j \cdot FA_j}{n}
+$$
+
+**Para datos agrupados en intervalos:** Se utiliza la Marca de Clase (MC) en lugar de $x_i$:
+k es el número de intervalos de clases
+
+$$
+\bar{X} = \frac{\sum MC_i \cdot FA_i}{n}
+$$
+
+**Propiedades:**
+
+$$
+\frac{\sum_{i=1}^{n} x_i + b}{n} = \frac{\left(x_1 + b\right) + \left(x_2 + b\right) + \dotsc + \left(x_n + b\right)}{n} = \bar{X} + b
+$$
+
+$$
+\frac{\sum_{i=1}^{n} c \cdot x_i}{n} = \frac{\left(c \cdot x_1\right) + \left(c \cdot x_2\right) + \dotsc + \left(c \cdot x_n\right)}{n} = c \cdot \bar{X}
+$$
+
+| Algunas **VENTAJAS** | Algunas **DESVENTAJAS** |
+|---------------------|------------------------|
+| • Emplea en su cálculo toda la información disponible | • Se ve afectada por valores extremos |
+| • Se expresa en las mismas unidades que la variable en estudio | • Si el conjunto de datos es muy grande puede ser tedioso su cálculo |
+
+#### Mediana
+
+Es el valor que divide al conjunto de datos ordenados en dos partes iguales. Si n es impar, es el valor central; si n es par, es el promedio de los dos valores centrales.
+
+$$
+\text{Mediana} = \begin{cases}
+x_{\left(\frac{n+1}{2}\right)} & \text{si n es impar} \\
+\frac{x_{\left(\frac{n}{2}\right)} + x_{\left(\frac{n}{2} + 1\right)}}{2} & \text{si n es par}
+\end{cases}
+$$
+
+**Para datos agrupados en intervalos:** Se utiliza la siguiente fórmula:
+
+$$
+\text{Mediana} = L_i + \left( \frac{\frac{n}{2} - F_{\left(i-1\right)}}{f_i} \right) \times a_i
+$$
+
+| Algunas **VENTAJAS** | Algunas **DESVENTAJAS** |
+|---------------------|------------------------|
+| • Fácil de obtener y entender | • No utiliza en su cálculo toda la información disponible |
+| • No se ve influenciada por valores extremos | • Hay que ordenar los datos antes de determinarla |
+| • Se puede calcular para cualquier tipo de datos cuantitativos | |
+
 #### Moda
+
+Es el valor que aparece con mayor frecuencia en el conjunto de datos.
 
 | Algunas **VENTAJAS** | Algunas **DESVENTAJAS** |
 |---------------------|------------------------|
@@ -253,74 +648,15 @@ Para tomar decisiones informadas, es fundamental comprender las fortalezas y lim
 | • Fácil de interpretar | • Difícil de interpretar si se tienen 3 o más modas |
 | • No se ve influenciada por valores extremos | |
 
-#### Mediana
+#### Relación entre Media, Mediana y Moda
 
-| Algunas **VENTAJAS** | Algunas **DESVENTAJAS** |
-|---------------------|------------------------|
-| • Fácil de obtener | • No utiliza en su cálculo toda la información disponible |
-| • No se ve influenciada por valores extremos | • Hay que ordenar los datos antes de determinarla |
-| • Fácil de entender | |
-| • Se puede calcular para cualquier tipo de datos cuantitativos | |
+- **Distribución simétrica:** Media = Mediana = Moda
+- **Distribución asimétrica positiva:** Moda < Mediana < Media
+- **Distribución asimétrica negativa:** Media < Mediana < Moda
 
-#### Media Aritmética (x̄)
+![Relación entre Media, Mediana y Moda](/img/probabilidad-y-estadistica/relacion-media-moda-mediana.webp)
 
-| Algunas **VENTAJAS** | Algunas **DESVENTAJAS** |
-|---------------------|------------------------|
-| • Emplea en su cálculo toda la información disponible | • Se ve afectada por valores extremos |
-| • Se expresa en las mismas unidades que la variable en estudio | • Si el conjunto de datos es muy grande puede ser tedioso su cálculo |
-
-### 1.4.2 Medidas de Dispersión
-
-#### Rango
-
-| Algunas **VENTAJAS** | Algunas **DESVENTAJAS** |
-|---------------------|------------------------|
-| • Es la medida de variabilidad más simple de obtener | • No proporciona una medida de variabilidad de las observaciones con respecto al centro de la distribución |
-| • Es fácil de interpretar | • Solo emplea dos valores en su cálculo |
-
-#### Varianza (s² o σ²)
-
-| Algunas **VENTAJAS** | Algunas **DESVENTAJAS** |
-|---------------------|------------------------|
-| • Utiliza toda la información disponible | • Es difícil de interpretar por tener sus unidades elevadas al cuadrado |
-| • Es útil cuando se compara la variabilidad de dos o más conjuntos de datos | • Al utilizar el valor de la media muestral, es sensible a la presencia de datos extremos |
-
-#### Desviación Estándar (s o σ)
-
-| Algunas **VENTAJAS** | Algunas **DESVENTAJAS** |
-|---------------------|------------------------|
-| • Utiliza toda la información disponible | • Al utilizar el valor de la media muestral, es sensible a la presencia de datos extremos |
-| • Está expresada en las mismas unidades que la variable en estudio | |
-| • Fácil de interpretar | |
-
-#### Coeficiente de Variación (CV)
-
-| Algunas **VENTAJAS** | Algunas **DESVENTAJAS** |
-|---------------------|------------------------|
-| • Permite comparar la dispersión de dos o más variables que no están expresadas en las mismas unidades | • Al utilizar la desviación estándar y la media aritmética en su cálculo, es sensible a la presencia de datos extremos |
-| • Es una medida adimensional | |
-
-### 1.4.3 Análisis Comparativo
-
-**Recomendaciones para la selección de medidas:**
-
-1. **Para datos con valores extremos:**
-   - Preferir mediana sobre media aritmética
-   - Usar rango intercuartílico en lugar de desviación estándar
-
-2. **Para datos simétricos sin valores extremos:**
-   - La media aritmética es la medida más eficiente
-   - La desviación estándar proporciona información completa sobre dispersión
-
-3. **Para comparar variables con diferentes unidades:**
-   - El coeficiente de variación es la medida más apropiada
-
-4. **Para datos cualitativos:**
-   - Solo se puede usar la moda como medida de tendencia central
-
-## Quinto tema: 1.5 Medidas de Posición y Forma
-
-### 1.5.1 Cuartiles, Deciles y Percentiles
+### 1.4.2 Medidas de Posición
 
 Las **medidas de posición** dividen el conjunto de datos ordenados en partes iguales, proporcionando información sobre la distribución de los valores.
 
@@ -331,6 +667,12 @@ Son **tres valores** que delimitan al 25%, 50% y 75% de los datos acumulados:
 - **Q₁ (Cuartil 1)** = Percentil 25 (P₂₅): Delimita el 25% inferior de los datos
 - **Q₂ (Cuartil 2)** = Mediana = Percentil 50 (P₅₀): Delimita el 50% de los datos
 - **Q₃ (Cuartil 3)** = Percentil 75 (P₇₅): Delimita el 75% inferior de los datos
+
+**Cálculo de Cuartiles:**
+
+$$
+Q_k = x_{\left(\frac{k(n+1)}{4}\right)} \quad \text{para } k = 1, 3
+$$
 
 #### Deciles (D)
 
@@ -352,32 +694,23 @@ Son **noventa y nueve valores** que delimitan al 1%, 2%, ..., 99% de los datos a
 
 > **Importante:** Siempre acumulamos de izquierda a derecha.
 
-### 1.5.2 Medidas de Tendencia Central (Detalle)
+**Ventajas y Desventajas de las Medidas de Posición:**
 
-Las principales medidas de tendencia central son:
-
-- **Media Aritmética** (μ para poblacional, x̄ para muestral)
-- **Mediana**
-- **Moda**
-- **Media aritmética ponderada**
-
-#### Cálculo de la Media Aritmética (x̄)
-
-Se calcula como la suma de todos los valores dividida por el número de datos (n):
-
-$$\bar{x} = \frac{\sum_{i=1}^{n} x_i}{n}$$
-
-**Para datos poblacionales:** se denota como μ
-
-**Para datos agrupados:** Se utiliza la Marca de Clase (MC) en lugar de xᵢ:
-
-$$\bar{x} = \frac{\sum MC_i \cdot FA_i}{n}$$
+| Algunas **VENTAJAS** | Algunas **DESVENTAJAS** |
+|---------------------|------------------------|
+| • Dividen los datos en partes iguales, facilitando su comprensión | • Requieren que los datos estén ordenados |
+| • No se ven afectadas por valores extremos | • No utilizan toda la información disponible |
+| • Útiles para identificar la posición relativa de un dato | • Su cálculo puede ser complejo para datos agrupados |
+| • Permiten comparar diferentes distribuciones | • No proporcionan información sobre la dispersión total |
+| • Fáciles de interpretar y comunicar | |
 
 #### Rango Intercuartílico (RIQ)
 
 Es la diferencia entre el tercer cuartil y el primer cuartil:
 
-$$RIQ = Q_3 - Q_1$$
+$$
+RIQ = Q_3 - Q_1
+$$
 
 **Características:**
 
@@ -385,25 +718,121 @@ $$RIQ = Q_3 - Q_1$$
 - Se utiliza para saber cuán disperso está el 50% central de los datos
 - No se ve afectado por valores extremos
 
-### 1.5.3 Medidas de Forma
+### 1.4.3 Medidas de Dispersión
 
-#### Asimetría (Skewness)
+#### Rango o Recorrido (R)
 
-Mide el grado de simetría o asimetría de la distribución:
+Es la diferencia entre el valor máximo y el valor mínimo del conjunto de datos:
 
-1. **Simetría:** Media = Mediana = Moda
-2. **Asimetría Positiva** (cola a la derecha): Moda < Mediana < Media
-3. **Asimetría Negativa** (cola a la izquierda): Media < Mediana < Moda
+$$
+R = x_{max} - x_{min}
+$$
 
-#### Curtosis (Kurtosis)
+| Algunas **VENTAJAS** | Algunas **DESVENTAJAS** |
+|---------------------|------------------------|
+| • Es la medida de variabilidad más simple de obtener | • No proporciona una medida de variabilidad de las observaciones con respecto al centro de la distribución |
+| • Es fácil de interpretar | • Solo emplea dos valores en su cálculo |
+
+#### Varianza (S² o σ²)
+
+Es la medida que indica la dispersión promedio de los datos con respecto a la media aritmética. Se calcula como el promedio de los cuadrados de las desviaciones respecto a la media.
+
+$$
+S^2 = \frac{\sum_{i=1}^{n} (x_i - \bar{X})^2}{n-1} \quad \text{(muestral)}
+$$
+
+$$
+\sigma^2 = \frac{\sum_{i=1}^{N} (x_i - \mu)^2}{N} \quad \text{(poblacional)}
+$$
+
+Siempre es mayor o igual a cero ($S^2 \geq 0$).
+
+**Formula de trabajo:**
+
+$$
+S^2 = \frac{\sum_{i=1}^{n} x_i^2 - \frac{(\sum_{i=1}^{n} x_i)^2}{n}}{n-1}
+$$
+
+| Algunas **VENTAJAS** | Algunas **DESVENTAJAS** |
+|---------------------|------------------------|
+| • Utiliza toda la información disponible | • Es difícil de interpretar por tener sus unidades elevadas al cuadrado |
+| • Es útil cuando se compara la variabilidad de dos o más conjuntos de datos | • Al utilizar el valor de la media muestral, es sensible a la presencia de datos extremos (outliers) |
+| | • Piede la unidad de medida original |
+
+#### Desviación Estándar (S o σ)
+
+Es la raíz cuadrada de la varianza, proporcionando una medida de dispersión en las mismas unidades que la variable en estudio.
+
+$$
+S = \sqrt{S^2} \quad \text{(muestral)}
+$$
+
+$$
+\sigma = \sqrt{\sigma^2} \quad \text{(poblacional)}
+$$
+
+| Algunas **VENTAJAS** | Algunas **DESVENTAJAS** |
+|---------------------|------------------------|
+| • Utiliza toda la información disponible | • Al utilizar el valor de la media muestral, es sensible a la presencia de datos extremos |
+| • Está expresada en las mismas unidades que la variable en estudio | |
+| • Fácil de interpretar | |
+
+#### Coeficiente de Variación (CV)
+
+Es una medida de dispersión relativa que expresa la desviación estándar como un porcentaje de la media:
+
+$$
+CV = \frac{S}{\bar{X}} \times 100\% \quad \text{(muestral)}
+$$
+
+$$
+CV = \frac{\sigma}{\mu} \times 100\% \quad \text{(poblacional)}
+$$
+
+| Algunas **VENTAJAS** | Algunas **DESVENTAJAS** |
+|---------------------|------------------------|
+| • Permite comparar la dispersión de dos o más variables que no están expresadas en las mismas unidades | • Al utilizar la desviación estándar y la media aritmética en su cálculo, es sensible a la presencia de datos extremos |
+| • Es una medida adimensional | |
+
+### 1.4.3 Medidas de Forma y Asimetría
+
+#### Coefficientes de Asimetría de Pearson
+
+Es una medida que cuantifica la asimetría de una distribución en relación con su media y mediana.
+
+$$
+a_2 = \frac{3(\text{Media} - \text{Mediana})}{\text{Desviación Estándar}}
+$$
+
+**Interpretación:**
+
+- Si $a_2$ es **cero**, la distribución es simétrica, es decir, Media = Mediana = Moda
+- Si $a_2$ es **positivo**, la distribución es asimétrica positiva (cola a la derecha), es decir, Moda < Mediana < Media
+- Si $a_2$ es **negativo**, la distribución es asimétrica negativa (cola a la izquierda), es decir, Media < Mediana < Moda
+
+#### Kurtosis
 
 Mide el grado de concentración de los valores alrededor de la media y en las colas:
 
-- **Leptocúrtica:** Mayor concentración alrededor de la media (curtosis > 0)
-- **Mesocúrtica:** Concentración normal (curtosis = 0)
-- **Platicúrtica:** Menor concentración alrededor de la media (curtosis < 0)
+$$
+K = \frac{n(n+1)}{(n-1)(n-2)(n-3)} \sum_{i=1}^{n} \left( \frac{x_i - \bar{X}}{S} \right)^4 - \frac{3(n-1)^2}{(n-2)(n-3)}
+$$
 
-### 1.5.4 Diagrama de Caja (Box Plot)
+- **Leptocúrtica:** Mayor concentración alrededor de la media (k > 0)
+- **Mesocúrtica:** Concentración normal (k = 0)
+- **Platicúrtica:** Menor concentración alrededor de la media (k < 0)
+
+**Ventajas y Desventajas de las Medidas de Forma:**
+
+| Algunas **VENTAJAS** | Algunas **DESVENTAJAS** |
+|---------------------|------------------------|
+| • Proporcionan información sobre la forma de la distribución | • Son sensibles a valores extremos |
+| • Permiten identificar desviaciones de la normalidad | • Requieren cálculos más complejos que las medidas de tendencia central |
+| • Útiles para validar supuestos en modelos estadísticos | • Su interpretación puede ser difícil sin contexto visual |
+| • Complementan las medidas de tendencia central y dispersión | • No tienen unidades fácilmente interpretables |
+| • Ayudan a detectar sesgos en los datos | • Requieren tamaños de muestra grandes para ser confiables |
+
+### 1.4.4 Diagrama de Caja (Box Plot)
 
 El **Diagrama de Caja** es un gráfico muy útil para visualizar la distribución de los datos. Muestra los cinco números principales de la distribución:
 
@@ -443,141 +872,4 @@ El **Diagrama de Caja** es un gráfico muy útil para visualizar la distribució
 - **Muestra la dispersión** y simetría de los datos
 - **Resumen visual completo** de la distribución en cinco números
 
-## Sexto tema: 1.6 Medidas de Dispersión
-
-Las medidas de dispersión indican el grado en que las observaciones se distribuyen con respecto a su valor central, proporcionando información esencial sobre la variabilidad de los datos.
-
-### 1.6.1 Medidas de Dispersión Absoluta
-
-#### Rango (R)
-
-$$R = X_{\text{máx}} - X_{\text{mín}}$$
-
-**Ventajas:**
-
-- Es la medida más simple y fácil de calcular
-
-**Desventajas:**
-
-- Solo utiliza dos valores y no proporciona una medida de variabilidad con respecto al centro
-
-#### Varianza (σ² o S²)
-
-Mide el promedio de las desviaciones al cuadrado de la media.
-
-**Poblacional (σ²):**
-$$\sigma^2 = \frac{\sum_{i=1}^{N} (X_i - \mu)^2}{N}$$
-
-**Muestral (S²):**
-$$S^2 = \frac{\sum_{i=1}^{n} (X_i - \bar{X})^2}{n-1}$$
-
-**Ventajas:**
-
-- Utiliza toda la información disponible
-
-**Desventajas:**
-
-- Las unidades están elevadas al cuadrado, lo que dificulta la interpretación
-- Es sensible a datos extremos
-
-#### Desviación Estándar (σ o S)
-
-Es la raíz cuadrada positiva de la varianza:
-
-$$\sigma = \sqrt{\sigma^2}$$
-$$S = \sqrt{S^2}$$
-
-**Ventajas:**
-
-- Utiliza toda la información disponible
-- Está expresada en las mismas unidades que la variable original
-- Fácil de interpretar
-
-**Desventajas:**
-
-- Es sensible a la presencia de datos extremos (Outliers)
-
-### 1.6.2 Medidas de Dispersión Relativa
-
-#### Coeficiente de Variación (CV) - Análisis Detallado
-
-Permite comparar la variabilidad de dos o más conjuntos de datos que están en unidades distintas o que tienen medias muy diferentes. Es una medida adimensional.
-
-$$CV = \frac{S}{\bar{X}} \times 100$$
-
-**Interpretación:**
-
-- Un valor más alto de CV indica **mayor dispersión** (o menor homogeneidad) relativa
-- Un valor más bajo de CV indica **menor dispersión** (o mayor homogeneidad) relativa
-
-#### Ejemplo Práctico del Coeficiente de Variación
-
-| Conjunto | x̄   | Desvío estándar (S) | CV    |
-|:--------:|:---:|:------------------:|:-----:|
-| A        | 23,4| 1,7                | 7,26% |
-| B        | 30,1| 1,7                | 5,64% |
-
-**Análisis:**
-
-- Desde el punto de vista de la **dispersión absoluta**, la variabilidad (S) es idéntica (1,7)
-- Desde el punto de vista **relativo**, el conjunto B presenta mayor homogeneidad (CV₍B₎ < CV₍A₎)
-
-### 1.6.3 Medidas de Forma Avanzadas
-
-Se aplican a distribuciones unimodales para caracterizar su forma.
-
-#### Asimetría (Skewness) - Análisis Detallado
-
-Mide el grado de simetría o asimetría de la distribución:
-
-**Simetría:**
-
-- Los datos se distribuyen de manera equilibrada a ambos lados de la medida central
-- **Media = Mediana = Moda**
-
-**Asimetría Positiva (sesgo a la derecha):**
-
-- Las frecuencias más altas corresponden a valores en el lado izquierdo de la posición central
-- **Moda < Mediana < Media**
-
-**Asimetría Negativa (sesgo a la izquierda):**
-
-- Las frecuencias más altas corresponden a valores en el lado derecho de la posición central
-- **Media < Mediana < Moda**
-
-#### Coeficiente de Asimetría de Pearson (as)
-
-$$a_s = \frac{3 \cdot (\bar{X} - Me)}{S}$$
-
-Donde:
-
-- x̄ = Media aritmética
-- Me = Mediana
-- S = Desviación estándar
-
-#### Curtosis (Kurtosis) - Análisis Detallado
-
-Representa la elevación o achatamiento de una distribución comparada con la distribución normal (mesocúrtica):
-
-##### k = 0: Mesocúrtica
-
-- Similar a la distribución normal
-
-##### k > 0: Leptocúrtica
-
-- Más puntiaguda y con colas más pesadas que la normal
-- Mayor concentración de datos alrededor de la media
-
-##### k < 0: Platicúrtica
-
-- Más achatada y con colas más livianas que la normal
-- Menor concentración de datos alrededor de la media
-
-#### Aplicaciones Prácticas
-
-Las medidas de forma son especialmente útiles para:
-
-1. **Control de calidad:** Identificar procesos que se desvían de la normalidad
-2. **Análisis financiero:** Evaluar riesgos en distribuciones de retornos
-3. **Investigación científica:** Validar supuestos de normalidad en modelos estadísticos
-4. **Análisis exploratorio:** Comprender la naturaleza de los datos antes de aplicar técnicas avanzadas
+![Diagrama de Caja - Ejemplo](/img/probabilidad-y-estadistica/diagrama-de-caja.webp)
