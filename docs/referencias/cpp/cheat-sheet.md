@@ -263,6 +263,219 @@ int x = (a = 1, b = 2, c = 3);  // x = 3 (valor de la última expresión)
 
 ---
 
+## 📦 Tuplas (C++11)
+
+```cpp
+#include <tuple>
+
+// Creación de tuplas
+tuple<int, string, double> persona = make_tuple(25, "Juan", 1.75);
+tuple<int, int, int> punto3D(10, 20, 30);  // Constructor directo
+auto datos = make_tuple(42, "Hola", 3.14);  // Con auto
+
+// Acceso a elementos (índice en tiempo de compilación)
+int edad = get<0>(persona);           // 25
+string nombre = get<1>(persona);      // "Juan"
+double altura = get<2>(persona);      // 1.75
+
+// Modificar elementos
+get<0>(persona) = 26;  // Cambia edad a 26
+
+// Tamaño de la tupla
+size_t tamano = tuple_size<decltype(persona)>::value;  // 3
+
+// Tipo de un elemento específico
+tuple_element<1, decltype(persona)>::type nom = get<1>(persona);  // string
+
+// Comparación de tuplas
+tuple<int, int> p1(1, 2);
+tuple<int, int> p2(1, 3);
+if (p1 < p2) {  // Comparación lexicográfica
+    cout << "p1 es menor" << endl;
+}
+
+// Tuplas anidadas
+tuple<int, tuple<string, double>> complejo = make_tuple(1, make_tuple("A", 3.14));
+string letra = get<0>(get<1>(complejo));  // "A"
+```
+
+### Desempaquetado de Tuplas
+
+```cpp
+// tie - Desempaquetar en variables existentes
+int edad;
+string nombre;
+double altura;
+tie(edad, nombre, altura) = persona;
+
+// ignore - Ignorar valores
+tie(edad, ignore, altura) = persona;  // Ignora el nombre
+
+// Retornar múltiples valores desde función
+tuple<int, int, int> obtenerCoordenadas() {
+    return make_tuple(10, 20, 30);
+}
+
+int x, y, z;
+tie(x, y, z) = obtenerCoordenadas();
+```
+
+### Aplicaciones Prácticas
+
+```cpp
+// Retornar resultado y error
+tuple<bool, string> dividir(int a, int b) {
+    if (b == 0) {
+        return make_tuple(false, "División por cero");
+    }
+    return make_tuple(true, to_string(a / b));
+}
+
+bool exito;
+string resultado;
+tie(exito, resultado) = dividir(10, 2);
+
+// Swap usando tuplas
+int a = 5, b = 10;
+tie(a, b) = make_tuple(b, a);  // Intercambio
+
+// Múltiples retornos en búsqueda
+tuple<bool, int> buscar(vector<int>& v, int valor) {
+    auto it = find(v.begin(), v.end(), valor);
+    if (it != v.end()) {
+        return make_tuple(true, it - v.begin());
+    }
+    return make_tuple(false, -1);
+}
+```
+
+---
+
+## 🎁 Declaraciones Estructuradas (C++17)
+
+```cpp
+// Structured Bindings - Desempaquetar automáticamente
+
+// Con tuplas
+tuple<int, string, double> persona = make_tuple(25, "Juan", 1.75);
+auto [edad, nombre, altura] = persona;
+cout << nombre << " tiene " << edad << " años" << endl;
+
+// Con pair
+pair<int, string> dato = {42, "Hola"};
+auto [numero, texto] = dato;
+
+// Con arrays
+int arr[3] = {1, 2, 3};
+auto [a, b, c] = arr;
+
+// Con structs
+struct Punto {
+    int x, y;
+};
+
+Punto p = {10, 20};
+auto [px, py] = p;
+cout << "x: " << px << ", y: " << py << endl;
+
+// Modificar valores (referencias)
+auto& [rx, ry] = p;
+rx = 100;  // Modifica p.x
+
+// Constantes
+const auto& [cx, cy] = p;  // Referencias constantes
+```
+
+### Con Mapas y Contenedores
+
+```cpp
+#include <map>
+
+map<string, int> edades = {
+    {"Ana", 25},
+    {"Luis", 30},
+    {"Pedro", 28}
+};
+
+// Iterar con structured bindings
+for (const auto& [nombre, edad] : edades) {
+    cout << nombre << ": " << edad << " años" << endl;
+}
+
+// Inserción con resultado
+auto [it, insertado] = edades.insert({"María", 27});
+if (insertado) {
+    cout << "Insertado correctamente" << endl;
+}
+```
+
+### Retorno de Funciones
+
+```cpp
+// Función que retorna struct
+struct Resultado {
+    bool exito;
+    int valor;
+    string mensaje;
+};
+
+Resultado calcular(int a, int b) {
+    if (b == 0) {
+        return {false, 0, "Error: división por cero"};
+    }
+    return {true, a / b, "OK"};
+}
+
+// Uso con structured bindings
+auto [ok, resultado, msg] = calcular(10, 2);
+if (ok) {
+    cout << "Resultado: " << resultado << endl;
+} else {
+    cout << "Error: " << msg << endl;
+}
+
+// Con tuplas
+tuple<int, int, int> obtenerRGB() {
+    return {255, 128, 64};
+}
+
+auto [r, g, b] = obtenerRGB();
+```
+
+### Comparación: Antes vs C++17
+
+```cpp
+// ❌ Antes de C++17 (verboso)
+tuple<int, string, double> persona = make_tuple(25, "Juan", 1.75);
+int edad = get<0>(persona);
+string nombre = get<1>(persona);
+double altura = get<2>(persona);
+
+// ✅ C++17 (conciso)
+auto [edad, nombre, altura] = make_tuple(25, "Juan", 1.75);
+
+// ❌ Antes (mapas)
+for (const auto& par : edades) {
+    cout << par.first << ": " << par.second << endl;
+}
+
+// ✅ C++17
+for (const auto& [nombre, edad] : edades) {
+    cout << nombre << ": " << edad << endl;
+}
+```
+
+:::tip Ventajas de Structured Bindings
+
+- 🎯 **Código más limpio** - Elimina get<0>, get<1>, etc.
+- 📖 **Mejor legibilidad** - Nombres descriptivos en lugar de índices
+- ✅ **Menos errores** - No más confusiones con índices
+- 🚀 **Más expresivo** - El código muestra claramente la intención
+
+:::
+
+---
+
 ## 🔄 Estructuras de Control
 
 ### If / Else

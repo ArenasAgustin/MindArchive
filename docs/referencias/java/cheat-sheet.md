@@ -1137,6 +1137,224 @@ Collections.sort(nombres, String::compareTo);
 
 ---
 
+## 🔍 Pattern Matching (Java 16+)
+
+### Pattern Matching con instanceof (Java 16)
+
+```java
+// ❌ Antes de Java 16 (verboso)
+Object obj = "Hola Mundo";
+if (obj instanceof String) {
+    String str = (String) obj;  // Cast explícito
+    System.out.println(str.length());
+}
+
+// ✅ Java 16+ (pattern matching)
+Object obj = "Hola Mundo";
+if (obj instanceof String str) {  // Declaración automática
+    System.out.println(str.length());  // No necesita cast
+}
+
+// Con lógica adicional
+if (obj instanceof String str && str.length() > 5) {
+    System.out.println("Cadena larga: " + str);
+}
+
+// Negación
+if (!(obj instanceof String str)) {
+    System.out.println("No es String");
+} else {
+    System.out.println(str.toUpperCase());
+}
+```
+
+### Ejemplos Prácticos
+
+```java
+// Procesamiento de diferentes tipos
+Object valor = obtenerValor();
+
+if (valor instanceof Integer num) {
+    System.out.println("Número: " + num * 2);
+} else if (valor instanceof String texto) {
+    System.out.println("Texto: " + texto.toUpperCase());
+} else if (valor instanceof Double decimal) {
+    System.out.println("Decimal: " + String.format("%.2f", decimal));
+}
+
+// Con jerarquía de clases
+class Forma {}
+class Circulo extends Forma {
+    double radio;
+    public Circulo(double r) { this.radio = r; }
+}
+class Rectangulo extends Forma {
+    double ancho, alto;
+    public Rectangulo(double a, double h) { this.ancho = a; this.alto = h; }
+}
+
+double calcularArea(Forma forma) {
+    if (forma instanceof Circulo c) {
+        return Math.PI * c.radio * c.radio;
+    } else if (forma instanceof Rectangulo r) {
+        return r.ancho * r.alto;
+    }
+    return 0;
+}
+
+// Validaciones encadenadas
+if (obj instanceof String str && !str.isEmpty() && str.length() < 100) {
+    // str está disponible en todo el scope del if
+    procesarTexto(str);
+}
+```
+
+### Pattern Matching con switch (Java 21+)
+
+```java
+// Switch tradicional con pattern matching
+Object obj = obtenerObjeto();
+
+String resultado = switch (obj) {
+    case Integer i -> "Entero: " + i;
+    case String s -> "Texto: " + s;
+    case Double d -> "Decimal: " + d;
+    case null -> "Valor nulo";
+    default -> "Tipo desconocido";
+};
+
+// Con guardas (when)
+String clasificar(Object obj) {
+    return switch (obj) {
+        case Integer i when i > 0 -> "Positivo: " + i;
+        case Integer i when i < 0 -> "Negativo: " + i;
+        case Integer i -> "Cero";
+        case String s when s.isEmpty() -> "Cadena vacía";
+        case String s -> "Cadena: " + s;
+        case null -> "Nulo";
+        default -> "Otro tipo";
+    };
+}
+
+// Pattern matching con tipos específicos
+double calcularArea(Forma forma) {
+    return switch (forma) {
+        case Circulo c -> Math.PI * c.radio * c.radio;
+        case Rectangulo r -> r.ancho * r.alto;
+        case Triangulo t -> (t.base * t.altura) / 2;
+        case null -> 0;
+        default -> throw new IllegalArgumentException("Forma desconocida");
+    };
+}
+```
+
+### Record Patterns (Java 21+)
+
+```java
+// Records (clases de datos inmutables)
+record Punto(int x, int y) {}
+record Circulo(Punto centro, double radio) {}
+
+// Pattern matching con records
+Object obj = new Circulo(new Punto(0, 0), 5.0);
+
+if (obj instanceof Circulo(Punto(int x, int y), double r)) {
+    System.out.println("Centro: (" + x + ", " + y + "), Radio: " + r);
+}
+
+// Switch con record patterns
+String describir(Object obj) {
+    return switch (obj) {
+        case Circulo(Punto(int x, int y), double r) -> 
+            "Círculo en (" + x + "," + y + ") con radio " + r;
+        case Punto(int x, int y) -> 
+            "Punto en (" + x + "," + y + ")";
+        default -> "Objeto desconocido";
+    };
+}
+
+// Patrones anidados
+record Rectangulo(Punto p1, Punto p2) {}
+
+if (obj instanceof Rectangulo(Punto(int x1, int y1), Punto(int x2, int y2))) {
+    int ancho = Math.abs(x2 - x1);
+    int alto = Math.abs(y2 - y1);
+    System.out.println("Área: " + (ancho * alto));
+}
+```
+
+### Ventajas de Pattern Matching
+
+| Ventaja | Descripción |
+|---------|-------------|
+| 🎯 **Menos código** | Elimina casts explícitos y variables temporales |
+| 📖 **Más legible** | Código más claro y expresivo |
+| 🛡️ **Más seguro** | Reduce errores de casting |
+| ⚡ **Más eficiente** | Optimizaciones del compilador |
+| 🔄 **Funcional** | Facilita programación funcional |
+
+### Comparación: Antes vs Después
+
+```java
+// ❌ Java tradicional (verboso, propenso a errores)
+Object obj = obtenerValor();
+String resultado;
+
+if (obj instanceof Integer) {
+    Integer i = (Integer) obj;
+    if (i > 0) {
+        resultado = "Positivo: " + i;
+    } else if (i < 0) {
+        resultado = "Negativo: " + i;
+    } else {
+        resultado = "Cero";
+    }
+} else if (obj instanceof String) {
+    String s = (String) obj;
+    if (s.isEmpty()) {
+        resultado = "Cadena vacía";
+    } else {
+        resultado = "Cadena: " + s;
+    }
+} else if (obj == null) {
+    resultado = "Nulo";
+} else {
+    resultado = "Otro tipo";
+}
+
+// ✅ Java 21+ (conciso, seguro)
+String resultado = switch (obj) {
+    case Integer i when i > 0 -> "Positivo: " + i;
+    case Integer i when i < 0 -> "Negativo: " + i;
+    case Integer i -> "Cero";
+    case String s when s.isEmpty() -> "Cadena vacía";
+    case String s -> "Cadena: " + s;
+    case null -> "Nulo";
+    default -> "Otro tipo";
+};
+```
+
+:::tip Características por Versión
+
+**Java 16:**
+
+- ✅ Pattern matching con `instanceof`
+
+**Java 17:**
+
+- ✅ Pattern matching con `switch` (preview)
+
+**Java 21 (LTS):**
+
+- ✅ Pattern matching con `switch` (estable)
+- ✅ Record patterns
+- ✅ Guardas (`when`)
+- ✅ Patrones anidados
+
+:::
+
+---
+
 ## 🔗 Recursos Adicionales
 
 - [Documentación Oficial de Java](https://docs.oracle.com/en/java/)
