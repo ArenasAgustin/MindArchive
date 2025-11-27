@@ -175,7 +175,91 @@ int c = a++;  // c = 6, a = 7 (usa el valor, luego incrementa)
 int max = (a > b) ? a : b;  // Máximo entre a y b
 string resultado = (edad >= 18) ? "Mayor" : "Menor";
 int signo = (num > 0) ? 1 : (num < 0) ? -1 : 0;  // Signo de un número
+
+// Asignación condicional
+string estado = (temperatura > 30) ? "Calor" : "Frío";
+int absoluto = (numero >= 0) ? numero : -numero;
+
+// En retornos
+int obtenerMax(int a, int b) {
+    return (a > b) ? a : b;
+}
+
+// Ternario anidado
+string categoria = (edad < 13) ? "Niño" 
+                 : (edad < 18) ? "Adolescente"
+                 : (edad < 65) ? "Adulto" 
+                 : "Adulto Mayor";
 ```
+
+### Alternativas al Operador Ternario (C++)
+
+```cpp
+// std::optional (C++17) - Manejo seguro de valores opcionales
+#include <optional>
+
+std::optional<int> obtenerValor(bool valido) {
+    if (valido) return 42;
+    return std::nullopt;
+}
+
+std::optional<int> valor = obtenerValor(true);
+int resultado = valor.value_or(0);  // 42 si tiene valor, 0 si no
+
+if (valor.has_value()) {
+    cout << valor.value() << endl;
+}
+
+// std::optional con tipos complejos
+std::optional<string> nombre = obtenerNombre();
+string final = nombre.value_or("Anónimo");
+```
+
+---
+
+## 🔢 Operador Coma (Único de C++)
+
+```cpp
+// Sintaxis: expresion1, expresion2, ..., expresionN
+// Evalúa todas las expresiones de izquierda a derecha
+// Retorna el valor de la última expresión
+
+// Ejemplo básico
+int a, b = 5;
+int resultado = (a = 3, b = a + 2, a + b);  // resultado = 8
+// Evalúa: a=3, luego b=5, luego retorna 3+5=8
+
+// Uso práctico en bucles for
+for (int i = 0, j = 10; i < j; i++, j--) {
+    cout << i << " " << j << endl;
+}
+// Inicializa dos variables: i=0, j=10
+// Incrementa i y decrementa j en cada iteración
+
+// Múltiples operaciones en una expresión
+int x = (cout << "Calculando...\n", 42);  // Imprime y asigna 42
+int y = (x++, x *= 2, x);  // Incrementa, multiplica, retorna
+
+// En expresiones complejas
+int max = (a > b) ? (temp = a, a = b, b = temp, a) : b;
+
+// Declaración múltiple (NO es operador coma)
+int m = 1, n = 2, p = 3;  // Declaración, no operador coma
+```
+
+:::warning Cuidado con el Operador Coma
+
+**Diferencia importante:**
+
+```cpp
+// Declaración múltiple (sintaxis de declaración)
+int a = 1, b = 2, c = 3;  // Esto NO es el operador coma
+
+// Operador coma (entre paréntesis)
+int x = (a = 1, b = 2, c = 3);  // x = 3 (valor de la última expresión)
+```
+
+:::
 
 ---
 
