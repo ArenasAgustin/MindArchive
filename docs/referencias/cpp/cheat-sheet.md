@@ -565,7 +565,7 @@ for (const auto& [nombre, edad] : edades) {
 
 :::tip Ventajas de Structured Bindings
 
-- 🎯 **Código más limpio** - Elimina get<0>, get<1>, etc.
+- 🎯 **Código más limpio** - Elimina `get<0>`, `get<1>`, etc.
 - 📖 **Mejor legibilidad** - Nombres descriptivos en lugar de índices
 - ✅ **Menos errores** - No más confusiones con índices
 - 🚀 **Más expresivo** - El código muestra claramente la intención
