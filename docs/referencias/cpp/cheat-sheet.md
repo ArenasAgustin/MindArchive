@@ -9,6 +9,104 @@ Guía de referencia rápida para programación en C++.
 
 ---
 
+## 💬 Comentarios
+
+```cpp
+// Comentario de una línea
+
+/*
+   Comentario de
+   múltiples líneas
+*/
+
+/* Los comentarios multilínea NO se pueden anidar en C++
+   /* esto causará un error */
+*/
+
+// Comentarios de documentación (Doxygen)
+/**
+ * @brief Calcula el factorial de un número
+ * @param n El número entero
+ * @return El factorial de n
+ */
+int factorial(int n) {
+    return (n <= 1) ? 1 : n * factorial(n - 1);
+}
+
+/// Documentación breve en una línea
+void funcion();
+```
+
+---
+
+## 🌐 Namespace std
+
+```cpp
+// Opción 1: Usar namespace completo (recomendado para proyectos grandes)
+#include <iostream>
+
+int main() {
+    std::cout << "Hola Mundo" << std::endl;
+    return 0;
+}
+
+// Opción 2: Using namespace std (solo para código simple/educativo)
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Hola Mundo" << endl;  // Más corto pero puede causar conflictos
+    return 0;
+}
+
+// Opción 3: Importar elementos específicos (compromiso recomendado)
+#include <iostream>
+using std::cout;
+using std::endl;
+using std::cin;
+
+int main() {
+    cout << "Hola Mundo" << endl;
+    return 0;
+}
+```
+
+:::warning Cuidado con `using namespace std;`
+
+**Ventajas:**
+
+- ✅ Código más corto y legible
+- ✅ Menos escritura
+
+**Desventajas:**
+
+- ⚠️ Puede causar conflictos de nombres
+- ⚠️ Contamina el scope global
+- ⚠️ Problemas en proyectos grandes con múltiples librerías
+
+**Ejemplo de conflicto:**
+
+```cpp
+using namespace std;
+
+// Si tienes tu propia función llamada 'count'
+int count(vector<int> v) {
+    return v.size();
+}
+
+// Conflicto con std::count de <algorithm>
+// Puede causar errores ambiguos
+```
+
+**Recomendación:**
+
+- Para código educativo/competitivo: `using namespace std;` está bien
+- Para proyectos profesionales: usa `std::` o importa solo lo necesario
+
+:::
+
+---
+
 ## 📋 Estructura Básica de un Programa
 
 ```cpp
