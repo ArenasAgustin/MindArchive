@@ -304,6 +304,8 @@ const config: Config = {
       crossorigin: "anonymous",
     },
   ],
+
+  trailingSlash: false,
 };
 
 export default config;
