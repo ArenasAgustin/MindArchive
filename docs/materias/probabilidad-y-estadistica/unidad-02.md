@@ -180,7 +180,7 @@ La **distribución de probabilidades** es la descripción de los posibles valore
 **Para variables discretas:** p(x) - función de probabilidad
 **Para variables continuas:** f(x) - función de densidad
 
-#### Propiedades de la distribución discreta:
+#### Propiedades de la distribución discreta
 
 1. $$p(x) \geq 0$$ para todo x
 2. $$\sum_x p(x) = 1$$
@@ -194,7 +194,7 @@ La **distribución de probabilidades** es la descripción de los posibles valore
 | **Esperanza (Media) (μ)** | $$\mu = E(X) = \sum_x x \cdot p(x)$$ | Valor promedio o esperado de la variable |
 | **Varianza (σ²)** | $$\sigma^2 = V(X) = \sum_x (x-\mu)^2 \cdot p(x)$$ | Medida de dispersión respecto a la media |
 
-#### Fórmula alternativa para la varianza:
+#### Fórmula alternativa para la varianza
 
 $$\sigma^2 = E(X^2) - [E(X)]^2$$
 
