@@ -16,7 +16,7 @@ const config: Config = {
   title: "MindArchive",
   tagline:
     "Apuntes de Ingeniería en Computación - FCEFyN UNC y recursos de cursos",
-  favicon: "img/favicon.ico",
+  favicon: "mindarchive.svg",
 
   url: `https://${organizationName}.github.io`,
   baseUrl: `/${projectName}/`,

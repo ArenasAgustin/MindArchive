@@ -6,26 +6,39 @@
     "scope": "/MindArchive/",
     "display": "standalone",
     "theme_color": "#7c3aed",
-    "background_color": "#ffffff",
-    "orientation": "portrait-primary",
+    "background_color": "#1b1b1d",
+    "orientation": "any",
     "icons": [
         {
             "src": "/MindArchive/mindarchive.svg",
             "sizes": "any",
             "type": "image/svg+xml",
-            "purpose": "any maskable"
+            "purpose": "any"
+        },
+        {
+            "src": "/MindArchive/mindarchive.svg",
+            "sizes": "192x192",
+            "type": "image/svg+xml",
+            "purpose": "maskable"
         },
         {
             "src": "/MindArchive/mindarchive.svg",
             "sizes": "512x512",
             "type": "image/svg+xml",
-            "purpose": "any maskable"
+            "purpose": "maskable"
         }
     ],
     "categories": [
         "education",
-        "productivity"
+        "productivity",
+        "utilities"
     ],
     "lang": "es-AR",
-    "dir": "ltr"
+    "dir": "ltr",
+    "prefer_related_applications": false,
+    "display_override": [
+        "window-controls-overlay",
+        "standalone"
+    ],
+    "screenshots": []
 }
