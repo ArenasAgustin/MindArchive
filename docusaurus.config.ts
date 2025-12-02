@@ -206,7 +206,11 @@ const config: Config = {
     },
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "📚 MindArchive",
+      title: "MindArchive",
+      logo: {
+        alt: "MindArchive Logo",
+        src: "mindarchive.svg",
+      },
       items: [
         {
           type: "docSidebar",
