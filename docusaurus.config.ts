@@ -189,15 +189,18 @@ const config: Config = {
       },
     ],
 
-    // Algolia DocSearch configuration
-    // Configurado desde variables de entorno (.env)
-    // Aplica en https://docsearch.algolia.com/apply/ para obtener credenciales
     algolia: {
       appId: algoliaAppId,
       apiKey: algoliaApiKey,
       indexName: algoliaIndexName,
       contextualSearch: true,
       searchPagePath: "search",
+      searchParameters: {
+        facetFilters: ["language:es", "version:current"],
+        hitsPerPage: 10,
+      },
+      placeholder: "Buscar en MindArchive...",
+      insights: false,
     },
 
     colorMode: {
