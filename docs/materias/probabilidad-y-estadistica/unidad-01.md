@@ -39,7 +39,6 @@ Al finalizar esta unidad, el estudiante será capaz de:
 - **1.3.1** Frecuencias y Porcentajes
 - **1.3.2** Tablas de frecuencias por tipo de variable
 - **1.3.3** Representaciones gráficas
-- **1.3.4** Medidas descriptivas
 
 ### 1.4 Medidas Estadísticas
 
@@ -557,10 +556,6 @@ Este ejemplo ilustra cómo la estadística descriptiva nos permite organizar y r
 ### 1.3.3 Representaciones Gráficas
 
 Las representaciones gráficas permiten visualizar la distribución de los datos de forma intuitiva. Según el tipo de variable, se utilizan diferentes tipos de gráficos (ver ejemplos en sección 1.3.2).
-
-### 1.3.4 Medidas Descriptivas
-
-Las medidas descriptivas resumen las características principales de un conjunto de datos. Se clasifican en medidas de tendencia central, dispersión y forma (ver temas 1.4, 1.5 y 1.6).
 
 ## Cuarto tema: 1.4 Medidas Estadísticas
 
