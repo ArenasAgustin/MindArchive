@@ -58,7 +58,7 @@ import java.util.stream.*;       // Streams (Java 8+)
 ### Primitivos
 
 | Tipo | Tamaño | Rango | Valor por Defecto |
-|------|--------|-------|-------------------|
+| ---- | ------ | ----- | ----------------- |
 | `byte` | 8 bits | -128 a 127 | 0 |
 | `short` | 16 bits | -32,768 a 32,767 | 0 |
 | `int` | 32 bits | -2³¹ a 2³¹-1 | 0 |
@@ -619,7 +619,7 @@ p2.setEdad(30);
 ### Modificadores de Acceso
 
 | Modificador | Clase | Paquete | Subclase | Global |
-|------------|-------|---------|----------|--------|
+| ----------- | ----- | ------- | -------- | ------ |
 | `private` | ✅ | ❌ | ❌ | ❌ |
 | (default) | ✅ | ✅ | ❌ | ❌ |
 | `protected` | ✅ | ✅ | ✅ | ❌ |
@@ -1107,7 +1107,7 @@ double promedioEdad = personas.stream()
 ### Ventajas de Lambdas
 
 | Ventaja | Descripción |
-|---------|-------------|
+| ------- | ----------- |
 | 🎯 **Código conciso** | Menos verbosidad que clases anónimas |
 | 📖 **Legibilidad** | Expresa la intención de forma clara |
 | 🔄 **Programación funcional** | Facilita el estilo funcional en Java |
@@ -1286,7 +1286,7 @@ if (obj instanceof Rectangulo(Punto(int x1, int y1), Punto(int x2, int y2))) {
 ### Ventajas de Pattern Matching
 
 | Ventaja | Descripción |
-|---------|-------------|
+| ------- | ----------- |
 | 🎯 **Menos código** | Elimina casts explícitos y variables temporales |
 | 📖 **Más legible** | Código más claro y expresivo |
 | 🛡️ **Más seguro** | Reduce errores de casting |

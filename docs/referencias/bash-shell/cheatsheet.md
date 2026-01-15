@@ -248,7 +248,7 @@ chown -R usuario:grupo carpeta/
 ### Valores Numéricos
 
 | Número | Permisos | Binario | Descripción |
-|--------|----------|---------|-------------|
+| ------ | -------- | ------- | ----------- |
 | 0 | --- | 000 | Sin permisos |
 | 1 | --x | 001 | Solo ejecución |
 | 2 | -w- | 010 | Solo escritura |
@@ -428,7 +428,7 @@ fi
 #### Números
 
 | Operador | Descripción | Ejemplo |
-|----------|-------------|---------|
+| -------- | ----------- | ------- |
 | `-eq` | Igual | `[ $a -eq $b ]` |
 | `-ne` | Diferente | `[ $a -ne $b ]` |
 | `-lt` | Menor que | `[ $a -lt $b ]` |
@@ -439,7 +439,7 @@ fi
 #### Strings
 
 | Operador | Descripción | Ejemplo |
-|----------|-------------|---------|
+| -------- | ----------- | ------- |
 | `=` o `==` | Igual | `[[ $a == $b ]]` |
 | `!=` | Diferente | `[[ $a != $b ]]` |
 | `<` | Menor (alfabético) | `[[ $a < $b ]]` |
@@ -450,7 +450,7 @@ fi
 #### Archivos
 
 | Operador | Descripción |
-|----------|-------------|
+| -------- | ----------- |
 | `-e archivo` | Archivo existe |
 | `-f archivo` | Es archivo regular |
 | `-d archivo` | Es directorio |
@@ -1061,7 +1061,7 @@ awk '{print $9}' "$LOGFILE" | sort | uniq -c | sort -rn
 ### Atajos de Teclado
 
 | Atajo | Acción |
-|-------|--------|
+| ----- | ------ |
 | `Ctrl+C` | Interrumpir comando |
 | `Ctrl+D` | Salir (EOF) |
 | `Ctrl+Z` | Suspender proceso |
@@ -1172,3 +1172,4 @@ fi
 - [ShellCheck](https://www.shellcheck.net/) - Validador de scripts
 - [Explain Shell](https://explainshell.com/) - Explica comandos
 - [Bash Guide](https://mywiki.wooledge.org/BashGuide)
+- [Cheat Sheet Linux - Manz](https://terminaldelinux.com/terminal/cheatsheets/download/)
