@@ -5,8 +5,6 @@ sidebar_position: 1
 tags: [javascript, cheatsheet, referencia, sintaxis, es6, async]
 ---
 
-# JavaScript Cheat Sheet
-
 Referencia rápida de los conceptos y sintaxis más importantes de JavaScript moderno (ES6+).
 
 ---
