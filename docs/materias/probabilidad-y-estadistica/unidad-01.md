@@ -53,6 +53,7 @@ Al finalizar esta unidad, el estudiante será capaz de:
 - [📄 Unidad 1 - Estadística Descriptiva (2020)](https://res.cloudinary.com/dmwto06rn/raw/upload/v1759447310/pdfs/Unidad_1-2020_rxyzoi.pdf)
 - [📄 Unidad 1 - Continuación](https://res.cloudinary.com/dmwto06rn/raw/upload/v1759447310/pdfs/Unidad_1_continuacion.pps_pcvqp1.pdf)
 - [📄 Unidad 1 - Estadística Descriptiva (2025)](https://res.cloudinary.com/dmwto06rn/raw/upload/v1759447310/pdfs/Unidad_1_-_Estadistica_Descriptiva_2025_b2n9g2.pdf)
+- [Graficador de Box Plot](https://www.desmos.com/calculator/h9icuu58wn?lang=es)
 
 ## Primer tema: 1.1 Introducción a la Estadística
 
