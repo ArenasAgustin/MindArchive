@@ -847,7 +847,7 @@ type Resultado<T = string, E = Error> = {
 
 TypeScript incluye tipos utilitarios integrados para transformar tipos existentes:
 
-### Partial<T>
+### `Partial<T>`
 
 ```typescript
 // Hace todas las propiedades opcionales
@@ -872,7 +872,7 @@ function actualizarUsuario(id: number, cambios: Partial<Usuario>) {
 actualizarUsuario(1, { email: "nuevo@email.com" });
 ```
 
-### Required<T>
+### `Required<T>`
 
 ```typescript
 // Hace todas las propiedades requeridas
@@ -885,7 +885,7 @@ type ConfiguracionCompleta = Required<Configuracion>;
 // Todas las propiedades son ahora obligatorias
 ```
 
-### Readonly<T>
+### `Readonly<T>`
 
 ```typescript
 // Hace todas las propiedades readonly
@@ -900,7 +900,7 @@ let punto: PuntoInmutable = { x: 10, y: 20 };
 // punto.x = 5; // ❌ Error
 ```
 
-### Record<K, T>
+### `Record<K, T>`
 
 ```typescript
 // Crea un objeto con claves K y valores T
@@ -922,7 +922,7 @@ let puntuaciones: Diccionario = {
 };
 ```
 
-### Pick<T, K>
+### `Pick<T, K>`
 
 ```typescript
 // Selecciona solo ciertas propiedades
@@ -942,7 +942,7 @@ let usuario: UsuarioBasico = {
 };
 ```
 
-### Omit<T, K>
+### `Omit<T, K>`
 
 ```typescript
 // Excluye ciertas propiedades
@@ -963,7 +963,7 @@ let publico: UsuarioPublico = {
 };
 ```
 
-### Exclude<T, U>
+### `Exclude<T, U>`
 
 ```typescript
 // Excluye de T los tipos asignables a U
@@ -971,7 +971,7 @@ type T1 = Exclude<"a" | "b" | "c", "a">; // "b" | "c"
 type T2 = Exclude<string | number | boolean, boolean>; // string | number
 ```
 
-### Extract<T, U>
+### `Extract<T, U>`
 
 ```typescript
 // Extrae de T los tipos asignables a U
@@ -979,14 +979,14 @@ type T1 = Extract<"a" | "b" | "c", "a" | "f">; // "a"
 type T2 = Extract<string | number | boolean, boolean | string>; // string | boolean
 ```
 
-### NonNullable<T>
+### `NonNullable<T>`
 
 ```typescript
 // Excluye null y undefined
 type T1 = NonNullable<string | number | null | undefined>; // string | number
 ```
 
-### ReturnType<T>
+### `ReturnType<T>`
 
 ```typescript
 // Obtiene el tipo de retorno de una función
@@ -1001,7 +1001,7 @@ type T1 = ReturnType<() => string>; // string
 type T2 = ReturnType<(x: number) => number>; // number
 ```
 
-### Parameters<T>
+### `Parameters<T>`
 
 ```typescript
 // Obtiene los tipos de parámetros como tupla
@@ -1016,7 +1016,7 @@ function wrapper(...args: Parameters<typeof crearUsuario>) {
 }
 ```
 
-### ConstructorParameters<T>
+### `ConstructorParameters<T>`
 
 ```typescript
 // Obtiene tipos de parámetros del constructor
@@ -1027,7 +1027,7 @@ class Usuario {
 type UsuarioParams = ConstructorParameters<typeof Usuario>; // [string, number]
 ```
 
-### Awaited<T>
+### `Awaited<T>`
 
 ```typescript
 // Desenvuelve el tipo de una Promise
