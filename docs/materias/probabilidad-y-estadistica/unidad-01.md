@@ -87,7 +87,7 @@ La **variable** es la característica o atributo que se estudia de la población
 ### Clasificación Principal
 
 | Tipo de Variable | Ejemplos |
-|------------------|----------|
+| ---------------- | -------- |
 | **CUALITATIVA** | Nivel de satisfacción (Bajo, Medio, Alto) |
 | **CUANTITATIVA** | Peso (kg), Altura (cm), Temperatura (°C) |
 
@@ -263,7 +263,7 @@ $$
 \sum_{i=1}^{k} FR_i = 1
 $$
 
-3. Se puede expresar como porcentaje multiplicando por 100:
+1. Se puede expresar como porcentaje multiplicando por 100:
 
 $$
 \text{Porcentaje} = FR_i \times 100\%
@@ -297,7 +297,7 @@ $$
 **Ejemplo (edades de estudiantes):**
 
 | Edad | FA | FAA |
-|------|----|----- |
+| ---- | -- | --- |
 | 18   | 5  | 5   |
 | 19   | 8  | 13  |
 | 20   | 12 | 25  |
@@ -325,7 +325,7 @@ $$
 **Ejemplo (continuando con edades):**
 
 | Edad | FA | FR   | FAA | FRA  |
-|------|----| -----|-----|----- |
+| ---- | -- | ---- | --- | ---- |
 | 18   | 5  | 0.14 | 5   | 0.14 |
 | 19   | 8  | 0.23 | 13  | 0.37 |
 | 20   | 12 | 0.34 | 25  | 0.71 |
@@ -339,13 +339,13 @@ Interpretación: FRA(20) = 0.71 significa que el 71% de los estudiantes tienen 2
 Para un conjunto de datos, la tabla completa de frecuencias incluye:
 
 | Valor/Categoría | FA ($f_i$) | FR | FAA | FRA |
-|-----------------|------------|-----|-----|-----|
-| $x_1$           | $f_1$      | $\frac{f_1}{n}$ | $f_1$ | $\frac{f_1}{n}$ |
-| $x_2$           | $f_2$      | $\frac{f_2}{n}$ | $f_1 + f_2$ | $\frac{f_1 + f_2}{n}$ |
-| $x_3$           | $f_3$      | $\frac{f_3}{n}$ | $f_1 + f_2 + f_3$ | $\frac{f_1 + f_2 + f_3}{n}$ |
-| ...             | ...        | ... | ... | ... |
-| $x_k$           | $f_k$      | $\frac{f_k}{n}$ | $n$ | $1.00$ |
-| **Total**       | **$n$**    | **1.00** | | |
+| --------------- | ---------- | -- | --- | --- |
+| $x_1$ | $f_1$ | $\frac{f_1}{n}$ | $f_1$ | $\frac{f_1}{n}$ |
+| $x_2$ | $f_2$ | $\frac{f_2}{n}$ | $f_1 + f_2$ | $\frac{f_1 + f_2}{n}$ |
+| $x_3$ | $f_3$ | $\frac{f_3}{n}$ | $f_1 + f_2 + f_3$ | $\frac{f_1 + f_2 + f_3}{n}$ |
+| ... | ... | ... | ... | ... |
+| $x_k$ | $f_k$ | $\frac{f_k}{n}$ | $n$ | $1.00$ |
+| **Total** | **$n$** | **1.00** | | |
 
 #### Propiedades Importantes
 
@@ -383,13 +383,13 @@ $$
 
 **Tabla de frecuencias:**
 
-| N° Hermanos | FA | FR   | FAA | FRA  |
-|-------------|----| -----|-----|----- |
-| 0           | 4  | 0.20 | 4   | 0.20 |
-| 1           | 9  | 0.45 | 13  | 0.65 |
-| 2           | 5  | 0.25 | 18  | 0.90 |
-| 3           | 2  | 0.10 | 20  | 1.00 |
-| **Total**   | **20** | **1.00** | | |
+| N° Hermanos | FA | FR | FAA | FRA |
+| ----------- | -- | -- | --- | --- |
+| 0 | 4 | 0.20 | 4 | 0.20 |
+| 1 | 9 | 0.45 | 13 | 0.65 |
+| 2 | 5 | 0.25 | 18 | 0.90 |
+| 3 | 2 | 0.10 | 20 | 1.00 |
+| **Total** | **20** | **1.00** | | |
 
 **Interpretación:**
 
@@ -420,10 +420,10 @@ El tratamiento adecuado de los datos depende del tipo de variable con la que tra
 
 **Tabla de frecuencias:**
 
-| Color | FA | FR   |
-|-------|----|----- |
-| Marrón| 45 | 0.45 |
-| Azul  | 30 | 0.30 |
+| Color | FA | FR |
+| ----- | -- | ---- |
+| Marrón | 45 | 0.45 |
+| Azul | 30 | 0.30 |
 | Verde | 15 | 0.15 |
 | Negro | 10 | 0.10 |
 | **Total** | **100** | **1.00** |
@@ -459,14 +459,14 @@ El tratamiento adecuado de los datos depende del tipo de variable con la que tra
 
 **Tabla de frecuencias:**
 
-| Nº Hijos | FA | FR   | FAA | FRA  |
-|----------|----| -----|-----|------|
-| 0        | 12 | 0.24 | 12  | 0.24 |
-| 1        | 18 | 0.36 | 30  | 0.60 |
-| 2        | 15 | 0.30 | 45  | 0.90 |
-| 3        | 4  | 0.08 | 49  | 0.98 |
-| 4        | 1  | 0.02 | 50  | 1.00 |
-| **Total**| **50** | **1.00** | | |
+| Nº Hijos | FA | FR | FAA | FRA |
+| -------- | -- | -- | --- | --- |
+| 0 | 12 | 0.24 | 12 | 0.24 |
+| 1 | 18 | 0.36 | 30 | 0.60 |
+| 2 | 15 | 0.30 | 45 | 0.90 |
+| 3 | 4 | 0.08 | 49 | 0.98 |
+| 4 | 1 | 0.02 | 50 | 1.00 |
+| **Total** | **50** | **1.00** | | |
 
 **Diagrama de barras:**
 
@@ -505,14 +505,14 @@ Los datos continuos se agrupan en clases o intervalos:
 
 **Tabla de frecuencias agrupadas:**
 
-| Clase | LI  | LS  | MC  | FA | FR   | FAA | FRA  |
-|-------|-----|-----|-----|----| -----|-----|------|
-| 1     | 150 | 160 | 155 | 8  | 0.16 | 8   | 0.16 |
-| 2     | 160 | 170 | 165 | 15 | 0.30 | 23  | 0.46 |
-| 3     | 170 | 180 | 175 | 18 | 0.36 | 41  | 0.82 |
-| 4     | 180 | 190 | 185 | 7  | 0.14 | 48  | 0.96 |
-| 5     | 190 | 200 | 195 | 2  | 0.04 | 50  | 1.00 |
-| **Total** |  |     |     | **50** | **1.00** | | |
+| Clase | LI | LS | MC | FA | FR | FAA | FRA |
+| ----- | --- | --- | --- | -- | ---- | --- | ---- |
+| 1 | 150 | 160 | 155 | 8 | 0.16 | 8 | 0.16 |
+| 2 | 160 | 170 | 165 | 15 | 0.30 | 23 | 0.46 |
+| 3 | 170 | 180 | 175 | 18 | 0.36 | 41 | 0.82 |
+| 4 | 180 | 190 | 185 | 7 | 0.14 | 48 | 0.96 |
+| 5 | 190 | 200 | 195 | 2 | 0.04 | 50 | 1.00 |
+| **Total** | | | | **50** | **1.00** | | |
 
 **Histograma:**
 
@@ -536,14 +536,14 @@ Los datos continuos se agrupan en clases o intervalos:
 
 #### Tabla de Frecuencias para Datos Agrupados
 
-| Clase | LI   | LS   | MC    | FA | FR   | FAA | FRA  |
-|-------|------|------|-------|----| -----|-----|------|
-| 1     | 11,71| 12,42| 12,07 | 5  | 0,16 | 5   | 0,16 |
-| 2     | 12,42| 13,14| 12,78 | 7  | 0,22 | 12  | 0,38 |
-| 3     | 13,14| 13,85| 13,50 | 11 | 0,34 | 23  | 0,72 |
-| 4     | 13,85| 14,57| 14,21 | 6  | 0,19 | 29  | 0,91 |
-| 5     | 14,57| 15,28| 14,93 | 3  | 0,09 | 32  | 1,00 |
-| **Total** |  |      |       | **32** | **1,00** |  |      |
+| Clase | LI | LS | MC | FA | FR | FAA | FRA |
+| ----- | ---- | ---- | ----- | -- | ---- | --- | ---- |
+| 1 | 11,71 | 12,42 | 12,07 | 5 | 0,16 | 5 | 0,16 |
+| 2 | 12,42 | 13,14 | 12,78 | 7 | 0,22 | 12 | 0,38 |
+| 3 | 13,14 | 13,85 | 13,50 | 11 | 0,34 | 23 | 0,72 |
+| 4 | 13,85 | 14,57 | 14,21 | 6 | 0,19 | 29 | 0,91 |
+| 5 | 14,57 | 15,28 | 14,93 | 3 | 0,09 | 32 | 1,00 |
+| **Total** | | | | **32** | **1,00** | | |
 
 **Interpretación:**
 
@@ -606,7 +606,7 @@ $$
 $$
 
 | Algunas **VENTAJAS** | Algunas **DESVENTAJAS** |
-|---------------------|------------------------|
+| -------------------- | ----------------------- |
 | • Emplea en su cálculo toda la información disponible | • Se ve afectada por valores extremos |
 | • Se expresa en las mismas unidades que la variable en estudio | • Si el conjunto de datos es muy grande puede ser tedioso su cálculo |
 
@@ -628,7 +628,7 @@ $$
 $$
 
 | Algunas **VENTAJAS** | Algunas **DESVENTAJAS** |
-|---------------------|------------------------|
+| -------------------- | ----------------------- |
 | • Fácil de obtener y entender | • No utiliza en su cálculo toda la información disponible |
 | • No se ve influenciada por valores extremos | • Hay que ordenar los datos antes de determinarla |
 | • Se puede calcular para cualquier tipo de datos cuantitativos | |
@@ -638,7 +638,7 @@ $$
 Es el valor que aparece con mayor frecuencia en el conjunto de datos.
 
 | Algunas **VENTAJAS** | Algunas **DESVENTAJAS** |
-|---------------------|------------------------|
+| -------------------- | ----------------------- |
 | • No requiere cálculos | • No siempre existe |
 | • Puede usarse para datos cuantitativos como cualitativos | • No utiliza toda la información disponible |
 | • Fácil de interpretar | • Difícil de interpretar si se tienen 3 o más modas |
@@ -693,7 +693,7 @@ Son **noventa y nueve valores** que delimitan al 1%, 2%, ..., 99% de los datos a
 **Ventajas y Desventajas de las Medidas de Posición:**
 
 | Algunas **VENTAJAS** | Algunas **DESVENTAJAS** |
-|---------------------|------------------------|
+| -------------------- | ----------------------- |
 | • Dividen los datos en partes iguales, facilitando su comprensión | • Requieren que los datos estén ordenados |
 | • No se ven afectadas por valores extremos | • No utilizan toda la información disponible |
 | • Útiles para identificar la posición relativa de un dato | • Su cálculo puede ser complejo para datos agrupados |
@@ -725,7 +725,7 @@ R = x_{max} - x_{min}
 $$
 
 | Algunas **VENTAJAS** | Algunas **DESVENTAJAS** |
-|---------------------|------------------------|
+| -------------------- | ----------------------- |
 | • Es la medida de variabilidad más simple de obtener | • No proporciona una medida de variabilidad de las observaciones con respecto al centro de la distribución |
 | • Es fácil de interpretar | • Solo emplea dos valores en su cálculo |
 
@@ -750,7 +750,7 @@ S^2 = \frac{\sum_{i=1}^{n} x_i^2 - \frac{(\sum_{i=1}^{n} x_i)^2}{n}}{n-1}
 $$
 
 | Algunas **VENTAJAS** | Algunas **DESVENTAJAS** |
-|---------------------|------------------------|
+| -------------------- | ----------------------- |
 | • Utiliza toda la información disponible | • Es difícil de interpretar por tener sus unidades elevadas al cuadrado |
 | • Es útil cuando se compara la variabilidad de dos o más conjuntos de datos | • Al utilizar el valor de la media muestral, es sensible a la presencia de datos extremos (outliers) |
 | | • Piede la unidad de medida original |
@@ -768,7 +768,7 @@ $$
 $$
 
 | Algunas **VENTAJAS** | Algunas **DESVENTAJAS** |
-|---------------------|------------------------|
+| -------------------- | ----------------------- |
 | • Utiliza toda la información disponible | • Al utilizar el valor de la media muestral, es sensible a la presencia de datos extremos |
 | • Está expresada en las mismas unidades que la variable en estudio | |
 | • Fácil de interpretar | |
@@ -786,7 +786,7 @@ CV = \frac{\sigma}{\mu} \times 100\% \quad \text{(poblacional)}
 $$
 
 | Algunas **VENTAJAS** | Algunas **DESVENTAJAS** |
-|---------------------|------------------------|
+| -------------------- | ----------------------- |
 | • Permite comparar la dispersión de dos o más variables que no están expresadas en las mismas unidades | • Al utilizar la desviación estándar y la media aritmética en su cálculo, es sensible a la presencia de datos extremos |
 | • Es una medida adimensional | |
 
@@ -821,7 +821,7 @@ $$
 **Ventajas y Desventajas de las Medidas de Forma:**
 
 | Algunas **VENTAJAS** | Algunas **DESVENTAJAS** |
-|---------------------|------------------------|
+| -------------------- | ----------------------- |
 | • Proporcionan información sobre la forma de la distribución | • Son sensibles a valores extremos |
 | • Permiten identificar desviaciones de la normalidad | • Requieren cálculos más complejos que las medidas de tendencia central |
 | • Útiles para validar supuestos en modelos estadísticos | • Su interpretación puede ser difícil sin contexto visual |
